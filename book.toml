@@ -1,0 +1,6 @@
+[book]
+authors = ["Prasanna Loganathar"]
+language = "en"
+multilingual = false
+src = "src"
+title = "DeFiChain Handbook"
