@@ -1,4 +1,4 @@
-# Chapter 1
+# Introduction
 
 ## What's the goal of this handbook? 
 
