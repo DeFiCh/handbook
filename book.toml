@@ -4,3 +4,25 @@ language = "en"
 multilingual = false
 src = "src"
 title = "DeFiChain Handbook"
+
+[rust]
+edition = "2018"
+
+[output.html]
+site-url = "/handbook/"
+mathjax-support = true
+git-repository-url = "https://github.com/DeFiCh/handbook/tree/main/"
+edit-url-template = "https://github.com/DeFiCh/handbook/edit/main/{path}"
+
+[output.html.playground]
+editable = true
+line-numbers = true
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
