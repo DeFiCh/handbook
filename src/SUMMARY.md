@@ -5,6 +5,8 @@
 - [Introduction]()
     - [Getting Started]()
 
+- [Concepts](./concepts.md)
+
 - [Protocol and Network](./proto.md)
 
 - [Reference Node - ain](./ain.md)
