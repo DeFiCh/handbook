@@ -1,0 +1,3 @@
+[submodule "src/pinkpaper"]
+	path = src/pinkpaper
+	url = https://github.com/DeFiCh/pinkpaper.git
