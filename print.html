@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="prelude.html">Prelude</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Introduction</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.1.</strong> Getting Started</div></li></ol></li><li class="chapter-item expanded "><a href="concepts.html"><strong aria-hidden="true">2.</strong> Concepts</a></li><li class="chapter-item expanded "><a href="proto.html"><strong aria-hidden="true">3.</strong> Protocol and Network</a></li><li class="chapter-item expanded "><a href="ain.html"><strong aria-hidden="true">4.</strong> Reference Node - ain</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> Drafts</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="drafts/releases.html"><strong aria-hidden="true">4.1.1.</strong> Releases</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.2.</strong> Code Conventions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.3.</strong> Git Conventions</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Applications</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.</strong> Wallets</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Resources</div></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="prelude.html">Prelude</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Introduction</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.1.</strong> Getting Started</div></li></ol></li><li class="chapter-item expanded "><a href="concepts.html"><strong aria-hidden="true">2.</strong> Concepts</a></li><li class="chapter-item expanded "><a href="proto.html"><strong aria-hidden="true">3.</strong> Protocol and Network</a></li><li class="chapter-item expanded "><a href="pinkpaper.html"><strong aria-hidden="true">4.</strong> Pink Papers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="pinkpaper/emission/index.html"><strong aria-hidden="true">4.1.</strong> Emission</a></li><li class="chapter-item expanded "><a href="pinkpaper/fees/index.html"><strong aria-hidden="true">4.2.</strong> Fees</a></li><li class="chapter-item expanded "><a href="pinkpaper/futures/index.html"><strong aria-hidden="true">4.3.</strong> Futures</a></li><li class="chapter-item expanded "><a href="pinkpaper/governance/index.html"><strong aria-hidden="true">4.4.</strong> Governance</a></li><li class="chapter-item expanded "><a href="pinkpaper/interchain-exchange/index.html"><strong aria-hidden="true">4.5.</strong> Intercain Exchange</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="pinkpaper/interchain-exchange/fees.html"><strong aria-hidden="true">4.5.1.</strong> Fees</a></li></ol></li><li class="chapter-item expanded "><a href="pinkpaper/loan/index.html"><strong aria-hidden="true">4.6.</strong> Loan</a></li><li class="chapter-item expanded "><a href="pinkpaper/operator/index.html"><strong aria-hidden="true">4.7.</strong> Operator</a></li><li class="chapter-item expanded "><a href="pinkpaper/price-oracle/index.html"><strong aria-hidden="true">4.8.</strong> Price Oracle</a></li></ol></li><li class="chapter-item expanded "><a href="ain.html"><strong aria-hidden="true">5.</strong> Reference Node - ain</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.</strong> Drafts</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="drafts/releases.html"><strong aria-hidden="true">5.1.1.</strong> Releases</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.2.</strong> Code Conventions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.3.</strong> Git Conventions</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Applications</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Wallets</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Resources</div></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -161,6 +161,49 @@ in minutes - not hours.</p>
 <p>Learn about it here: <a href="https://rust-lang.github.io/mdBook/index.html">mdbook</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="concepts"><a class="header" href="#concepts">Concepts</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="protocol-and-network"><a class="header" href="#protocol-and-network">Protocol and Network</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><p><img src="pinkpaper/files/pinkpaper-banner.svg" alt="DeFiChain Pink Paper" /></p>
+<p>This is a working version of the Pink Paper for <a href="https://defichain.com">DeFiChain</a>.</p>
+<p>Comments and pull requests are welcomed.</p>
+<h2 id="goals"><a class="header" href="#goals">Goals</a></h2>
+<ol>
+<li>Lay out the roadmap for DeFiChain for the next few quarters, esp. 2021/2022.</li>
+<li>To form the basis of an open discussion with DeFiChain community on the direction of the project.</li>
+<li>Provide a general product and design direction for the engineering team.</li>
+</ol>
+<h2 id="sections"><a class="header" href="#sections">Sections</a></h2>
+<table><thead><tr><th>#</th><th>Topic</th><th>Remarks</th></tr></thead><tbody>
+<tr><td>1</td><td><a href="/pinkpaper.html">Introduction</a></td><td>This document.</td></tr>
+<tr><td>2</td><td><a href="/pinkpaper/emission">Emission rate</a></td><td>Under implementation. Targeting May 2021 upgrade.</td></tr>
+<tr><td>3</td><td><a href="/pinkpaper/governance">Governance</a></td><td>Also community development fund management. <br> Under implementation. Targeting May 2021 upgrade.</td></tr>
+<tr><td>4</td><td><a href="/pinkpaper/price-oracle">Price oracle</a></td><td>Under implementation. Targeting May 2021 upgrade.</td></tr>
+<tr><td>5</td><td><a href="/pinkpaper/interchain-exchange">Interchain exchange (ICX)</a></td><td>Also Bitcoin atomic swap. Under implementation. Targeting May 2021 upgrade.</td></tr>
+<tr><td>6</td><td><a href="/pinkpaper/fees">Fees</a></td><td>Draft. Partial implementation.</td></tr>
+<tr><td>7</td><td><a href="/pinkpaper/futures">Futures</a></td><td>Early draft.</td></tr>
+<tr><td>8</td><td><a href="/pinkpaper/operator">Operator</a></td><td>Early draft.</td></tr>
+<tr><td>9</td><td>Loan &amp; decentralized tokenization</td><td>Early draft.</td></tr>
+<tr><td>10</td><td>Automated options</td><td>Early draft.</td></tr>
+<tr><td>11</td><td>Non-Fungible Token (NFT)</td><td>Early draft.</td></tr>
+</tbody></table>
+<h4 id="see-also"><a class="header" href="#see-also">See also</a></h4>
+<ul>
+<li><a href="/files/2021-03-30%20DeFiChain%20PinkPaper%20Overview.pdf">Presentation deck on 2021-03-30</a></li>
+</ul>
+<h2 id="disclaimers"><a class="header" href="#disclaimers">Disclaimers</a></h2>
+<ol>
+<li>Content may be updated without notice.</li>
+<li>Content does not guarantee implementation and does not imply implementation order.</li>
+<li>Actual implementation may differ from the paper.</li>
+<li>This my no means signify acceptance by the DeFiChain users and masternode owners.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="emission"><a class="header" href="#emission">Emission</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fees"><a class="header" href="#fees">Fees</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="futures"><a class="header" href="#futures">Futures</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="governance"><a class="header" href="#governance">Governance</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="intercain-exchange"><a class="header" href="#intercain-exchange">Intercain Exchange</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fees-1"><a class="header" href="#fees-1">Fees</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="loan"><a class="header" href="#loan">Loan</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operator"><a class="header" href="#operator">Operator</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="price-oracle"><a class="header" href="#price-oracle">Price Oracle</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="blockchain-node---ain"><a class="header" href="#blockchain-node---ain">Blockchain Node - ain</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="releases"><a class="header" href="#releases">Releases</a></h1>
 
