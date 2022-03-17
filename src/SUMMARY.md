@@ -8,7 +8,7 @@
 - [Concepts](./concepts.md)
 
 - [Protocol and Network](./proto.md)
-- [Pink Papers](./pinkpaper.md)
+- [Pink Paper](./pinkpaper/README.md)
     - [Emission](./pinkpaper/emission/README.md)
     - [Fees](./pinkpaper/fees/README.md)
     - [Futures](./pinkpaper/futures/README.md)
