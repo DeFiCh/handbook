@@ -93,7 +93,7 @@ Proceed to [Initial Block Download](#initial-block-download).
 
 Once you have the required binaries available, you can start the node by running the following commands in the folder with the executables.
 
-Linux and macOS: `.\defid`
+Linux and macOS: `./defid`
 Windows: `defid.exe`
 
 This will start the node and the software will begin syncing blockchain data. Your wallets and transaction history will not be visible until the blockchain has been completely synced and up to date with the rest of the nodes. Currently the blockchain takes up **around 4GB** of disk space.
@@ -105,12 +105,12 @@ In order to speed up the process, you can download a snapshot from AWS.
 3. Replace `index.txt` in the URL with the filename from the previous step.
 4. Extract the contents of the downloaded `.zip` file.
 5. Copy the extracted contents into the `.defi` folder.
-   - Windows: `C:\Users\<username>\.defi\`
+   - Windows: `C:\Users\<username>\AppData\Roaming\DeFi Blockchain`
    - Linux and macOS: `~/.defi/`
 6. Now restart the `defi` process. There will be a short syncing process to get the node up to date with the rest of the network.
 
 ## Interacting with the node
 
-Once `defid` is running, you interact with the node on a different terminal using the `defi-cli` application. You can run `defi-cli help` to see a list of available commands.
+Once `defid` is running, you interact with the node on a different terminal using the `defi-cli` application. You can run `./defi-cli help` to see a list of available commands.
 
 Proceed to [Using a wallet](./node/wallet.md) to learn how to get started with using the node.
