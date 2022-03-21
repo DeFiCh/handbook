@@ -12,19 +12,19 @@ Comments and pull requests are welcomed.
 
 ## Sections
 
-| #    | Topic    | Remarks |
-| ------------- | ------------- | ------------- |
-| 1 | [Introduction](/pinkpaper.md) | This document.  |
-| 2 | [Emission rate](/pinkpaper/emission) | Under implementation. Targeting May 2021 upgrade. |
-| 3 | [Governance](/pinkpaper/governance) | Also community development fund management. <br> Under implementation. Targeting May 2021 upgrade. |
-| 4 | [Price oracle](/pinkpaper/price-oracle) | Under implementation. Targeting May 2021 upgrade. |
-| 5 | [Interchain exchange (ICX)](/pinkpaper/interchain-exchange) |  Also Bitcoin atomic swap. Under implementation. Targeting May 2021 upgrade.|
-| 6 | [Fees](/pinkpaper/fees) | Draft. Partial implementation. |
-| 7 | [Futures](/pinkpaper/futures) | Early draft. |
-| 8 | [Operator](/pinkpaper/operator) | Early draft. |
-| 9 | Loan & decentralized tokenization | Early draft. |
-| 10 | Automated options  | Early draft. |
-| 11 | Non-Fungible Token (NFT)  | Early draft. |
+| #   | Topic                                                       | Remarks                                                                                            |
+| --- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| 1   | [Introduction](/pinkpaper.md)                               | This document.                                                                                     |
+| 2   | [Emission rate](/pinkpaper/emission)                        | Under implementation. Targeting May 2021 upgrade.                                                  |
+| 3   | [Governance](/pinkpaper/governance)                         | Also community development fund management. <br> Under implementation. Targeting May 2021 upgrade. |
+| 4   | [Price oracle](/pinkpaper/price-oracle)                     | Under implementation. Targeting May 2021 upgrade.                                                  |
+| 5   | [Interchain exchange (ICX)](/pinkpaper/interchain-exchange) | Also Bitcoin atomic swap. Under implementation. Targeting May 2021 upgrade.                        |
+| 6   | [Fees](/pinkpaper/fees)                                     | Draft. Partial implementation.                                                                     |
+| 7   | [Futures](/pinkpaper/futures)                               | Early draft.                                                                                       |
+| 8   | [Operator](/pinkpaper/operator)                             | Early draft.                                                                                       |
+| 9   | Loan & decentralized tokenization                           | Early draft.                                                                                       |
+| 10  | Automated options                                           | Early draft.                                                                                       |
+| 11  | Non-Fungible Token (NFT)                                    | Early draft.                                                                                       |
 
 #### See also
 
@@ -33,6 +33,6 @@ Comments and pull requests are welcomed.
 ## Disclaimers
 
 1. Content may be updated without notice.
-1. Content does not guarantee implementation and does not imply implementation order.
-1. Actual implementation may differ from the paper.
-1. This my no means signify acceptance by the DeFiChain users and masternode owners.
+2. Content does not guarantee implementation and does not imply implementation order.
+3. Actual implementation may differ from the paper.
+4. This my no means signify acceptance by the DeFiChain users and masternode owners.
