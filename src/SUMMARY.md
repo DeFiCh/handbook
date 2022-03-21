@@ -13,7 +13,7 @@
     - [Fees](./pinkpaper/fees/README.md)
     - [Futures](./pinkpaper/futures/README.md)
     - [Governance](./pinkpaper/governance/README.md)
-    - [Intercain Exchange](./pinkpaper/interchain-exchange/README.md)
+    - [Interchain Exchange](./pinkpaper/interchain-exchange/README.md)
         - [Fees](./pinkpaper/interchain-exchange/fees.md)
     - [Loan](./pinkpaper/loan/README.md))
     - [Operator](./pinkpaper/operator/README.md)
@@ -23,7 +23,7 @@
     - [Drafts]()
         - [Releases](./drafts/releases.md)
         - [Code Conventions]()
-        - [Git Conventions]() 
+        - [Git Conventions]()
 
 - [Applications]()
     - [Wallets]()
