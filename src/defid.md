@@ -1,4 +1,4 @@
-# Blockchain Node - ain
+# Blockchain Node - defid
 
 DeFiChain is a distributed network of computers running software (known as nodes).
 DeFiChain nodes are able to
@@ -7,7 +7,7 @@ DeFiChain nodes are able to
 - Serve data to lightweight clients
 - Validate and propogate blocks and transactions
 
-Every DeFiChain node runs an implementation of the DeFiChain protocol, and can be run on local and cloud machines. The minimum requirements for running the reference `ain` node are
+Every DeFiChain node runs an implementation of the DeFiChain protocol, and can be run on local and cloud machines. The minimum requirements for running the reference `defid` node are
 
 - Desktop or laptop hardware running recent versions of Windows, Mac OS X, or Linux.
 - Atleast 5 GB of disk space
