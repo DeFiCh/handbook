@@ -19,6 +19,9 @@
     - [Operator](./pinkpaper/operator/README.md)
     - [Price Oracle](./pinkpaper/price-oracle/README.md)
 
+- [DFIPS]()
+    - [DFIP 2203](./dfips/2203.md)
+
 - [Reference Node - ain](./ain.md)
     - [Drafts]()
         - [Releases](./drafts/releases.md)
