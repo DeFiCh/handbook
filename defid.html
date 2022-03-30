@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Reference Node - defid - DeFiChain Handbook</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="prelude.html">Prelude</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Introduction</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.1.</strong> Getting Started</div></li></ol></li><li class="chapter-item expanded "><a href="concepts.html"><strong aria-hidden="true">2.</strong> Concepts</a></li><li class="chapter-item expanded "><a href="proto.html"><strong aria-hidden="true">3.</strong> Protocol and Network</a></li><li class="chapter-item expanded "><a href="pinkpaper/index.html"><strong aria-hidden="true">4.</strong> Pink Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="pinkpaper/emission/index.html"><strong aria-hidden="true">4.1.</strong> Emission</a></li><li class="chapter-item expanded "><a href="pinkpaper/fees/index.html"><strong aria-hidden="true">4.2.</strong> Fees</a></li><li class="chapter-item expanded "><a href="pinkpaper/futures/index.html"><strong aria-hidden="true">4.3.</strong> Futures</a></li><li class="chapter-item expanded "><a href="pinkpaper/governance/index.html"><strong aria-hidden="true">4.4.</strong> Governance</a></li><li class="chapter-item expanded "><a href="pinkpaper/interchain-exchange/index.html"><strong aria-hidden="true">4.5.</strong> Interchain Exchange</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="pinkpaper/interchain-exchange/fees.html"><strong aria-hidden="true">4.5.1.</strong> Fees</a></li></ol></li><li class="chapter-item expanded "><a href="pinkpaper/loan/index.html"><strong aria-hidden="true">4.6.</strong> Loan</a></li><li class="chapter-item expanded "><a href="pinkpaper/operator/index.html"><strong aria-hidden="true">4.7.</strong> Operator</a></li><li class="chapter-item expanded "><a href="pinkpaper/price-oracle/index.html"><strong aria-hidden="true">4.8.</strong> Price Oracle</a></li></ol></li><li class="chapter-item expanded "><a href="defid.html" class="active"><strong aria-hidden="true">5.</strong> Reference Node - defid</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="node/wallet.html"><strong aria-hidden="true">5.1.</strong> Using a Wallet</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> Drafts</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="drafts/releases.html"><strong aria-hidden="true">5.2.1.</strong> Releases</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.2.</strong> Code Conventions</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.3.</strong> Git Conventions</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Applications</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Wallets</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Resources</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">DeFiChain Handbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/DeFiCh/handbook/tree/main/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/DeFiCh/handbook/edit/main/src/defid.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="blockchain-node---defid"><a class="header" href="#blockchain-node---defid">Blockchain Node - defid</a></h1>
+<p>DeFiChain is a distributed network of computers running software (known as nodes).
+DeFiChain nodes are able to</p>
+<ul>
+<li>Store all blockchain data</li>
+<li>Serve data to lightweight clients</li>
+<li>Validate and propogate blocks and transactions</li>
+</ul>
+<p>Every DeFiChain node runs an implementation of the DeFiChain protocol, and can be run on local and cloud machines. The minimum requirements for running the reference <code>defid</code> node are</p>
+<ul>
+<li>Desktop or laptop hardware running recent versions of Windows, Mac OS X, or Linux.</li>
+<li>Atleast 5 GB of disk space</li>
+<li>2 gigabytes of memory (RAM)</li>
+<li>Stable internet connection with high upload limits</li>
+</ul>
+<p>There are two ways start using the node - using the compiled releases or compiling the souce code on your own.</p>
+<h2 id="using-compiled-releases"><a class="header" href="#using-compiled-releases">Using compiled releases</a></h2>
+<p>Download the latest available release from <a href="https://github.com/DeFiCh/ain/releases">Github</a>. Extract the archive by using an archive manager, or running the following command in a terminal</p>
+<pre><code class="language-bash">tar xzf &lt;filename&gt;.tar.gz # replace &lt;filename&gt; with the filename downloaded file
+</code></pre>
+<p>You can run the following install command to globally install the DeFiChain binaries.</p>
+<pre><code class="language-bash">sudo install -m 0755 -o root -g root -t /usr/local/bin &lt;defichain-path&gt;/bin/* # replace &lt;defichain-path&gt; with the path to the root of the extracted folder
+</code></pre>
+<p>Proceed to <a href="#initial-block-download">Initial Block Download</a>.</p>
+<h2 id="compiling-from-source"><a class="header" href="#compiling-from-source">Compiling from source</a></h2>
+<h3 id="using-makesh-debianubuntu-only"><a class="header" href="#using-makesh-debianubuntu-only">Using <code>make.sh</code> (Debian/Ubuntu only)</a></h3>
+<p>By running <code>./make.sh build</code> will download install required dependencies and run the complete compilation process. Run <code>make install</code> at the end of the process to make the compiled binaries available globally.</p>
+<h3 id="compiling-manually"><a class="header" href="#compiling-manually">Compiling manually</a></h3>
+<p>Install <code>gcc</code> and <code>boost</code> and other dependecies from your distribution's package manager.</p>
+<p>Arch Linux: <code>sudo pacman -S gcc boost libevent python</code>.</p>
+<p>Debian/Ubuntu: <code>sudo apt-get install build-essential libtool autotools-dev automake pkg-config bsdmainutils python3 curl ibssl-dev libevent-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev</code></p>
+<p>Clone the latest version of <code>ain</code> from GitHub.</p>
+<pre><code class="language-bash">git clone https://github.com/DeFiCh/ain.git
+cd ain
+</code></pre>
+<p>Install Berekely DB.</p>
+<pre><code class="language-bash">./contrib/install_db4.sh `pwd`
+</code></pre>
+<p>Once installation is complete, take note of the commands provided at the end of the build log.</p>
+<pre><code class="language-bash">db4 build complete.
+
+When compiling defid, run `./configure` in the following way:
+
+  export BDB_PREFIX='/home/DeFiCha/ain/contrib/db4'
+  ./configure BDB_LIBS=&quot;-L${BDB_PREFIX}/lib -ldb_cxx-4.8&quot; BDB_CFLAGS=&quot;-I${BDB_PREFIX}/include&quot; ...
+</code></pre>
+<p>Now, run the export command from the DB compilation, then run <code>autogen.sh</code> and finally run the configure command from above.</p>
+<pre><code class="language-bash">export BDB_PREFIX='/home/DeFiCha/ain/contrib/db4'
+./autogen.sh
+./configure BDB_LIBS=&quot;-L${BDB_PREFIX}/lib -ldb_cxx-4.8&quot; BDB_CFLAGS=&quot;-I${BDB_PREFIX}/include&quot;
+</code></pre>
+<p>We can now compile the node. Run <code>make</code> in the <code>ain</code> root directory.</p>
+<pre><code class="language-bash">make #
+make -j &quot;$(($(nproc)))&quot; # for multicore CPUs
+</code></pre>
+<p><code>defi-d</code> and other DeFiChain executable will now be in the <code>src/</code> directory. You can run <code>make install</code> to access the compiled binaries globally.</p>
+<p>Proceed to <a href="#initial-block-download">Initial Block Download</a>.</p>
+<h2 id="initial-block-download"><a class="header" href="#initial-block-download">Initial Block Download</a></h2>
+<p>Once you have the required binaries available, you can start the node by running the following commands in the folder with the executables.</p>
+<p>Linux and macOS: <code>./defid</code>
+Windows: <code>defid.exe</code></p>
+<p>This will start the node and the software will begin syncing blockchain data. Your wallets and transaction history will not be visible until the blockchain has been completely synced and up to date with the rest of the nodes. Currently the blockchain takes up <strong>around 4GB</strong> of disk space.</p>
+<p>In order to speed up the process, you can download a snapshot from AWS.</p>
+<ol>
+<li>Stop the <code>defid</code> process.</li>
+<li>Go to <a href="https://defi-snapshots.s3.ap-southeast-1.amazonaws.com/index.txt">the AWS bucket</a> and copy the filename of the latest (bottom most) snapshot.</li>
+<li>Replace <code>index.txt</code> in the URL with the filename from the previous step.</li>
+<li>Extract the contents of the downloaded <code>.zip</code> file.</li>
+<li>Copy the extracted contents into the <code>.defi</code> folder.
+<ul>
+<li>Windows: <code>C:\Users\&lt;username&gt;\AppData\Roaming\DeFi Blockchain</code></li>
+<li>Linux and macOS: <code>~/.defi/</code></li>
+</ul>
+</li>
+<li>Now restart the <code>defi</code> process. There will be a short syncing process to get the node up to date with the rest of the network.</li>
+</ol>
+<h2 id="interacting-with-the-node"><a class="header" href="#interacting-with-the-node">Interacting with the node</a></h2>
+<p>Once <code>defid</code> is running, you interact with the node on a different terminal using the <code>defi-cli</code> application. You can run <code>./defi-cli help</code> to see a list of available commands.</p>
+<p>Proceed to <a href="./node/wallet.html">Using a wallet</a> to learn how to get started with using the node.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="pinkpaper/price-oracle/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="node/wallet.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="pinkpaper/price-oracle/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="node/wallet.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
