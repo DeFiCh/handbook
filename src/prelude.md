@@ -1,8 +1,8 @@
 # Prelude
 
-## What's the goal of this handbook? 
+## What's the goal of this handbook?
 
-To slowly start building this up: 
+To slowly start building this up:
 
 - Critical docs: How to update for exchanges, reindexes etc.
 - Standard practices for coding, git, things like how to add a new data structure, add rpc, etc
@@ -10,11 +10,10 @@ To slowly start building this up:
 - Links to pink paper, external resources of all kind (a dedicated page similar to github awesome-{x} repos.
 - Anything that's doesn't belong in the source code or is process related.
 
-
 ## How do I read and write this handbook?
 
 The book uses the simplest Markdown generator available, `mdbook` - intentionally.
-No big features. It's simple. Any engineer should be able to learn and use it 
+No big features. It's simple. Any engineer should be able to learn and use it
 in minutes - not hours.
 
 - [Reading the handbook](https://rust-lang.github.io/mdBook/guide/reading.html)
