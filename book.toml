@@ -13,6 +13,8 @@ site-url = "/handbook/"
 mathjax-support = true
 git-repository-url = "https://github.com/DeFiCh/handbook/tree/main/"
 edit-url-template = "https://github.com/DeFiCh/handbook/edit/main/{path}"
+fold.enable = true
+no-section-label = true
 
 [output.html.playground]
 editable = true
