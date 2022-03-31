@@ -1,9 +1,7 @@
 # Summary
 
-[Prelude](./prelude.md)
-
 - [Introduction]()
-
+  - [Prelude](./prelude.md)
   - [Getting Started]()
 
 - [Concepts](./concepts.md)
