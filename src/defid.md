@@ -7,12 +7,12 @@ DeFiChain nodes are able to
 - Serve data to lightweight clients
 - Validate and propogate blocks and transactions
 
-Every DeFiChain node runs an implementation of the DeFiChain protocol, and can be run on local and cloud machines. The minimum requirements for running the reference `defid` node are
+Every DeFiChain node runs an implementation of the DeFiChain protocol, and can be run on local and cloud machines. The recommended requirements for running the reference `defid` node are
 
 - Desktop or laptop hardware running recent versions of Windows, Mac OS X, or Linux.
-- Atleast 5 GB of disk space
-- 2 gigabytes of memory (RAM)
-- Stable internet connection with high upload limits
+- Atleast 30 GB of disk space (Minimum: ~8GB)
+- Atleast 8 gigabytes of memory (RAM) (Minimum: ~1GB, but sufficient swap and isn't recommended)
+- 4 GB of swap space (Minimum: None, but highly recommended to give room for memory fragmentation spikes)
 
 There are two ways start using the node - using the compiled releases or compiling the souce code on your own.
 
