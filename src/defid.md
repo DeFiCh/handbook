@@ -11,7 +11,7 @@ Every DeFiChain node runs an implementation of the DeFiChain protocol, and can b
 
 - Desktop or laptop hardware running recent versions of Windows, Mac OS X, or Linux.
 - Atleast 30 GB of disk space (Minimum: ~8GB)
-- Atleast 8 gigabytes of memory (RAM) (Minimum: ~1GB, but sufficient swap and isn't recommended)
+- Atleast 8 gigabytes of memory (RAM) (Minimum: ~1GB, but isn't recommended and sufficient swap is required)
 - 4 GB of swap space (Minimum: None, but highly recommended to give room for memory fragmentation spikes)
 
 There are two ways start using the node - using the compiled releases or compiling the souce code on your own.
