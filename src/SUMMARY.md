@@ -18,18 +18,17 @@
     - [Price Oracle](./pinkpaper/price-oracle/README.md)
 
 - [Guides](./guides.md)
+  - [Using defid - The Reference Node](./defid.md)
+  - [Using a Wallet](./node/wallet.md)
 
 - [References](./concepts.md)
-  - [Reference Node - defid](./defid.md)
-
-    - [Using a Wallet](./node/wallet.md)
-
-    - [Drafts]()
-      - [Releases](./drafts/releases.md)
-      - [Code Conventions]()
-      - [Git Conventions]()
 
 - [Ecosystem]()
   - [Wallets]()
 
 - [Resources]()
+
+- [Drafts]()
+  - [Releases](./drafts/releases.md)
+  - [Code Conventions]()
+  - [Git Conventions]()
