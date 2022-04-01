@@ -17,6 +17,9 @@
     - [Operator](./pinkpaper/operator/README.md)
     - [Price Oracle](./pinkpaper/price-oracle/README.md)
 
+- [DFIPS]()
+    - [DFIP 2203](./dfips/2203.md)
+
 - [Guides](./guides.md)
   - [Using defid - The Reference Node](./defid.md)
   - [Using a Wallet](./node/wallet.md)
