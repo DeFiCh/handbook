@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><div>Introduction</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="prelude.html">Prelude</a></li><li class="chapter-item "><div>Getting Started</div></li></ol></li><li class="chapter-item "><a href="concepts.html">Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="proto.html">Protocol and Network</a></li><li class="chapter-item "><a href="pinkpaper/index.html">Pink Paper</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pinkpaper/emission/index.html">Emission</a></li><li class="chapter-item "><a href="pinkpaper/fees/index.html">Fees</a></li><li class="chapter-item "><a href="pinkpaper/futures/index.html">Futures</a></li><li class="chapter-item "><a href="pinkpaper/governance/index.html">Governance</a></li><li class="chapter-item "><a href="pinkpaper/interchain-exchange/index.html">Interchain Exchange</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pinkpaper/interchain-exchange/fees.html">Fees</a></li></ol></li><li class="chapter-item "><a href="pinkpaper/loan/index.html">Loan</a></li><li class="chapter-item "><a href="pinkpaper/operator/index.html">Operator</a></li><li class="chapter-item "><a href="pinkpaper/price-oracle/index.html">Price Oracle</a></li></ol></li></ol></li><li class="chapter-item "><a href="guides.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="defid.html">Using defid - The Reference Node</a></li><li class="chapter-item "><a href="node/wallet.html">Using a Wallet</a></li></ol></li><li class="chapter-item "><a href="concepts.html">References</a></li><li class="chapter-item "><div>Ecosystem</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Wallets</div></li></ol></li><li class="chapter-item "><div>Resources</div></li><li class="chapter-item "><div>Drafts</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="drafts/releases.html">Releases</a></li><li class="chapter-item "><div>Code Conventions</div></li><li class="chapter-item "><div>Git Conventions</div></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item "><div>Introduction</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="prelude.html">Prelude</a></li><li class="chapter-item "><div>Getting Started</div></li></ol></li><li class="chapter-item "><a href="concepts.html">Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="proto.html">Protocol and Network</a></li><li class="chapter-item "><a href="pinkpaper/index.html">Pink Paper</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pinkpaper/emission/index.html">Emission</a></li><li class="chapter-item "><a href="pinkpaper/fees/index.html">Fees</a></li><li class="chapter-item "><a href="pinkpaper/futures/index.html">Futures</a></li><li class="chapter-item "><a href="pinkpaper/governance/index.html">Governance</a></li><li class="chapter-item "><a href="pinkpaper/interchain-exchange/index.html">Interchain Exchange</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pinkpaper/interchain-exchange/fees.html">Fees</a></li></ol></li><li class="chapter-item "><a href="pinkpaper/loan/index.html">Loan</a></li><li class="chapter-item "><a href="pinkpaper/operator/index.html">Operator</a></li><li class="chapter-item "><a href="pinkpaper/price-oracle/index.html">Price Oracle</a></li></ol></li></ol></li><li class="chapter-item "><div>DFIPS</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dfips/2203.html">DFIP 2203</a></li></ol></li><li class="chapter-item "><a href="guides.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="defid.html">Using defid - The Reference Node</a></li><li class="chapter-item "><a href="node/wallet.html">Using a Wallet</a></li></ol></li><li class="chapter-item "><a href="concepts.html">References</a></li><li class="chapter-item "><div>Ecosystem</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Wallets</div></li></ol></li><li class="chapter-item "><div>Resources</div></li><li class="chapter-item "><div>Drafts</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="drafts/releases.html">Releases</a></li><li class="chapter-item "><div>Code Conventions</div></li><li class="chapter-item "><div>Git Conventions</div></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -1308,6 +1308,92 @@ in minutes - not hours.</p>
 </ul>
 </li>
 </ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dfip-2203"><a class="header" href="#dfip-2203">DFIP-2203</a></h1>
+<h2 id="proposal"><a class="header" href="#proposal">Proposal</a></h2>
+<p>For the community discussion that led to the addition of this feature, please have a look at the <a href="https://www.reddit.com/r/defiblockchain/comments/t63ppr/handling_dtoken_premium_with_futures/">Reddit</a> post and hear the <a href="https://twitter.com/i/spaces/1eaKbNRkzqkKX">Twitter Space</a>.</p>
+<p>For the proposal, refer to this <a href="https://github.com/DeFiCh/dfips/issues/127">link</a></p>
+<h2 id="dfip-summary-"><a class="header" href="#dfip-summary-">DFIP summary :</a></h2>
+<ul>
+<li>Introduce future trading for settling dToken prices once a week (7*2880 blocks).</li>
+<li>Establish 2 different Future contracts - one for the premium case and on for the discount case.</li>
+<li>Range for settlement should be +/-5%, which allows anticipating the next price in case of closed markets (constant oracle price)</li>
+<li>Premium future should trade 5% above the oracle price - you can buy dTokens with a 5% fee)</li>
+<li>Discount future should trade 5% below the oracle price - you can sell dTokens with a 5% discount)</li>
+<li>Futures will be a weak binding of DEX price to oracle price: between settlement time higher/lower deviations are possible</li>
+<li>Introducing an additional swap fee of 0.1% for every dToken pool to burn dTokens. The fee should be conducted for both swap
+directions.</li>
+<li>Strengthen dUSD by counting them in the same way as the mandatory 50% DFI in vaults with fix price of $0.99.</li>
+</ul>
+<h2 id="related-prs"><a class="header" href="#related-prs">Related PRs:</a></h2>
+<ul>
+<li>DEX fee <a href="https://github.com/DeFiCh/ain/pull/1153">PR</a></li>
+<li>DUSD as collateral <a href="https://github.com/DeFiCh/ain/pull/1128">PR</a></li>
+<li>Future swap contract <a href="https://github.com/DeFiCh/ain/pull/1155">PR</a></li>
+</ul>
+<h2 id="governances-variables"><a class="header" href="#governances-variables">Governances variables</a></h2>
+<h3 id="v0paramsdfip2203active"><a class="header" href="#v0paramsdfip2203active">v0/params/dfip2203/active</a></h3>
+<p>This variable determines wether the DFIP is activated or not. When disabled, no more deposit to the smart contract address will be accepted nor any swap will be executed.</p>
+<h3 id="v0paramsdfip2203reward_pct"><a class="header" href="#v0paramsdfip2203reward_pct">v0/params/dfip2203/reward_pct</a></h3>
+<p>The percent of premium deducted at the moment of the swap.</p>
+<h3 id="v0paramsdfip2203period_blocks"><a class="header" href="#v0paramsdfip2203period_blocks">v0/params/dfip2203/period_blocks</a></h3>
+<p>The block interval between two future swaps.</p>
+<h3 id="v0tokentoken_iddfip2203_disabled"><a class="header" href="#v0tokentoken_iddfip2203_disabled">v0/token/&lt;token_id&gt;/dfip2203_disabled</a></h3>
+<p>Defaults to false. Used to blacklist certain token.</p>
+<h2 id="rpc-commands"><a class="header" href="#rpc-commands">RPC commands</a></h2>
+<h3 id="getfutureswapblock"><a class="header" href="#getfutureswapblock">getfutureswapblock</a></h3>
+<p>Get the next block when the contract will be executed.</p>
+<pre><code>defi-cli getfutureswapblock
+895100
+</code></pre>
+<h3 id="futureswap"><a class="header" href="#futureswap">futureswap</a></h3>
+<h4 id="parameters-"><a class="header" href="#parameters-">Parameters :</a></h4>
+<ul>
+<li><code>address</code> : Address to fund contract and receive resulting token.</li>
+<li><code>amount</code> : Amount to send in amount@token format.</li>
+<li><code>destination</code> : Optional. Expected dToken if DUSD amount supplied.</li>
+</ul>
+<p>Deposit DUSD or dTokens to be swapped at the next block interval.</p>
+<pre><code>defi-cli futureswap &lt;address&gt; &lt;amount&gt; &lt;destination&gt;
+fd55837215c7ff29ba43afb196ffbfba8c20f16eb9dbba30ba829853f15b2aeb
+</code></pre>
+<h3 id="withdrawfutureswap"><a class="header" href="#withdrawfutureswap">withdrawfutureswap</a></h3>
+<h4 id="parameters--1"><a class="header" href="#parameters--1">Parameters :</a></h4>
+<ul>
+<li><code>address</code> : Address to fund contract and receive resulting token.</li>
+<li><code>amount</code> : Amount to send in amount@token format.</li>
+<li><code>destination</code> : Optional. Expected dToken if DUSD amount supplied.</li>
+</ul>
+<p>Withdraw DUSD or dTokens previously deposited.</p>
+<pre><code>defi-cli withdrawfutureswap &lt;address&gt; &lt;amount&gt; &lt;destination&gt;
+bceb216add60c38888d102c737d73d3a559fc214bbe18cab92848a8d31586944
+</code></pre>
+<h3 id="listpendingfutureswaps"><a class="header" href="#listpendingfutureswaps">listpendingfutureswaps</a></h3>
+<p>List all pending futures.</p>
+<pre><code>defi-cli listpendingfutureswaps
+[{'owner': 'mg1qAZBb28tuWpxNmbRvZha9zhUpEQ5uVx', 'source': '1.00000000@MSFT', 'destination': 'DUSD'}, {'owner': 'mhe4v9VMpinWfJpgUqpmyEXeUXc1AdFoVC', 'source': '1.00000000@GOOGL', 'destination': 'DUSD'}, {'owner': 'mk5RKGj4nNiVPhKvrVqkUh7oX2oGXvtXc5', 'source': '1.00000000@TSLA', 'destination': 'DUSD'}, {'owner': 'msyMCXeC12XwzJ8CbZTbDyDAem3PsWFrRJ', 'source': '1.00000000@TWTR', 'destination': 'DUSD'}]
+</code></pre>
+<h3 id="getpendingfutureswaps"><a class="header" href="#getpendingfutureswaps">getpendingfutureswaps</a></h3>
+<p>Get all pending futures for a specific address.</p>
+<h4 id="parameters--2"><a class="header" href="#parameters--2">Parameters :</a></h4>
+<ul>
+<li><code>address</code> : Address to get futures prices for.</li>
+</ul>
+<pre><code>defi-cli getpendingfutureswaps &lt;address&gt;
+{'owner': '&lt;address&gt;', 'values': [{'source': '1.00000000@MSFT', 'destination': 'DUSD'}]}
+</code></pre>
+<h3 id="listgovs"><a class="header" href="#listgovs">listgovs</a></h3>
+<p>All the governance variables related to this DFIP can be accessed via <code>listgovs</code></p>
+<pre><code>defi-cli listgovs
+{
+    ...,
+    &quot;ATTRIBUTES&quot;: {
+    &quot;v0/params/dfip2203/active&quot;: &quot;true&quot;,
+    &quot;v0/params/dfip2203/reward_pct&quot;: &quot;0.05&quot;,
+    &quot;v0/params/dfip2203/block_period&quot;: &quot;20160&quot;,
+    &quot;v0/token/10/dfip2203_disabled&quot;:&quot;true&quot;,
+    }
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="guides"><a class="header" href="#guides">Guides</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="blockchain-node---defid"><a class="header" href="#blockchain-node---defid">Blockchain Node - defid</a></h1>
 <p>DeFiChain is a distributed network of computers running software (known as nodes).
