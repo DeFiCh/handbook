@@ -2,9 +2,9 @@
 
 # Table of contents
 
-1. [Introduction](#introduction)
-1. [Loans in DeFiChain](#loans-in-defichain)
-1. [Main concepts](#main-concepts)
+1. [Introduction](#1-introduction)
+1. [Loans in DeFiChain](#2-loans-in-defichain)
+1. [Main concepts](#3-main-concepts)
     * [Collateral](#collateral)
         * [Collateralization ratio](#collateralization-ratio)
         * [Over-collateralization](#over-collateralization)
@@ -24,7 +24,7 @@
         * [Example](#example)
         * [Collateral auction example](#collateral-auction-example)
         * [Failed auction](#failed-auction)
-1. [RPC](#rpc)
+1. [RPC](#4-rpc)
     * [Loan scheme RPCs](#loan-scheme-rpcs)
     * [Loan tokens RPCs](#loan-tokens-rpcs)
     * [Collateral tokens RPCs](#collateral-tokens-rpcs)
@@ -76,6 +76,21 @@ Applying the changes mentioned, our definition of loan is now:
 > An amount of loan tokens that is minted, ~~often from a bank~~, and which value has to be backed up by collateral during the loan's life cycle.
 
 The loan's life cycle ends when a loan is fully paid back, i.e. all dTokens + interests are returned to the vault.
+
+```mermaid
+graph LR;
+    id1(Create vault) --> id2(Deposit collateral);
+    id2 --> id3(Take loan);
+    subgraph Loan life cycle;
+    direction LR;
+    id3 --> id4(...);
+    id4 --> id5(Accrue interest);
+    id5 --> id6(...);
+    id6 --> id7(Payback loan + interest);
+    id7 --> id3;
+    end;
+    id7 --> id8(Close vault)
+```
 
 Now lets continue to the second part of the initial definition:
 
@@ -362,7 +377,7 @@ If auctions yield more `dTSLA` than the vault's loan, it will be deposited back 
 
 Auction that expires after 720 blocks without bids will be reopened immediately based on the remaining amount of collateral and loan that the vault receives due to conclusion of other auction batches.
 
-# RPC
+# 4. RPC
 
 Now we will go through all the different RPCs implemented in DeFiChain to handle loans.
 
