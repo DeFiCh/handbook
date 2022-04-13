@@ -1604,9 +1604,9 @@ Windows: <code>defid.exe</code></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="loans"><a class="header" href="#loans">Loans</a></h1>
 <h1 id="table-of-contents"><a class="header" href="#table-of-contents">Table of contents</a></h1>
 <ol>
-<li><a href="drafts/loans.html#introduction">Introduction</a></li>
-<li><a href="drafts/loans.html#loans-in-defichain">Loans in DeFiChain</a></li>
-<li><a href="drafts/loans.html#main-concepts">Main concepts</a>
+<li><a href="drafts/loans.html#1-introduction">Introduction</a></li>
+<li><a href="drafts/loans.html#2-loans-in-defichain">Loans in DeFiChain</a></li>
+<li><a href="drafts/loans.html#3-main-concepts">Main concepts</a>
 <ul>
 <li><a href="drafts/loans.html#collateral">Collateral</a>
 <ul>
@@ -1644,7 +1644,7 @@ Windows: <code>defid.exe</code></p>
 </li>
 </ul>
 </li>
-<li><a href="drafts/loans.html#rpc">RPC</a>
+<li><a href="drafts/loans.html#4-rpc">RPC</a>
 <ul>
 <li><a href="drafts/loans.html#loan-scheme-rpcs">Loan scheme RPCs</a></li>
 <li><a href="drafts/loans.html#loan-tokens-rpcs">Loan tokens RPCs</a></li>
@@ -1689,6 +1689,19 @@ Windows: <code>defid.exe</code></p>
 <p>An amount of loan tokens that is minted, <del>often from a bank</del>, and which value has to be backed up by collateral during the loan's life cycle.</p>
 </blockquote>
 <p>The loan's life cycle ends when a loan is fully paid back, i.e. all dTokens + interests are returned to the vault.</p>
+<pre><code class="language-mermaid">graph LR;
+    id1(Create vault) --&gt; id2(Deposit collateral);
+    id2 --&gt; id3(Take loan);
+    subgraph Loan life cycle;
+    direction LR;
+    id3 --&gt; id4(...);
+    id4 --&gt; id5(Accrue interest);
+    id5 --&gt; id6(...);
+    id6 --&gt; id7(Payback loan + interest);
+    id7 --&gt; id3;
+    end;
+    id7 --&gt; id8(Close vault)
+</code></pre>
 <p>Now lets continue to the second part of the initial definition:</p>
 <blockquote>
 <p><em>&quot;...usually together with an extra amount of money that you have to pay as a charge for borrowing&quot;</em></p>
@@ -1907,7 +1920,7 @@ To create an empty vault only a valid address is needed, nothing else. If a loan
 <p>If auctions yield more <code>dTSLA</code> than the vault's loan, it will be deposited back to the vault as part of vault's asset, but not collateral. It can be withdrawn from the vault after vault exits liquidation state by vault's owner and carries no interest.</p>
 <h2 id="failed-auction-1"><a class="header" href="#failed-auction-1">Failed auction</a></h2>
 <p>Auction that expires after 720 blocks without bids will be reopened immediately based on the remaining amount of collateral and loan that the vault receives due to conclusion of other auction batches.</p>
-<h1 id="rpc-3"><a class="header" href="#rpc-3">RPC</a></h1>
+<h1 id="4-rpc"><a class="header" href="#4-rpc">4. RPC</a></h1>
 <p>Now we will go through all the different RPCs implemented in DeFiChain to handle loans.</p>
 <blockquote>
 <p>Note: In this section a red asterisk <span style="color: red">*</span> means the parameter is required. If no asterisk is present the argument will then be optional.</p>
@@ -2917,8 +2930,8 @@ defi-cli listauctionhistory {&quot;maxBlockHeight&quot;: 1000, \
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript" src="mermaid.min.js"></script>
-        <script type="text/javascript" src="mermaid-init.js"></script>
+        <script type="text/javascript" src="scripts/mermaid.min.js"></script>
+        <script type="text/javascript" src="scripts/mermaid-init.js"></script>
         <script type="text/javascript">
         window.addEventListener('load', function() {
             MathJax.Hub.Register.StartupHook('End', function() {
