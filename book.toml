@@ -15,7 +15,7 @@ git-repository-url = "https://github.com/DeFiCh/handbook/tree/main/"
 edit-url-template = "https://github.com/DeFiCh/handbook/edit/main/{path}"
 fold.enable = true
 no-section-label = true
-additional-js = ["mermaid.min.js", "mermaid-init.js"]
+additional-js = ["scripts/mermaid.min.js", "scripts/mermaid-init.js"]
 
 [output.html.playground]
 editable = true
