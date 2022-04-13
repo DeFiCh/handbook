@@ -149,7 +149,6 @@
 <li><a href="#loans-in-defichain">Loans in DeFiChain</a></li>
 <li><a href="#main-concepts">Main concepts</a>
 <ul>
-<li><a href="#operator">Operator</a></li>
 <li><a href="#collateral">Collateral</a>
 <ul>
 <li><a href="#collateralization-ratio">Collateralization ratio</a></li>
@@ -225,7 +224,7 @@
 <p>When operating in DeFiChain it is more accurate to talk about loan tokens or dTokens instead of borrowed money as all operations regarding loans. Moreover, loan tokens are not borrowed like in traditional finance as there is no one lending the assets in the other side. Instead, loan tokens are <a href="#minting">minted</a>, this is how we call the process to create new dTokens on the blockchain.</p>
 <p>For a better understanding of dTokens please have a look at this <a href="https://blog.defichain.com/what-are-decentralised-stock-tokens-and-how-do-they-work/">blog post</a>. For now lets say, <em>borrowed money</em>=loan tokens.</p>
 <p>Continuing with the adaptation of the definition, in DeFi (Decentralized finance) there are no central authorities so we can remove any reference to banks. Again, the key part to understand here is that there is not one specific person nor entity approving or rejecting a loan, the network through consensus rules and algorithms will be in charge of providing users for their loans tokens.</p>
-<p>The last part <em>&quot;...and has to be paid back.&quot;</em> needs also some refactoring as in DeFiChain <strong>loans have no due date</strong>. In DeFiChain you <strong>don't need to payback a loan as long as your deposit's value (collaterals) covers the loan tokens + interest value</strong>. We can spot a similar behaviour in traditional finance where the bank asks for a deposit of value as a guarantee (a house, a car...) in return of a certain amount of money.</p>
+<p>The last part <em>&quot;...and has to be paid back.&quot;</em> needs also some refactoring as in DeFiChain <strong>loans have no due date</strong>. In DeFiChain loans need to be backed up by collateral tokens value. We can spot a similar behaviour in traditional finance where the bank asks for a deposit of value as a guarantee (a house, a car...) in return of a certain amount of money.</p>
 <p>Applying the changes mentioned, our definition of loan is now:</p>
 <blockquote>
 <p>An amount of loan tokens that is minted, <del>often from a bank</del>, and which value has to be backed up by collateral during the loan's life cycle.</p>
@@ -242,28 +241,6 @@
 </blockquote>
 <h1 id="3-main-concepts"><a class="header" href="#3-main-concepts">3. Main concepts</a></h1>
 <p>In this section you will find a detailed explanation of the concepts and key aspects regarding loans in DeFiChain.</p>
-<h2 id="operator"><a class="header" href="#operator">Operator</a></h2>
-<p>Loan is to be offered by operator to allow decentralized price-tracking tokens to be created by users.</p>
-<p>Before Operator model is ready, it uses only 1 default opspace and requires foundation authorization, that acts on behalf of community.</p>
-<p>Operator plays the role to decide on the following:</p>
-<ul>
-<li>Collateral tokens and their respective collateralization factors.
-<ul>
-<li>For instance, an Operator can decide to allow users to start a Vault in their <a href="../pinkpaper/operator">opspace</a> with the following collateralization factors:
-<ul>
-<li><code>DFI</code> at 100% collateralization factor</li>
-<li><code>dBTC</code> at 100% collateralization factor</li>
-<li><code>dDOGE</code> at 70% collateralization factor</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Operator is in charge of creating loan schemes, setting loan tokens (dTokens elegible for minting with loans) and collateral tokens (tokens that can be used as collaterals in a vault). Also will set global variables such as <code>LOAN_LIQUIDATION_PENALTY</code>.</p>
-<ul>
-<li><code>LOAN_LIQUIDATION_PENALTY</code>: is by default set to 0.05, for 5% liquidation penalty. This is converted into DFI upon liquidation and burned.</li>
-</ul>
-<p>We will cover the <a href="#liquidation">liquidation process</a> later in this paper.</p>
 <h2 id="collateral"><a class="header" href="#collateral">Collateral</a></h2>
 <p>Collateral is the guarantee deposited into a <a href="#vault">vault</a> that let vault owners mint dTokens in DeFiChain i.e., take a loan. This collateral will be locked in the vault until a <a href="">withdraw</a> or <a href="#closevault">closevault</a> operation succeeds.</p>
 <h3 id="collateralization-ratio"><a class="header" href="#collateralization-ratio">Collateralization ratio</a></h3>
@@ -338,7 +315,7 @@
 <p>Interest rate for loan consists of 2 parts:</p>
 <ul>
 <li>Vault interest, based on loan scheme of individual vaults.</li>
-<li>Token interest, based on loan tokens, e.g. <code>TSLA</code> token might have its own interest that is chargeable only for <code>TSLA</code> token. This can be set by the operator.</li>
+<li>Token interest, based on loan tokens, e.g. <code>TSLA</code> token might have its own interest that is chargeable only for <code>TSLA</code> token.</li>
 </ul>
 <p><a href="../fees">DeFi fees</a> are burned. Fees are typically collected in the form of the loan token repayment, and automatically swapped on DEX for DFI to be burned.</p>
 <p>For example, if a loan of 100 <code>TSLA</code> is taken out and repaid back exactly 6 months later with the APR of 2%, the user will have to repay 101 <code>TSLA</code> during redemption to regain full access of collateral in the vault.</p>
@@ -353,11 +330,11 @@
 </ul>
 <p>DeFiChain, a blockchain that's built for specifically for DeFi, enjoy the benefit of automation and can have liquidation trigger automatically on-chain. This address the above two problems.</p>
 <h3 id="liquidation-penalty"><a class="header" href="#liquidation-penalty">Liquidation penalty</a></h3>
-<p>If a vault gets liquidated then a penalty fee is charged. Default penalty is set to 5% of the total value of the minted dTokens including interest value. As we have seen in the <a href="#operator">operator</a> section, the value of <code>LOAN_LIQUIDATION_PENALTY</code> can be set to a different value.</p>
+<p>If a vault gets liquidated then a penalty fee is charged. Default penalty is set to 5% of the total value of the minted dTokens including interest value.</p>
 <h2 id="vault"><a class="header" href="#vault">Vault</a></h2>
 <p>A vault is the place where <a href="#collateral">collaterals</a> (guarantee) and loans (minted dTokens) are handled. It is also accountant of the generated interests over time.</p>
 <p>Vaults are identified by a unique <code>Id</code> on the blockchain. This <code>Id</code> is the transaction hash of the creation of the vault, meaning the return of the <a href="#createvault"><code>createvault</code></a> RPC command.
-To create an empty vault only a valid address is needed, nothing else. If a loan scheme is not set upon creation, the vault will be subscribed to the default loan scheme created by the operator.</p>
+To create an empty vault only a valid address is needed, nothing else. If a loan scheme is not set upon creation, the vault will be subscribed to the default loan scheme.</p>
 <p>There are many actions that can be made regarding vaults. The following actions can only be performed by the owner of the vault:</p>
 <ul>
 <li>Update the vault (change owner address and/or loan scheme).</li>
@@ -415,7 +392,7 @@ To create an empty vault only a valid address is needed, nothing else. If a loan
 <h2 id="auction"><a class="header" href="#auction">Auction</a></h2>
 <p>An auction is the mechanism implemented in DeFiChain to recover the dTokens that are at risk of not being backed up by collaterals in vaults. As we have seen, vaults are <a href="#over-colateralization">over-collateralized</a> so this auctions are triggered way before the dTokens are at risk of not being backed up by the value of the collaterals.</p>
 <h3 id="auction-batch"><a class="header" href="#auction-batch">Auction batch</a></h3>
-<p>The entirety of loan and collateral of a vault is put up for auction along with the <code>LOAN_LIQUIDATION_PENALTY</code> defined by the operator. As the first version of collateral auction requires bidding of the full amount, auction is automatically split into <strong>batches</strong> of around $10,000 worth each to facilitate for easier bidding.</p>
+<p>The entirety of loan and collateral of a vault is put up for auction along with the <code>LOAN_LIQUIDATION_PENALTY</code>. As the first version of collateral auction requires bidding of the full amount, auction is automatically split into <strong>batches</strong> of around $10,000 worth each to facilitate for easier bidding.</p>
 <p>A batch contains the relevant information for bidders:</p>
 <ul>
 <li>minimum bid amount of dToken</li>
@@ -482,7 +459,7 @@ To create an empty vault only a valid address is needed, nothing else. If a loan
 <ul>
 <li>
 <p><code>createloanscheme</code>:</p>
-<p>Is used to create a loan scheme. The first loan scheme created will be set as the default loan scheme in the opspace. Can only be run by operator.</p>
+<p>Is used to create a loan scheme. The first loan scheme created will be set as the default loan scheme.</p>
 <p>Arguments:</p>
 <ul>
 <li><code>mincolratio</code><span style="color: red">*</span>: e.g. 175 for 175% minimum collateralization ratio. Cannot be less than 100.</li>
@@ -499,13 +476,13 @@ To create an empty vault only a valid address is needed, nothing else. If a loan
 <ul>
 <li>
 <p><code>updateloanscheme</code>:</p>
-<p>Used to update a loan scheme. Can only be run by operator.</p>
+<p>Used to update a loan scheme.</p>
 <p>Arguments:</p>
 <ul>
 <li><code>mincolratio</code><span style="color: red">*</span>: e.g. 175 for 175% minimum collateralization ratio. Cannot be less than 100.</li>
 <li><code>interest rate</code><span style="color: red">*</span>: annual interest rate, but chargeable per block (scaled to 30-sec block). e.g. 3.5 for 3.5% interest rate. Must be &gt; 0.</li>
 <li><code>id</code><span style="color: red">*</span>: id of loan scheme that will be updated</li>
-<li><code>ACTIVATE_AFTER_BLOCK</code>: if set, this will only be activated after the set block. The purpose is to allow good operators to provide sufficient warning.</li>
+<li><code>ACTIVATE_AFTER_BLOCK</code>: if set, this will only be activated after the set block. The purpose is to allow to provide sufficient warning.</li>
 </ul>
 <p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
 <p>Example usage:</p>
@@ -518,11 +495,11 @@ defi-cli createloanscheme 150 5 LOAN150 3020 # Update only after block 3020
 <ul>
 <li>
 <p><code>destroyloanscheme</code>:</p>
-<p>Used to destroy a loan scheme. Can only be run by operator.</p>
+<p>Used to destroy a loan scheme.</p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code><span style="color: red">*</span>: the unique identifier of the loan scheme to destroy.</li>
-<li><code>ACTIVATE_AFTER_BLOCK</code>: if set, loan will be destroyed after the set block. The purpose is to allow good operators to provide sufficient warning.</li>
+<li><code>ACTIVATE_AFTER_BLOCK</code>: if set, loan will be destroyed after the set block. The purpose is to allow to provide sufficient warning.</li>
 </ul>
 <p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
 <p>Example usage:</p>
@@ -546,7 +523,7 @@ defi-cli destroyloanscheme LOAN150 3020 # Destroy only after block 3020
 <ul>
 <li>
 <p><code>setdefaultloanscheme</code>:</p>
-<p>Used to change the default loan scheme. Can only be set by operator.</p>
+<p>Used to change the default loan scheme.</p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code><span style="color: red">*</span>: the unique identifier of the new default loan scheme.</li>
@@ -615,7 +592,7 @@ defi-cli destroyloanscheme LOAN150 3020 # Destroy only after block 3020
 <ul>
 <li>
 <p><code>setloantoken</code>:</p>
-<p>Creates a loan token. Can only be performed by operator.</p>
+<p>Creates a loan token.</p>
 <p>This arguments are wrapped in a <code>metadata</code> object see the example:</p>
 <ul>
 <li><code>symbol</code><span style="color: red">*</span>: token's symbol (unique).</li>
@@ -637,7 +614,7 @@ defi-cli destroyloanscheme LOAN150 3020 # Destroy only after block 3020
 <ul>
 <li>
 <p><code>updateloantoken</code>:</p>
-<p>Updates a loan token. Can only be performed by operator.</p>
+<p>Updates a loan token.</p>
 <ul>
 <li><code>token</code><span style="color: red">*</span>: token's symbol, id or creation transaction hash.</li>
 <li><code>metadata</code><span style="color: red">*</span>: object containing the data to be updated.
@@ -776,7 +753,7 @@ defi-cli getloantoken c207f70156adb13a76d3ae08814d6735670b901079cbae5e4f1b5ca7bb
 <ul>
 <li>
 <p><code>setcollateraltoken</code>:</p>
-<p>Creates updates and destroys a collateral token. Can only be performed by operator.</p>
+<p>Creates updates and destroys a collateral token.</p>
 <p>This arguments are wrapped in a <code>metadata</code> object see the example:</p>
 <ul>
 <li><code>token</code><span style="color: red">*</span>: token's symbol or id of collateral token (unique).</li>
@@ -863,7 +840,7 @@ defi-cli getloantoken c207f70156adb13a76d3ae08814d6735670b901079cbae5e4f1b5ca7bb
 <ul>
 <li><code>ownerAddress</code><span style="color: red">*</span>: the address owning this vault. This address might be owned by the node executing the command or not, meaning, anyone can create vaults to other users.</li>
 <li><code>loanSchemeId</code>: id of the <a href="#loan-scheme">loan scheme</a> this vault is subscribed to. This defines the rules applied to this particular vault; the <a href="#interest-rate">interest rate</a> and the <a href="#minimum-collateral-ratio">minimum collateral ratio</a>.
-If omitted the vault will subscribe to the default loan scheme set by the <a href="../pinkpaper/operator">operator</a>.</li>
+If omitted the vault will subscribe to the default loan scheme.</li>
 </ul>
 <p><span style="color: #FF00AF">Return</span>: <code>vaultId</code> (transaction hash). This can be used to identify the created vault inside the blockchain.</p>
 <blockquote>
