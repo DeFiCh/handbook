@@ -42,3 +42,4 @@
   - [Releases](./drafts/releases.md)
   - [Code Conventions]()
   - [Git Conventions]()
+  - [Loans](./drafts/loans.md)
