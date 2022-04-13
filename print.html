@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Landing</a></li><li class="chapter-item "><div>Introduction</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="prelude.html">Prelude</a></li><li class="chapter-item "><div>Getting Started</div></li></ol></li><li class="chapter-item "><a href="concepts.html">Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="proto.html">Protocol and Network</a></li><li class="chapter-item "><a href="pinkpaper/index.html">Pink Paper</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pinkpaper/emission/index.html">Emission</a></li><li class="chapter-item "><a href="pinkpaper/fees/index.html">Fees</a></li><li class="chapter-item "><a href="pinkpaper/futures/index.html">Futures</a></li><li class="chapter-item "><a href="pinkpaper/governance/index.html">Governance</a></li><li class="chapter-item "><a href="pinkpaper/interchain-exchange/index.html">Interchain Exchange</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pinkpaper/interchain-exchange/fees.html">Fees</a></li></ol></li><li class="chapter-item "><a href="pinkpaper/loan/index.html">Loan</a></li><li class="chapter-item "><a href="pinkpaper/operator/index.html">Operator</a></li><li class="chapter-item "><a href="pinkpaper/price-oracle/index.html">Price Oracle</a></li></ol></li></ol></li><li class="chapter-item "><div>DFIPS</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dfips/2203.html">DFIP 2203</a></li></ol></li><li class="chapter-item "><a href="guides.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="defid.html">Using defid - The Reference Node</a></li><li class="chapter-item "><a href="node/wallet.html">Using a Wallet</a></li></ol></li><li class="chapter-item "><a href="concepts.html">References</a></li><li class="chapter-item "><div>Ecosystem</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Wallets</div></li></ol></li><li class="chapter-item "><div>Resources</div></li><li class="chapter-item "><div>Drafts</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="drafts/releases.html">Releases</a></li><li class="chapter-item "><div>Code Conventions</div></li><li class="chapter-item "><div>Git Conventions</div></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Landing</a></li><li class="chapter-item "><div>Introduction</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="prelude.html">Prelude</a></li><li class="chapter-item "><div>Getting Started</div></li></ol></li><li class="chapter-item "><a href="concepts.html">Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="proto.html">Protocol and Network</a></li><li class="chapter-item "><a href="pinkpaper/index.html">Pink Paper</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pinkpaper/emission/index.html">Emission</a></li><li class="chapter-item "><a href="pinkpaper/fees/index.html">Fees</a></li><li class="chapter-item "><a href="pinkpaper/futures/index.html">Futures</a></li><li class="chapter-item "><a href="pinkpaper/governance/index.html">Governance</a></li><li class="chapter-item "><a href="pinkpaper/interchain-exchange/index.html">Interchain Exchange</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pinkpaper/interchain-exchange/fees.html">Fees</a></li></ol></li><li class="chapter-item "><a href="pinkpaper/loan/index.html">Loan</a></li><li class="chapter-item "><a href="pinkpaper/operator/index.html">Operator</a></li><li class="chapter-item "><a href="pinkpaper/price-oracle/index.html">Price Oracle</a></li></ol></li></ol></li><li class="chapter-item "><div>DFIPS</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dfips/2203.html">DFIP 2203</a></li></ol></li><li class="chapter-item "><a href="guides.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="defid.html">Using defid - The Reference Node</a></li><li class="chapter-item "><a href="node/wallet.html">Using a Wallet</a></li></ol></li><li class="chapter-item "><a href="concepts.html">References</a></li><li class="chapter-item "><div>Ecosystem</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Wallets</div></li></ol></li><li class="chapter-item "><div>Resources</div></li><li class="chapter-item "><div>Drafts</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="drafts/releases.html">Releases</a></li><li class="chapter-item "><div>Code Conventions</div></li><li class="chapter-item "><div>Git Conventions</div></li><li class="chapter-item "><a href="drafts/loans.html">Loans</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -1601,6 +1601,1311 @@ Windows: <code>defid.exe</code></p>
 <p>Your wallet is <strong>not encrypted by default</strong>. This means that anyone with physical access to your computer or wallet file will be able to access your funds. For any wallets with real DFI or dTokens, make use of the <code>encryptwallet</code> command to encrypt your wallet, and use <code>walletlock</code> lock your wallet with a password and prevent hackers from accessing your funds.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="concepts-2"><a class="header" href="#concepts-2">Concepts</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="releases"><a class="header" href="#releases">Releases</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="loans"><a class="header" href="#loans">Loans</a></h1>
+<h1 id="table-of-contents"><a class="header" href="#table-of-contents">Table of contents</a></h1>
+<ol>
+<li><a href="drafts/loans.html#introduction">Introduction</a></li>
+<li><a href="drafts/loans.html#loans-in-defichain">Loans in DeFiChain</a></li>
+<li><a href="drafts/loans.html#main-concepts">Main concepts</a>
+<ul>
+<li><a href="drafts/loans.html#operator">Operator</a></li>
+<li><a href="drafts/loans.html#collateral">Collateral</a>
+<ul>
+<li><a href="drafts/loans.html#collateralization-ratio">Collateralization ratio</a></li>
+<li><a href="drafts/loans.html#over-collateralization">Over-collateralization</a></li>
+<li><a href="drafts/loans.html#collateralization-factor">Collateralization factor</a></li>
+</ul>
+</li>
+<li><a href="drafts/loans.html#minting">Minting</a></li>
+<li><a href="drafts/loans.html#loan-scheme">Loan scheme</a>
+<ul>
+<li><a href="drafts/loans.html#minimum-collateralization-ratio">Minimum collateralization ratio</a></li>
+<li><a href="drafts/loans.html#interest-rate">Interest rate</a></li>
+</ul>
+</li>
+<li><a href="drafts/loans.html#price-and-fixed-interval-price">Price and Fixed Interval Price</a></li>
+<li><a href="drafts/loans.html#liquidation">Liquidation</a>
+<ul>
+<li><a href="drafts/loans.html#liquidation-penalty">Liquidation penalty</a></li>
+</ul>
+</li>
+<li><a href="drafts/loans.html#vault">Vault</a>
+<ul>
+<li><a href="drafts/loans.html#vault-state">Vault state</a></li>
+<li><a href="drafts/loans.html#50-rule">50% rule</a></li>
+</ul>
+</li>
+<li><a href="drafts/loans.html#auction">Auction</a>
+<ul>
+<li><a href="drafts/loans.html#auction">Auction batch</a></li>
+<li><a href="drafts/loans.html#example">Example</a></li>
+<li><a href="drafts/loans.html#collateral-auction-example">Collateral auction example</a></li>
+<li><a href="drafts/loans.html#failed-auction">Failed auction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="drafts/loans.html#rpc">RPC</a>
+<ul>
+<li><a href="drafts/loans.html#loan-scheme-rpcs">Loan scheme RPCs</a></li>
+<li><a href="drafts/loans.html#loan-tokens-rpcs">Loan tokens RPCs</a></li>
+<li><a href="drafts/loans.html#collateral-tokens-rpcs">Collateral tokens RPCs</a></li>
+<li><a href="drafts/loans.html#vault-rpcs">Vault RPCs</a></li>
+<li><a href="drafts/loans.html#auction-rpcs">Auction RPCs</a></li>
+<li><a href="drafts/loans.html#helper-rpcs">Helper RPCs</a></li>
+</ul>
+</li>
+</ol>
+<h1 id="1-introduction"><a class="header" href="#1-introduction">1. Introduction</a></h1>
+<p>In this document we will try to understand how loans work inside DeFiChain and how they differ from traditional lending services in CeFi (Centralized Finance).</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>We will be speaking a lot about <strong>amount</strong> and <strong>value</strong> when talking about dTokens, collaterals, loans and interests. It is important to make clear the difference between both.</p>
+<p>Amount is the quantity of the referred asset and value is the conversion to $ taken from the oracles.</p>
+<p>To make this more clear lets see an example:</p>
+<blockquote>
+<p>Given 10dTSLA with each tesla priced at 100$:</p>
+<p>Amount = 10</p>
+<p>Value = 10dTSLA * 100$ = 1000$</p>
+</blockquote>
+</blockquote>
+<p>This documentation is in continuous development, feel free to open an issue or Pull Request to the <a href="https://github.com/DeFiCh/handbook">official repository</a>.</p>
+<h1 id="2-loans-in-defichain"><a class="header" href="#2-loans-in-defichain">2. Loans in DeFiChain</a></h1>
+<p>To better understand the difference between DeFiChain loans and traditional loans lets start by looking at the definition of traditional <em>loan</em> by the Cambridge Dictionary:</p>
+<blockquote>
+<blockquote>
+<p><em>Loan: An amount of money that is borrowed, often from a bank, and has to be paid back, usually together with an extra amount of money that you have to pay as a charge for borrowing</em></p>
+</blockquote>
+</blockquote>
+<p>Lets adjust this definition to fit in the DeFiChain's implementation of loans.</p>
+<blockquote>
+<p><em>&quot;an amount of money that is borrowed, often from bank, and has to be paid back...&quot;</em>.</p>
+</blockquote>
+<p>When operating in DeFiChain it is more accurate to talk about loan tokens or dTokens instead of borrowed money as all operations regarding loans. Moreover, loan tokens are not borrowed like in traditional finance as there is no one lending the assets in the other side. Instead, loan tokens are <a href="drafts/loans.html#minting">minted</a>, this is how we call the process to create new dTokens on the blockchain.</p>
+<p>For a better understanding of dTokens please have a look at this <a href="https://blog.defichain.com/what-are-decentralised-stock-tokens-and-how-do-they-work/">blog post</a>. For now lets say, <em>borrowed money</em>=loan tokens.</p>
+<p>Continuing with the adaptation of the definition, in DeFi (Decentralized finance) there are no central authorities so we can remove any reference to banks. Again, the key part to understand here is that there is not one specific person nor entity approving or rejecting a loan, the network through consensus rules and algorithms will be in charge of providing users for their loans tokens.</p>
+<p>The last part <em>&quot;...and has to be paid back.&quot;</em> needs also some refactoring as in DeFiChain <strong>loans have no due date</strong>. In DeFiChain you <strong>don't need to payback a loan as long as your deposit's value (collaterals) covers the loan tokens + interest value</strong>. We can spot a similar behaviour in traditional finance where the bank asks for a deposit of value as a guarantee (a house, a car...) in return of a certain amount of money.</p>
+<p>Applying the changes mentioned, our definition of loan is now:</p>
+<blockquote>
+<p>An amount of loan tokens that is minted, <del>often from a bank</del>, and which value has to be backed up by collateral during the loan's life cycle.</p>
+</blockquote>
+<p>The loan's life cycle ends when a loan is fully paid back, i.e. all dTokens + interests are returned to the vault.</p>
+<p>Now lets continue to the second part of the initial definition:</p>
+<blockquote>
+<p><em>&quot;...usually together with an extra amount of money that you have to pay as a charge for borrowing&quot;</em></p>
+</blockquote>
+<p>This part talks about <strong>interests</strong> and of course DeFiChain loans also generate interests. Each vault subscribes to a <a href="drafts/loans.html#loan-scheme">loan scheme</a>, this loan scheme sets the amount of interest that the minted tokens will generate. Also dTokens can be set to generate interests themselves regardless the vault they operate in. This is explained in detail in the <a href="drafts/loans.html#interests">interests</a> definition.</p>
+<p>Now we are finished with the adaptation of the definition to suit the DeFiChain implementation of loans, lets have a look at the final result:</p>
+<blockquote>
+<p>An amount of dToken that is minted and which value + interests has to be backed up by collateral during the loan's life cycle.</p>
+</blockquote>
+<h1 id="3-main-concepts"><a class="header" href="#3-main-concepts">3. Main concepts</a></h1>
+<p>In this section you will find a detailed explanation of the concepts and key aspects regarding loans in DeFiChain.</p>
+<h2 id="operator-3"><a class="header" href="#operator-3">Operator</a></h2>
+<p>Loan is to be offered by operator to allow decentralized price-tracking tokens to be created by users.</p>
+<p>Before Operator model is ready, it uses only 1 default opspace and requires foundation authorization, that acts on behalf of community.</p>
+<p>Operator plays the role to decide on the following:</p>
+<ul>
+<li>Collateral tokens and their respective collateralization factors.
+<ul>
+<li>For instance, an Operator can decide to allow users to start a Vault in their <a href="drafts/../pinkpaper/operator">opspace</a> with the following collateralization factors:
+<ul>
+<li><code>DFI</code> at 100% collateralization factor</li>
+<li><code>dBTC</code> at 100% collateralization factor</li>
+<li><code>dDOGE</code> at 70% collateralization factor</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Operator is in charge of creating loan schemes, setting loan tokens (dTokens elegible for minting with loans) and collateral tokens (tokens that can be used as collaterals in a vault). Also will set global variables such as <code>LOAN_LIQUIDATION_PENALTY</code>.</p>
+<ul>
+<li><code>LOAN_LIQUIDATION_PENALTY</code>: is by default set to 0.05, for 5% liquidation penalty. This is converted into DFI upon liquidation and burned.</li>
+</ul>
+<p>We will cover the <a href="drafts/loans.html#liquidation">liquidation process</a> later in this paper.</p>
+<h2 id="collateral"><a class="header" href="#collateral">Collateral</a></h2>
+<p>Collateral is the guarantee deposited into a <a href="drafts/loans.html#vault">vault</a> that let vault owners mint dTokens in DeFiChain i.e., take a loan. This collateral will be locked in the vault until a <a href="drafts/">withdraw</a> or <a href="drafts/loans.html#closevault">closevault</a> operation succeeds.</p>
+<h3 id="collateralization-ratio-1"><a class="header" href="#collateralization-ratio-1">Collateralization ratio</a></h3>
+<p>The collateralization ratio is the value of the deposit with respect to the value of the minted or loan tokens plus the interests.</p>
+<p>It is calculated using the following formula:</p>
+<pre><code>Collateralization ratio =
+    Total value of collateral /
+    (Total value of tokens minted + Total value interest)
+</code></pre>
+<h3 id="over-collateralization"><a class="header" href="#over-collateralization">Over-collateralization</a></h3>
+<p>Vaults follow an over-collateralization mechanism, i.e., the value of the collateral locked in a vault must be of greater value than the one of the minted dTokens + the interests. How much a vault must be over-collateralized is defined by the <a href="drafts/loans.html#minimum-collateralization-ratio">minimum collateralization ratio</a>. This is set by the <a href="drafts/loans.html#loan-scheme">loan scheme</a> the vault subscribes to.</p>
+<h3 id="collateralization-factor-1"><a class="header" href="#collateralization-factor-1">Collateralization factor</a></h3>
+<p>Assets that are accepted for collateralization could be accepted at different collateralization factors, from 0% to 100%. When an asset's collateralization factor is 100%, the entirety of the asset's value contributes to the collateralization value of the vault, however, if an asset's collateralization factor is say 50%, then only half of its value contributes to the total vault's collateral.</p>
+<p>For example if <code>DOGE</code> is accepted at 70% collateralization factor, $100 worth of <code>DOGE</code> would contribute to $70 of collateral value in a vault.</p>
+<p>This is not to be confused with <a href="drafts/loans.html#collateralization-ratio"><em>collateralization ratio</em></a>.</p>
+<h2 id="minting"><a class="header" href="#minting">Minting</a></h2>
+<p>Minting dTokens is the process by which dTokens are created in DeFiChain. dTokens in DeFiChain can be minted by creating a vault, depositing collateral and taking a loan. As vaults are over-collateralized, this process ensures that all dTokens are backed up by the collaterals locked in vaults at all times.</p>
+<p>This loaned tokens can be freely used for other purposes like adding liquidity to a pool, swaping in a liquidity pool or transfer to another address.</p>
+<h2 id="loan-scheme-2"><a class="header" href="#loan-scheme-2">Loan scheme</a></h2>
+<p>Loan schemes are structures that define the conditions vaults adhere to.</p>
+<p>A loan scheme has the following information:</p>
+<ul>
+<li>An <code>Id</code> (String) used as a unique identifier of the loan scheme.</li>
+<li>A <code>minimum collateralization ratio</code> (Natural number greater or equal to 100)</li>
+<li>An <code>interest rate</code> (positive rational number from 0-100)</li>
+</ul>
+<p>Lets see some examples of possible loan schemes:</p>
+<ul>
+<li>Id: &quot;LOAN150&quot;. Min collateralization ratio: 150%. Interest rate: 5% APR.</li>
+<li>Id: &quot;LOAN175&quot;. Min collateralization ratio: 175%. Interest rate: 3% APR.</li>
+<li>Id: &quot;LOAN200&quot;. Min collateralization ratio: 200%. Interest rate: 2% APR.</li>
+<li>Id: &quot;LOAN350&quot;. Min collateralization ratio: 350%. Interest rate: 1.5% APR.</li>
+<li>Id: &quot;LOAN500&quot;. Min collateralization ratio: 500%. Interest rate: 1% APR.</li>
+<li>Id: &quot;LOAN1000&quot;. Min collateralization ratio: 1000%. Interest rate: 0.5% APR.</li>
+</ul>
+<p>Following the above list, a vault subscribed to &quot;LOAN150&quot; would need to have always a <a href="drafts/loans.html#collateralization-ratio">collateralization ratio</a> over 150% and it's loans will generate a 5% interest per year.</p>
+<h2 id="price-and-fixed-interval-price"><a class="header" href="#price-and-fixed-interval-price">Price and fixed interval price</a></h2>
+<p>Price in DeFiChain can be found in two forms:</p>
+<ul>
+<li>DEX price: obtained by the balance inside the liquidity pools.</li>
+<li>Oracle price: retrieved from the actual asset represented by the dToken outside DeFiChain.</li>
+</ul>
+<p>Oracles are trusted services that inject this prices directly into DeFiChain. Read more about oracles <a href="drafts/../pinkpaper/price-oracle">here</a>.</p>
+<p>The important thing to understand here is that these prices are different and each is used for different purposes. For instance, when we talk about value, this is calculated with the oracle price and not with the DEX price. DEX price in the other hand is used when swapping between dTokens and DFI to burn the interests or the penalty generated by a vault being liquidated.</p>
+<h3 id="fixed-interval-price"><a class="header" href="#fixed-interval-price">Fixed Interval Price</a></h3>
+<p>Is a mechanism to provide users time to prevent the liquidation of their vaults when the price of the collateral tokens or loan tokens is unstable. This is achieved by fixing the price of the tokens each 120 blocks (~1 hour) for vault calculations.</p>
+<p>There are in reality three prices for each dToken all of them taken from the oracles:</p>
+<div id="active-price"></div>
+<ul>
+<li><code>Active price</code>: the price used for <a href="drafts/loans.html#collateralization-ratio">collateralization ratio</a> calculation.</li>
+</ul>
+<div id="current-price"></div>
+<ul>
+<li><code>Current price</code>: this is the live price of the oracle used to calculate the dTokens that can be minted within a vault at the time of taking the loan.</li>
+</ul>
+<div id="next-price"></div>
+<ul>
+<li><code>Next price</code>: the next price that will be used for calculations, i.e. the next price that will become active.</li>
+</ul>
+<div id="invalid-price"></div>
+<p>Token price feeds become invalid in the following scenarios:</p>
+<ul>
+<li>Active price and next price deviation is over 30%</li>
+<li>Active price is 0.</li>
+<li>Next price is 0.</li>
+<li>There are less than two active oracles for that price feed.</li>
+</ul>
+<h3 id="minimum-collateralization-ratio"><a class="header" href="#minimum-collateralization-ratio">Minimum collateralization ratio</a></h3>
+<p>This is one of the most important aspects to understand vaults functioning and to do a proper risk management of your loans. The minimum collateralization ratio sets a threshold that will trigger the <a href="drafts/loans.html#liquidation">liquidation</a> of a vault if crossed. Basically if <a href="drafts/loans.html#collateralization-ratio">collateralization ratio</a> falls under this number, the collaterals locked will be publicly auctioned along with a penalty fee.</p>
+<p>We will cover the liquidation process later but for now take a note to remember that <strong>you want your vault's collateralization ratio to be always over the minimum collateralization ratio.</strong></p>
+<h3 id="interest-rate-1"><a class="header" href="#interest-rate-1">Interest rate</a></h3>
+<p>Interest rate for loan consists of 2 parts:</p>
+<ul>
+<li>Vault interest, based on loan scheme of individual vaults.</li>
+<li>Token interest, based on loan tokens, e.g. <code>TSLA</code> token might have its own interest that is chargeable only for <code>TSLA</code> token. This can be set by the operator.</li>
+</ul>
+<p><a href="drafts/../fees">DeFi fees</a> are burned. Fees are typically collected in the form of the loan token repayment, and automatically swapped on DEX for DFI to be burned.</p>
+<p>For example, if a loan of 100 <code>TSLA</code> is taken out and repaid back exactly 6 months later with the APR of 2%, the user will have to repay 101 <code>TSLA</code> during redemption to regain full access of collateral in the vault.</p>
+<p>100 <code>TSLA</code> will be burned as part of the repayment process. 1 <code>TSLA</code> that forms the interest payment will be swapped on DEX for DFI. The resulting DFI will burned. All of these occur atomically as part of DeFiChain consensus.</p>
+<h2 id="liquidation-1"><a class="header" href="#liquidation-1">Liquidation</a></h2>
+<p>Liquidation starts when the <a href="drafts/loans.html#collateralization-ratio">collateralization ratio</a> of a vault falls below the <a href="drafts/loans.html#minimum-collateralization-ratio">minimum collateralization ratio</a> set by the loan scheme a vault subscribes to. Liquidation is crucial in ensuring that all loan tokens are sufficiently over-collateralized to support its price.</p>
+<p>For Turing-complete VM-based blockchain, liquidation requires the assistance of publicly run bots to trigger it, in exchange for some incentives.</p>
+<p>There are two problems with that:</p>
+<ul>
+<li>During major price movements, the network fee, or commonly known as gas price, would sky rocket due to a race by both the vault owners frantically trying to save their vaults from getting liquidated, and by the public liquidators trying to trigger liquidation.</li>
+<li>If liquidations are not triggered on time, tokens that are generated as a result of loan runs the risk of losing its values. Worse scenario would see it getting into a negative feedback loop situation creating a rapid crash of token values.</li>
+</ul>
+<p>DeFiChain, a blockchain that's built for specifically for DeFi, enjoy the benefit of automation and can have liquidation trigger automatically on-chain. This address the above two problems.</p>
+<h3 id="liquidation-penalty"><a class="header" href="#liquidation-penalty">Liquidation penalty</a></h3>
+<p>If a vault gets liquidated then a penalty fee is charged. Default penalty is set to 5% of the total value of the minted dTokens including interest value. As we have seen in the <a href="drafts/loans.html#operator">operator</a> section, the value of <code>LOAN_LIQUIDATION_PENALTY</code> can be set to a different value.</p>
+<h2 id="vault-2"><a class="header" href="#vault-2">Vault</a></h2>
+<p>A vault is the place where <a href="drafts/loans.html#collateral">collaterals</a> (guarantee) and loans (minted dTokens) are handled. It is also accountant of the generated interests over time.</p>
+<p>Vaults are identified by a unique <code>Id</code> on the blockchain. This <code>Id</code> is the transaction hash of the creation of the vault, meaning the return of the <a href="drafts/loans.html#createvault"><code>createvault</code></a> RPC command.
+To create an empty vault only a valid address is needed, nothing else. If a loan scheme is not set upon creation, the vault will be subscribed to the default loan scheme created by the operator.</p>
+<p>There are many actions that can be made regarding vaults. The following actions can only be performed by the owner of the vault:</p>
+<ul>
+<li>Update the vault (change owner address and/or loan scheme).</li>
+<li>Deposit collateral.</li>
+<li>Take a loan (mint dTokens).</li>
+<li>Withdraw collaterals from the vault.</li>
+<li>Close the vault.</li>
+</ul>
+<p>Other actions that can be performed by anyone in the blockchain:</p>
+<ul>
+<li>Create a vault.</li>
+<li>Pay back a loan.</li>
+</ul>
+<p>There are also actions that aim to retrieve vault information and help with the calculation estimation.</p>
+<p>This commands can also be run by any node in the network:</p>
+<ul>
+<li>Get a vault's current information.</li>
+<li>List a vault's history (collateral ratios, actions, value changes, states...)</li>
+<li>Estimate loan. (return the maximum amount of dToken that can be minted with the current collateral value locked in a vault)</li>
+<li>Estimate collateral. (return the minimum amount of collateral needed under a certain loan scheme to mint a given number of dTokens)</li>
+<li>Estimate vault. (give back the estimation of collateral value, loan value and ratios that a vault would have given an amount of collaterals and an amount of minted tokens)</li>
+</ul>
+<p>This is just an introduction to the several actions you can make around vaults. All this actions are translated into RPC commands and will be covered in depth in the <a href="drafts/loans.html#rpc">RPC section</a> of this paper.</p>
+<h3 id="vault-state"><a class="header" href="#vault-state">Vault state</a></h3>
+<p>Depending on the <a href="drafts/loans.html#fixed-interval-price">status of the dTokens</a> and the balance between the assets in a vault (collaterals, loans and interests), the vault will be subject to enter different states:</p>
+<ul>
+<li><code>active</code>: <a href="drafts/loans.html#collateralization-ratio">collateralization ratio</a> is over the <a href="drafts/loans.html#minimum-collateralization-ratio">minimum collateralization ratio</a> and both collaterals and loans price feeds are valid.</li>
+<li><code>frozen</code>: collateral or loan price feed is <a href="drafts/loans.html#invalid-price">invalid</a>.</li>
+<li><code>inLiquidation</code>: <a href="drafts/loans.html#collateralization-ratio">collateralization ratio</a> is below the <a href="drafts/loans.html#minimum-collateralization-ratio">minimum collateralization ratio</a> thus vault is under liquidation and has undergoing auctions. When a vault enters in liquidation state, it can no longer be used until all the loan amount is repaid, only then the vault will be reopened. Interest accrual is also stopped during liquidation process.</li>
+<li><code>mayLiquidate</code> : <a href="drafts/loans.html#collateralization-ratio">collateralization ratio</a> calculated with <a href="drafts/loans.html#next-price">next price</a> is below <a href="drafts/loans.html#minimum-collateralization-ratio">minimum collateralization ratio</a>, meaning the vault will liquidate at the next price update unless loan is paid back or collateral deposited.</li>
+</ul>
+<p>Every time an action in the vault is triggered, the state is checked to allow or deny the execution of the action. This table represents the action/state relation:</p>
+<table><thead><tr><th>Action/State</th><th>Active</th><th>Frozen</th><th>InLiquidation</th><th>MayLiquidate</th></tr></thead><tbody>
+<tr><td>Update</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td></tr>
+<tr><td>Take loan</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td></tr>
+<tr><td>Withdraw collateral</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td></tr>
+<tr><td>Close</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>Deposit collateral</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
+<tr><td>Loan payback</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td></tr>
+</tbody></table>
+<p>*All other actions can occur regardless the state of the vault.</p>
+<p>Now as you can see in the table nothing can be done once a vault enters the <code>inLiquidation</code> state, so what happens when a vault gets liquidated? DeFiChain starts the liquidation process and a public auction takes place.</p>
+<p>We will explore the details of these auctions in the next section.</p>
+<h3 id="50-rule"><a class="header" href="#50-rule">50% rule</a></h3>
+<p>This rule applies to vaults and particularly to collaterals. The rule states:</p>
+<blockquote>
+<blockquote>
+<p>At least 50% of the minimum required collateral must be in <code>DFI</code> or/and <code>DUSD</code>.</p>
+</blockquote>
+</blockquote>
+<h4 id="example-1"><a class="header" href="#example-1">Example</a></h4>
+<p>Having a vault which has a <a href="drafts/loans.html#minimum-collateralization-ratio">minimum collateralization ratio</a> of 100%. This means the minimum collateral needed would be equal to the value of the loan taken. i.e. If we have 1000$ of dTSLA we would need a minimum of 1000$ of collateral.</p>
+<p>Following with the example, this rule forces the vault owner to have at least 50% of the 1000$ collateral either in DFI, DUSD or the sum of both. For instance, having 1000$ of dBTC as collateral would break this rule, we would need at least 500$ (DUSD+DFI) and 500$ in dBTC as collateral.</p>
+<p>This rule only affects <code>takeloan</code> action. This means no loan can be taken in a vault that breaks the <code>50% rule</code>.</p>
+<h2 id="auction-1"><a class="header" href="#auction-1">Auction</a></h2>
+<p>An auction is the mechanism implemented in DeFiChain to recover the dTokens that are at risk of not being backed up by collaterals in vaults. As we have seen, vaults are <a href="drafts/loans.html#over-colateralization">over-collateralized</a> so this auctions are triggered way before the dTokens are at risk of not being backed up by the value of the collaterals.</p>
+<h3 id="auction-batch"><a class="header" href="#auction-batch">Auction batch</a></h3>
+<p>The entirety of loan and collateral of a vault is put up for auction along with the <code>LOAN_LIQUIDATION_PENALTY</code> defined by the operator. As the first version of collateral auction requires bidding of the full amount, auction is automatically split into <strong>batches</strong> of around $10,000 worth each to facilitate for easier bidding.</p>
+<p>A batch contains the relevant information for bidders:</p>
+<ul>
+<li>minimum bid amount of dToken</li>
+<li>amount of collaterals that the winner of the auction will receive.</li>
+</ul>
+<p>Batches may contain multiple collateral tokens, but not more than one loan token.</p>
+<p>For instance, a liquidating vault that consists of the following:</p>
+<ul>
+<li>Collateral: 1 dBTC &amp; 100 DFI</li>
+<li>Loan: $10k worth of DUSD * $40k worth TSLA</li>
+</ul>
+<p>would be liquidated as follows:</p>
+<ul>
+<li>(0.2 dBTC &amp; 20 DFI) for $10k worth of DUSD</li>
+<li>(0.8 dBTC &amp; 80 DFI) for $40k worth of dTSLA</li>
+</ul>
+<p>and further split into $10k batches.</p>
+<h3 id="example-2"><a class="header" href="#example-2">Example</a></h3>
+<p>A vault, that requires a minimum of 150% collateralization ratio contains $15,000 worth of collateral, which consists of $10,000 worth of DFI and $5,000 worth of dBTC, and the total loan, inclusive of interest, is $11,000 worth.</p>
+<ul>
+<li>Collateral: $10,000 DFI + $5,000 dBTC</li>
+<li>Loan: $10,000 <code>dTSLA</code> + $1,000 interest (<code>dTSLA</code>)</li>
+</ul>
+<p>Collateralization ratio = 15k / 11k = 136.36% less than the required 150%. Liquidation is triggered automatically by consensus. Auction will be initiated with the intention to liquidate $15k of collateral to recover $11k of loan.</p>
+<p>Liquidation penalty is defined as <code>LOAN_LIQUIDATION_PENALTY</code>. The amount to be recovered should also include the penalty. If <code>LOAN_LIQUIDATION_PENALTY</code> is 0.05, the total amount to be recovered is thus $11k * 1.05 = $11,550</p>
+<p>Total collateral worth is $15k, it will thus be split into 2 batches, each not exceeding $10k:</p>
+<ol>
+<li>2/3 of the whole vault, worth $10k of collateral.</li>
+<li>1/3 of the whole vault, worth $5k of collateral.</li>
+</ol>
+<p>Specifically the following:</p>
+<ol>
+<li>($6,667 DFI and $3,333 dBTC) for $7,700 <code>dTSLA</code></li>
+<li>($3,333 DFI and $1,667 dBTC) for $3,850 <code>dTSLA</code></li>
+</ol>
+<p><code>dTSLA</code> recovered at the conclusion of the auction will be paid back to the vault. Once all loan is repaid, vault will exit liquidation state, allowing its owner to continue to use it. It will, however, not terminate all opened auctions. Opened auctions see through to their conclusion.</p>
+<h2 id="collateral-auction-example"><a class="header" href="#collateral-auction-example">Collateral auction example</a></h2>
+<p>Collateral auction will run for 720 blocks (approximately 6 hours) with the starting price based on liquidation vault's ratio.</p>
+<p>Using the same illustration, Auction 1: ($6,667 DFI and $3,333 dBTC) for $7,700 <code>dTSLA</code></p>
+<p>Anyone can participate in the auction, including the vault owner by bidding for the entirety of the auction with higher amount. To prevent unnecessary auction sniping at closing blocks, each higher bid, except the first one, has to be at least 1% higher than previous bid.</p>
+<p>A user could bid for the same auction by offering $7,800 worth of <code>dTSLA</code> tokens. During bidding, the bid is locked and refunded immediately when outbid. Top bid is not cancelable.</p>
+<p>At the conclusion of the auction, the entirety of the for sale collateral will be transferred to the winner – in this case the winner would be paying $7,800 for $10,000 worth of BTC and DFI.</p>
+<p>$7,800 worth of <code>dTSLA</code> token will be processed as follow:</p>
+<ul>
+<li>Paid back to vault = $7,800 worth of <code>dTSLA</code> / (1 + <code>LOAN_LIQUIDATION_PENALTY</code>) = 7800 / 1.05 = $7,428.57 <code>dTSLA</code> token</li>
+<li>The remaining, i.e. liquidation penalty, will be swapped to DFI and burned. $371.43 worth of <code>dTSLA</code> be swapped as follows and  trackably burned:
+<ol>
+<li><code>dTSLA</code> to <code>DUSD</code> from <code>dTSLA-DUSD</code> DEX.</li>
+<li><code>DUSD</code> to <code>DFI</code> from <code>DUSD-DFI</code> DEX.</li>
+</ol>
+</li>
+</ul>
+<p>If auctions yield more <code>dTSLA</code> than the vault's loan, it will be deposited back to the vault as part of vault's asset, but not collateral. It can be withdrawn from the vault after vault exits liquidation state by vault's owner and carries no interest.</p>
+<h2 id="failed-auction-1"><a class="header" href="#failed-auction-1">Failed auction</a></h2>
+<p>Auction that expires after 720 blocks without bids will be reopened immediately based on the remaining amount of collateral and loan that the vault receives due to conclusion of other auction batches.</p>
+<h1 id="rpc-3"><a class="header" href="#rpc-3">RPC</a></h1>
+<p>Now we will go through all the different RPCs implemented in DeFiChain to handle loans.</p>
+<blockquote>
+<p>Note: In this section a red asterisk <span style="color: red">*</span> means the parameter is required. If no asterisk is present the argument will then be optional.</p>
+</blockquote>
+<div id="loan-scheme-rpcs"></div>
+<h2 id="loan-scheme-rpcs"><a class="header" href="#loan-scheme-rpcs">Loan scheme RPCs</a></h2>
+<div id="createloanscheme"></div>
+<ul>
+<li>
+<p><code>createloanscheme</code>:</p>
+<p>Is used to create a loan scheme. The first loan scheme created will be set as the default loan scheme in the opspace. Can only be run by operator.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>mincolratio</code><span style="color: red">*</span>: e.g. 175 for 175% minimum collateralization ratio. Cannot be less than 100.</li>
+<li><code>interest rate</code><span style="color: red">*</span>: annual interest rate, but chargeable per block (scaled to 30-sec block). e.g. 3.5 for 3.5% interest rate. Must be &gt; 0.</li>
+<li><code>id</code><span style="color: red">*</span>: non-colliding scheme ID that's unique within opspace, e.g. MIN_175</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli createloanscheme 150 5 LOAN150 # mincolratio 150%, interest rate 5%, id &quot;LOAN150&quot;
+</code></pre>
+</li>
+</ul>
+<div id="updateloanscheme"></div>
+<ul>
+<li>
+<p><code>updateloanscheme</code>:</p>
+<p>Used to update a loan scheme. Can only be run by operator.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>mincolratio</code><span style="color: red">*</span>: e.g. 175 for 175% minimum collateralization ratio. Cannot be less than 100.</li>
+<li><code>interest rate</code><span style="color: red">*</span>: annual interest rate, but chargeable per block (scaled to 30-sec block). e.g. 3.5 for 3.5% interest rate. Must be &gt; 0.</li>
+<li><code>id</code><span style="color: red">*</span>: id of loan scheme that will be updated</li>
+<li><code>ACTIVATE_AFTER_BLOCK</code>: if set, this will only be activated after the set block. The purpose is to allow good operators to provide sufficient warning.</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli createloanscheme 150 5 LOAN150
+defi-cli createloanscheme 150 5 LOAN150 3020 # Update only after block 3020
+</code></pre>
+</li>
+</ul>
+<div id="destroyloanscheme"></div>
+<ul>
+<li>
+<p><code>destroyloanscheme</code>:</p>
+<p>Used to destroy a loan scheme. Can only be run by operator.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code><span style="color: red">*</span>: the unique identifier of the loan scheme to destroy.</li>
+<li><code>ACTIVATE_AFTER_BLOCK</code>: if set, loan will be destroyed after the set block. The purpose is to allow good operators to provide sufficient warning.</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli destroyloanscheme LOAN150
+defi-cli destroyloanscheme LOAN150 3020 # Destroy only after block 3020
+</code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<ul>
+<li>
+<p>All vaults under this loan scheme will be moved to the default loan scheme after destruction.</p>
+</li>
+<li>
+<p>Default loan scheme cannot be destroyed.</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<div id="setdefaultloanscheme"></div>
+<ul>
+<li>
+<p><code>setdefaultloanscheme</code>:</p>
+<p>Used to change the default loan scheme. Can only be set by operator.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code><span style="color: red">*</span>: the unique identifier of the new default loan scheme.</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli setdefaultloanscheme LOAN150
+</code></pre>
+</li>
+</ul>
+<div id="getloanscheme"></div>
+<ul>
+<li>
+<p><code>getloanscheme</code>:</p>
+<p>Get loan scheme information.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code><span style="color: red">*</span>: unique identifier of a loan scheme.</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">{
+  &quot;id&quot;: &quot;C150&quot;,
+  &quot;mincolratio&quot;: 150,
+  &quot;interestrate&quot;: 5.00000000,
+  &quot;default&quot;: true
+}
+</code></pre>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli getloanscheme C150
+</code></pre>
+</li>
+</ul>
+<div id="listloanschemes"></div>
+<ul>
+<li>
+<p><code>listloanschemes</code>:</p>
+<p>Retrieve the list of all loan schemes. This command receives no arguments.</p>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">[
+      {
+        &quot;id&quot;: &quot;C150&quot;,
+        &quot;mincolratio&quot;: 150,
+        &quot;interestrate&quot;: 5.00000000,
+        &quot;default&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;C175&quot;,
+        &quot;mincolratio&quot;: 175,
+        &quot;interestrate&quot;: 3.00000000,
+        &quot;default&quot;: false
+      },
+      .
+      .
+      .
+]
+</code></pre>
+<p>If there are no loan schemes an empty list is returned []</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli listloanschemes
+</code></pre>
+</li>
+</ul>
+<div id="loan-tokens-rpcs"></div>
+<h2 id="loan-tokens-rpcs"><a class="header" href="#loan-tokens-rpcs">Loan tokens RPCs</a></h2>
+<div id="setloantoken"></div>
+<ul>
+<li>
+<p><code>setloantoken</code>:</p>
+<p>Creates a loan token. Can only be performed by operator.</p>
+<p>This arguments are wrapped in a <code>metadata</code> object see the example:</p>
+<ul>
+<li><code>symbol</code><span style="color: red">*</span>: token's symbol (unique).</li>
+<li><code>fixedIntervalPriceId</code><span style="color: red">*</span>: the id of the price feed to track tokens price</li>
+<li><code>name</code>: token's name. Default is set to an empty string.</li>
+<li><code>mintble</code>: token's mintable property. Defaults to True.</li>
+<li><code>interest</code>: annual interest rate, but chargeable per block (scaled to 30-sec block). e.g. 3.5 for 3.5% interest rate. Must be &gt; 0. Defaults to 0.</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli setloantoken {&quot;symbol&quot;:&quot;TSLA&quot;, \
+                    &quot;name&quot;:&quot;TSLA stock token&quot;, \
+                    &quot;fixedIntervalPriceId&quot;:&quot;TSLA/USD&quot;, \
+                    &quot;interest&quot;:&quot;3&quot;}
+</code></pre>
+</li>
+</ul>
+<div id="updateloantoken"></div>
+<ul>
+<li>
+<p><code>updateloantoken</code>:</p>
+<p>Updates a loan token. Can only be performed by operator.</p>
+<ul>
+<li><code>token</code><span style="color: red">*</span>: token's symbol, id or creation transaction hash.</li>
+<li><code>metadata</code><span style="color: red">*</span>: object containing the data to be updated.
+<ul>
+<li><code>symbol</code>: token's symbol (unique).</li>
+<li><code>fixedIntervalPriceId</code>: the id of the price feed to track tokens price</li>
+<li><code>name</code>: token's name. Default is set to an empty string.</li>
+<li><code>mintble</code>: token's mintable property. Defaults to True.</li>
+<li><code>interest</code>: annual interest rate, but chargeable per block (scaled to 30-sec block). e.g. 3.5 for 3.5% interest rate. Must be &gt; 0. Defaults to 0.</li>
+</ul>
+</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli updateloantoken TSLA {&quot;symbol&quot;:&quot;NEWTSLA&quot;, \
+                            &quot;name&quot;:&quot;NEWTSLA stock token&quot;, \
+                            &quot;fixedIntervalPriceId&quot;:&quot;NEWTSLA/USD&quot;, \
+                            &quot;interest&quot;:&quot;1&quot;}
+</code></pre>
+</li>
+</ul>
+<div id="getloantoken"></div>
+<ul>
+<li>
+<p><code>getloantoken</code>:</p>
+<p>Get relevant information about a loan token.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>token</code><span style="color: red">*</span>: token's symbol, id or creation transaction hash.</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: There are only two attributes differencing a token from a loan token: <code>interest</code> and <code>fixedIntervalPricedId</code> which is for tracking tokens oracle price. Lets see an example of real return for a loan token:</p>
+<pre><code class="language-bash">{
+    &quot;token&quot;: {
+        &quot;19&quot;: {
+            &quot;symbol&quot;: &quot;TSLA&quot;,
+            &quot;symbolKey&quot;: &quot;TSLA&quot;,
+            &quot;name&quot;: &quot;TSLA&quot;,
+            &quot;decimal&quot;: 8,
+            &quot;limit&quot;: 0,
+            &quot;mintable&quot;: true,
+            &quot;tradeable&quot;: true,
+            &quot;isDAT&quot;: true,
+            &quot;isLPS&quot;: false,
+            &quot;finalized&quot;: false,
+            &quot;isLoanToken&quot;: true,
+            &quot;minted&quot;: 40018.13292270,
+            &quot;creationTx&quot;: &quot;ea485478eb87885cd083faf0dfacd9253d9f15d9bdc016ebacb50becb47e4ce6&quot;,
+            &quot;creationHeight&quot;: 686335,
+            &quot;destructionTx&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+            &quot;destructionHeight&quot;: -1,
+            &quot;collateralAddress&quot;: &quot;7Q2nZCcKnxiRiHSNQtLB27RA5efxm2cE7w&quot;
+        }
+    },
+    &quot;fixedIntervalPriceId&quot;: &quot;TSLA/USD&quot;,
+    &quot;interest&quot;: 6.00000000
+}
+</code></pre>
+<p>If loan token is not found an empty object is returned {}</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli getloantoken TSLA # symbol
+defi-cli getloantoken 0    # token id
+defi-cli getloantoken c207f70156adb13a76d3ae08814d6735670b901079cbae5e4f1b5ca7bb9e2573 # tx creation hash
+</code></pre>
+</li>
+</ul>
+<div id="listloantokens"></div>
+<ul>
+<li>
+<p><code>listloantokens</code>:</p>
+<p>Retrieve the list of all loan tokens. This command receives no arguments.</p>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">[
+      {
+            &quot;token&quot;: {
+                  &quot;10&quot;: {
+                    &quot;symbol&quot;: &quot;TWTR&quot;,
+                    &quot;symbolKey&quot;: &quot;TWTR&quot;,
+                    &quot;name&quot;: &quot;TWTR&quot;,
+                    &quot;decimal&quot;: 8,
+                    &quot;limit&quot;: 0,
+                    &quot;mintable&quot;: true,
+                    &quot;tradeable&quot;: true,
+                    &quot;isDAT&quot;: true,
+                    &quot;isLPS&quot;: false,
+                    &quot;finalized&quot;: false,
+                    &quot;isLoanToken&quot;: true,
+                    &quot;minted&quot;: 40492.38394616,
+                    &quot;creationTx&quot;: &quot;35113ddb109e60867d1c8a5eddcee4ee73f1f704954a89ab7d0ec12247ec2d4d&quot;,
+                    &quot;creationHeight&quot;: 686314,
+                    &quot;destructionTx&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                    &quot;destructionHeight&quot;: -1,
+                    &quot;collateralAddress&quot;: &quot;7Q2nZCcKnxiRiHSNQtLB27RA5efxm2cE7w&quot;
+                  }
+            },
+            &quot;fixedIntervalPriceId&quot;: &quot;TWTR/USD&quot;,
+            &quot;interest&quot;: 2.10000000
+      },
+      {
+            &quot;token&quot;: {
+                  &quot;11&quot;: {
+                    &quot;symbol&quot;: &quot;DUSD&quot;,
+                    &quot;symbolKey&quot;: &quot;DUSD&quot;,
+                    &quot;name&quot;: &quot;DUSD&quot;,
+                    &quot;decimal&quot;: 8,
+                    &quot;limit&quot;: 0,
+                    &quot;mintable&quot;: true,
+                    &quot;tradeable&quot;: true,
+                    &quot;isDAT&quot;: true,
+                    &quot;isLPS&quot;: false,
+                    &quot;finalized&quot;: false,
+                    &quot;isLoanToken&quot;: true,
+                    &quot;minted&quot;: 5177661.38853472,
+                    &quot;creationTx&quot;: &quot;cac1cd0a39e8ac2351ac68075fa651bd831eeef25b1dee005928fdbb2c431d5e&quot;,
+                    &quot;creationHeight&quot;: 686314,
+                    &quot;destructionTx&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                    &quot;destructionHeight&quot;: -1,
+                    &quot;collateralAddress&quot;: &quot;7Q2nZCcKnxiRiHSNQtLB27RA5efxm2cE7w&quot;
+                  }
+            },
+            &quot;fixedIntervalPriceId&quot;: &quot;DUSD/USD&quot;,
+            &quot;interest&quot;: 1.00000000
+      },
+      .
+      .
+      .
+]
+</code></pre>
+<p>If there are no loan tokens an empty list is returned []</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli listloantokens
+</code></pre>
+</li>
+</ul>
+<h2 id="collateral-tokens-rpcs"><a class="header" href="#collateral-tokens-rpcs">Collateral tokens RPCs</a></h2>
+<div id="setcollateraltoken"></div>
+<ul>
+<li>
+<p><code>setcollateraltoken</code>:</p>
+<p>Creates updates and destroys a collateral token. Can only be performed by operator.</p>
+<p>This arguments are wrapped in a <code>metadata</code> object see the example:</p>
+<ul>
+<li><code>token</code><span style="color: red">*</span>: token's symbol or id of collateral token (unique).</li>
+<li><code>factor</code><span style="color: red">*</span>: collateral factor.</li>
+<li><code>fixedIntervalPriceId</code><span style="color: red">*</span>: token/currency pair to use for price of token.</li>
+<li><code>activeAfterBlock</code>: token will be active after block height. If not set it will be active immediately.</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli setcollateraltoken {&quot;token&quot;: &quot;TSLA&quot;, \
+                          &quot;factor&quot;: 1, \
+                          &quot;fixedIntervalPriceId&quot;: &quot;TSLA/USD&quot;, \
+                          &quot;activeAfterBlock&quot;: 3020}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>This same command can be used to update an existing collateral token.</p>
+<p>To destroy a collateral token just set collateral factor to 0.</p>
+</blockquote>
+</li>
+</ul>
+<div id="getcollateraltoken"></div>
+<ul>
+<li>
+<p><code>getcollateraltoken</code>:</p>
+<p>Get relevant information about a collateral token.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>token</code><span style="color: red">*</span>: token's symbol e.g. DUSD, DFI...</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">{
+  &quot;token&quot;: &quot;DUSD&quot;,
+  &quot;tokenId&quot;: &quot;d9fdcb425a8e770e8689a2cb04e3891b30031b511492981446ecaf8e5d479455&quot;,
+  &quot;factor&quot;: 0.99000000,
+  &quot;fixedIntervalPriceId&quot;: &quot;DUSD/USD&quot;,
+  &quot;activateAfterBlock&quot;: 854986
+}
+</code></pre>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli getcollateraltoken BTC
+</code></pre>
+</li>
+</ul>
+<div id="listcollateraltokens"></div>
+<ul>
+<li>
+<p><code>listcollateraltokens</code>:</p>
+<p>Retrieve the list of all collateral tokens. This command receives no arguments.</p>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">[
+      {
+        &quot;token&quot;: &quot;DFI&quot;,
+        &quot;tokenId&quot;: &quot;897dcc7567cd883d9e77e06ee786856db3708c27b75da936e55072fc5300ba89&quot;,
+        &quot;factor&quot;: 1.00000000,
+        &quot;fixedIntervalPriceId&quot;: &quot;DFI/USD&quot;,
+        &quot;activateAfterBlock&quot;: 686335
+      },
+      {
+        &quot;token&quot;: &quot;BTC&quot;,
+        &quot;tokenId&quot;: &quot;7705ba258dc7c2a7fb8a8e55d65726d83fbeadcabd9b857f29527dbe4da46f99&quot;,
+        &quot;factor&quot;: 1.00000000,
+        &quot;fixedIntervalPriceId&quot;: &quot;BTC/USD&quot;,
+        &quot;activateAfterBlock&quot;: 686308
+      },
+      .
+      .
+      .
+]
+</code></pre>
+<p>If there are no collateral tokens an empty list is returned []</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli listcollateraltokens
+</code></pre>
+</li>
+</ul>
+<h2 id="vault-rpcs"><a class="header" href="#vault-rpcs">Vault RPCs</a></h2>
+<div id="createvault"></div>
+<ul>
+<li>
+<p><code>createvault</code>:</p>
+<p>Is used to create an empty vault.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>ownerAddress</code><span style="color: red">*</span>: the address owning this vault. This address might be owned by the node executing the command or not, meaning, anyone can create vaults to other users.</li>
+<li><code>loanSchemeId</code>: id of the <a href="drafts/loans.html#loan-scheme">loan scheme</a> this vault is subscribed to. This defines the rules applied to this particular vault; the <a href="drafts/loans.html#interest-rate">interest rate</a> and the <a href="drafts/loans.html#minimum-collateral-ratio">minimum collateral ratio</a>.
+If omitted the vault will subscribe to the default loan scheme set by the <a href="drafts/../pinkpaper/operator">operator</a>.</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: <code>vaultId</code> (transaction hash). This can be used to identify the created vault inside the blockchain.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>2 DFIs are charged when creating a vault:</p>
+<ul>
+<li>1 DFI will be burned.</li>
+<li>1 DFI will be added as collateral of the vault.
+This last 1 DFI will be send to the address indicated in <a href="drafts/loans.html#closevault"><code>closevault</code></a> RPC command.</li>
+</ul>
+<p>So the overall cost of creating a vault is 1 DFI.</p>
+</blockquote>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli createvault mwSDMvn1Hoc8DsoB7AkLv7nxdrf5Ja4jsF LOAN150
+defi-cli createvault mwSDMvn1Hoc8DsoB7AkLv7nxdrf5Ja4jsF #  Choose default loan scheme
+</code></pre>
+</li>
+</ul>
+<div id="updatevault"></div>
+<ul>
+<li>
+<p><code>updatevault</code>:</p>
+<p>Is used to update a vault's owner, loan scheme or both.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>vaultId</code><span style="color: red">*</span>: id of the vault to be updated</li>
+<li><code>parameters</code><span style="color: red">*</span>: object containing the attributes to be updated
+<ul>
+<li><code>ownerAddress</code>: address to which transfer the vault.</li>
+<li><code>loanSchemeId</code>: id of the <a href="drafts/loans.html#loan-scheme">loan scheme</a> this vault will be subscribed to.</li>
+</ul>
+</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<ul>
+<li>
+<p>Requires ownerAddress authentication.</p>
+</li>
+<li>
+<p>Update cannot happen while the vault is in either <code>inLiquidation</code> or <code>frozen</code> state.</p>
+</li>
+<li>
+<p>If the loan scheme is set to be destroyed in the future with <code>activateAfterBlock</code>,the update of the vault to that loan scheme will not be allowed.</p>
+</li>
+</ul>
+</blockquote>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli updatevault 84b22eee1964768304e624c416f29a91d78a01dc5e8e12db26bdac0670c67bb2 \
+                  { &quot;ownerAddress&quot;: mwSDMvn1Hoc8DsoB7AkLv7nxdrf5Ja4jsF, \
+                    &quot;loanSchemeId&quot;: &quot;LOAN150&quot; }
+</code></pre>
+</li>
+</ul>
+<div id="closevault"></div>
+<ul>
+<li>
+<p><code>closevault</code>:</p>
+<p>Is used to close an empty vault. Only vaults with no active loans can be closed by its owner.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>vaultId</code><span style="color: red">*</span>: identifier of the vault to be closed.</li>
+<li><code>to</code><span style="color: red">*</span>: address to which transfer remaining collaterals (if any).</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli closevault mwSDMvn1Hoc8DsoB7AkLv7nxdrf5Ja4jsF LOAN150
+</code></pre>
+</li>
+</ul>
+<div id="getvault"></div>
+<ul>
+<li>
+<p><code>getvault</code>:</p>
+<p>Get vault relevant information.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>vaultId</code><span style="color: red">*</span>: identifier of the vault.</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">{
+  &quot;vaultId&quot;: &quot;279e8a0dc5aa5c57baae66277d0135231934b7be7d8fcc2572ee703b6269eea5&quot;,
+  &quot;loanSchemeId&quot;: &quot;C200&quot;,
+  &quot;ownerAddress&quot;: &quot;tpsc2JrxHBEsRJ1PvXSq7pP12jDzBGydTT&quot;,
+  &quot;state&quot;: &quot;active&quot;,
+  &quot;collateralAmounts&quot;: [
+    &quot;700.00000000@DFI&quot;
+  ],
+  &quot;loanAmounts&quot;: [
+    &quot;0.51774842@TSLA&quot;
+  ],
+  &quot;interestAmounts&quot;: [
+    &quot;0.00774842@TSLA&quot;
+  ],
+  &quot;collateralValue&quot;: 2199.30307800,
+  &quot;loanValue&quot;: 505.27742871,
+  &quot;interestValue&quot;: 7.56178403,
+  &quot;informativeRatio&quot;: 435.26644038,
+  &quot;collateralRatio&quot;: 435
+}
+</code></pre>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli getvault 279e8a0dc5aa5c57baae66277d0135231934b7be7d8fcc2572ee703b6269eea5
+</code></pre>
+</li>
+</ul>
+<div id="listvaults"></div>
+<ul>
+<li>
+<p><code>listvaults</code>:</p>
+<p>Get the list of vaults on the network.</p>
+<p>Arguments:</p>
+<p>We have two optional parameters that will help with the <strong>filtering</strong> and <strong>pagination</strong> of the resulting list.</p>
+<ul>
+<li><code>options</code>: this object contains the parameters to filter the results
+<ul>
+<li><code>ownerAddress</code>: return only vaults owned by this address.</li>
+<li><code>loanSchemeId</code>: return vaults that subscribe to a specific loan scheme.</li>
+<li><code>state</code>: retrieve vaults that are currently in a specific state (active, froze, inLiquidation...)</li>
+<li><code>verbose</code>: show the full information of the vaults listed. See the example returns to see the difference. (boolean)</li>
+</ul>
+</li>
+<li><code>pagination</code>: this object contains the parameters needed for pagination purposes.
+<ul>
+<li><code>start</code>: optional first key to iterate from, in lexicographical order. Typically it's set to last ID from previous request.</li>
+<li><code>including_start</code>: if true, then iterate including starting position. False by default.</li>
+<li><code>limit</code>: maximum number of orders to return, 100 by default.</li>
+</ul>
+</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<p>Verbose parameter not set or set to false:</p>
+<pre><code class="language-bash">[
+      {
+        &quot;vaultId&quot;: &quot;d5611d2823b09eaa9c3a990ae2b372f6fa8c71cfce272c6f942d25f715732f01&quot;,
+        &quot;ownerAddress&quot;: &quot;tXu6Q9UKN4rKEHykANSMSAQ6Gowijear2i&quot;,
+        &quot;loanSchemeId&quot;: &quot;C150&quot;,
+        &quot;state&quot;: &quot;active&quot;
+      },
+      {
+        &quot;vaultId&quot;: &quot;6a63ec6a5f5fd00d1669e17ed547f54f5c561c10cfb1fadcee427688b5c34702&quot;,
+        &quot;ownerAddress&quot;: &quot;tkjZa5HmeCVzry2Tq77tFouKjm5vQ3NsY7&quot;,
+        &quot;loanSchemeId&quot;: &quot;C150&quot;,
+        &quot;state&quot;: &quot;active&quot;
+      },
+      .
+      .
+      .
+]
+</code></pre>
+<p>Verbose parameter set to true:</p>
+<pre><code class="language-bash">[
+      {
+        &quot;vaultId&quot;: &quot;d5611d2823b09eaa9c3a990ae2b372f6fa8c71cfce272c6f942d25f715732f01&quot;,
+        &quot;loanSchemeId&quot;: &quot;C150&quot;,
+        &quot;ownerAddress&quot;: &quot;tXu6Q9UKN4rKEHykANSMSAQ6Gowijear2i&quot;,
+        &quot;state&quot;: &quot;active&quot;,
+        &quot;collateralAmounts&quot;: [
+        ],
+        &quot;loanAmounts&quot;: [
+        ],
+        &quot;interestAmounts&quot;: [
+        ],
+        &quot;collateralValue&quot;: 0.00000000,
+        &quot;loanValue&quot;: 0.00000000,
+        &quot;interestValue&quot;: 0,
+        &quot;informativeRatio&quot;: -1.00000000,
+        &quot;collateralRatio&quot;: -1
+      },
+      .
+      .
+      .
+]
+</code></pre>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli listvaults
+defi-cli listvaults '{&quot;loanSchemeId&quot;: &quot;LOAN1502&quot;}'
+defi-cli listvaults '{&quot;verbose&quot;: &quot;true&quot;}'
+defi-cli listvaults '{&quot;loanSchemeId&quot;: &quot;LOAN1502&quot;}' '{&quot;start&quot;:&quot;3ef9fd5bd1d0ce94751e6286710051361e8ef8fac43cca9cb22397bf0d17e013&quot;, &quot;including_start&quot;: true, &quot;limit&quot;:100}'
+defi-cli listvaults {} '{&quot;start&quot;:&quot;3ef9fd5bd1d0ce94751e6286710051361e8ef8fac43cca9cb22397bf0d17e013&quot;, &quot;including_start&quot;: true, &quot;limit&quot;:100}'
+</code></pre>
+</li>
+</ul>
+<div id="listvaulthistory"></div>
+<ul>
+<li>
+<p><code>listvaulthistory</code>:</p>
+<p>Get the history of a vault.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>vaultId</code><span style="color: red">*</span>: identifier of the vault.</li>
+<li><code>options</code>: this object contains the parameters to filter the results.
+<ul>
+<li><code>maxBlockHeight</code>: optional height to iterate from (down to genesis block), (default = chaintip).</li>
+<li><code>depth</code>: maximum depth, from the genesis block is the default.</li>
+<li><code>token</code>: filter by token.</li>
+<li><code>txtype</code>: filter by transaction type, supported letter from {CustomTxType} e.g. &quot;CloseVault&quot;, &quot;PaybackLoan&quot;, &quot;UpdateVault&quot;</li>
+<li><code>limit</code>: maximum number of records to return, 100 by default.</li>
+</ul>
+</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">[
+      {
+          'address': 'mqYr2o5sGRkBuUm7CkWiBWkM11naYMscog',
+          'amounts': ['10.00000000@DFI'],
+          'blockHash': '29097a94dbeeac54de137eb706831062ef8296a402388fd212276d0b0d1945c3',
+          'blockHeight': 127,
+          'blockTime': 1649765301,
+          'txid': 'e6b9b0aed8a0752547e8880685db559ea0abdb3648303fa15117fe02caa459f2',
+          'txn': 1,
+          'type': 'CloseVault'
+      },
+      {
+          'address': 'mqkdzzVL36dsf9vABwWoq5iBjptS5vyUDU',
+          'amounts': ['0.50000000@DFI'],
+          'blockHash': '7c8a41660884dc28e6e59af39ac662208dabc3f61e76b7a096e9d7953bd32804',
+          'blockHeight': 126,
+          'blockTime': 1649765300,
+          'txid': 'a35ee0798c76c48da748f38b47c9abb945586473816308d06731eb352477084a',
+          'txn': 1,
+          'type': 'WithdrawFromVault'
+      },
+      {
+          'address': 'mfburnZSAM7Gs1hpDeNaMotJXSGA7edosG',
+          'amounts': ['0.00000228@DFI'],
+          'blockHash': 'fa20e13c42d2dc3243efcb96f95e2953e30974b46191da074e271077437f2197',
+          'blockHeight': 125,
+          'blockTime': 1649765299,
+          'txid': '611da4b4204eb758f215a383f5602f048cc607f06e9dcd01aca087c963dc1131',
+          'txn': 1,
+          'type': 'PaybackLoan'
+      },
+      .
+      .
+      .
+]
+</code></pre>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli listvaulthistory 84b22eee1964768304e624c416f29a91d78a01dc5e8e12db26bdac0670c67bb2 \
+                          '{&quot;maxBlockHeight&quot;:160,&quot;depth&quot;:10}'
+</code></pre>
+</li>
+</ul>
+<div id="deposittovault"></div>
+<ul>
+<li>
+<p><code>deposittovault</code>:</p>
+<p>Is used to deposit collateral tokens in a vault. Only the owner of the vault can perform this action.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>vaultId</code><span style="color: red">*</span>: identifier of the vault to which deposit the collateral amount.</li>
+<li><code>from</code><span style="color: red">*</span>: address account containing the amount of collateral.</li>
+<li><code>amount</code><span style="color: red">*</span>: amount of collateral in amount@symbol format. e.g. 1.3@dTSLA</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli deposittovault 84b22eee1964768304e624c416f29a91d78a01dc5e8e12db26bdac0670c67bb2i mwSDMvn1Hoc8DsoB7AkLv7nxdrf5Ja4jsF 1.3@dTSLA
+</code></pre>
+</li>
+</ul>
+<div id="takeloan"></div>
+<ul>
+<li>
+<p><code>takeloan</code>:</p>
+<p>Is used to take a loan (mint dTokens).</p>
+<p>All arguments are wrapped in a metadata object, see example usage:</p>
+<ul>
+<li><code>vaultId</code><span style="color: red">*</span>: identifier of the vault to which deposit the collateral amount.</li>
+<li><code>to</code>: address to transfer minted tokens. If not specified a valid address will be taken from the wallet.</li>
+<li><code>amounts</code><span style="color: red">*</span>: amount of requested tokens in amount@symbol format. e.g. 20@dTSLA</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli takeloan '{&quot;vaultId&quot;: &quot;84b22eee1964768304e624c416f29a91d78a01dc5e8e12db26bdac0670c67bb2&quot;, \
+                    &quot;amounts&quot;: &quot;10@TSLA&quot;}'
+
+defi-cli takeloan '{&quot;vaultId&quot;: &quot;84b22eee1964768304e624c416f29a91d78a01dc5e8e12db26bdac0670c67bb2&quot;, \
+                    &quot;to&quot;: &quot;mwSDMvn1Hoc8DsoB7AkLv7nxdrf5Ja4jsF&quot;, \
+                    &quot;amounts&quot;: &quot;10@TSLA&quot;}'
+</code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Remember that to be able to take a loan the vault must comply the <a href="drafts/loans.html#50-rule">50% rule</a>.</p>
+</blockquote>
+</li>
+</ul>
+<div id="paybackloan"></div>
+<ul>
+<li>
+<p><code>paybackloan</code>:</p>
+<p>Is used to payback loan tokens and interests. It does not require authentication so anyone can payback anyone's loan.</p>
+<p>All arguments are wrapped in a metadata object, see example usage:</p>
+<ul>
+<li><code>vaultId</code><span style="color: red">*</span>: identifier of the vault to which deposit the collateral amount.</li>
+<li><code>from</code><span style="color: red">*</span>: address account containing the amount of collateral.</li>
+<li><code>amounts</code><span style="color: red">**</span>: amount of collateral in amount@symbol format. e.g. 1.3@dTSLA</li>
+<li><code>loans</code><span style="color: red">**</span>: object list containing specific payment for each loan token.
+<ul>
+<li><code>dToken</code><span style="color: red">*</span>: dToken symbol to be paid.</li>
+<li><code>loans</code><span style="color: red">*</span>: amount in amount@token format that will pay for the above dToken</li>
+</ul>
+</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash"># Using amounts
+defi-cli paybackloan '{&quot;vaultId&quot;: &quot;84b22eee1964768304e624c416f29a91d78a01dc5e8e12db26bdac0670c67bb2i&quot; \
+                       &quot;from&quot;: &quot;mwSDMvn1Hoc8DsoB7AkLv7nxdrf5Ja4jsF&quot; \
+                       &quot;amounts&quot;: &quot;1.3@dTSLA&quot;}'
+
+# Using loans object list
+defi-cli paybackloan '{&quot;vaultId&quot;: &quot;84b22eee1964768304e624c416f29a91d78a01dc5e8e12db26bdac0670c67bb2i&quot; \
+                       &quot;from&quot;: mwSDMvn1Hoc8DsoB7AkLv7nxdrf5Ja4jsF \
+                       &quot;loans&quot;: [{&quot;dToken&quot;: &quot;dTSLA&quot;, &quot;amounts&quot;: &quot;1@DFI&quot;} \
+                                 {&quot;dToken&quot;: &quot;dDOGE&quot;, &quot;amounts&quot;: &quot;1@DUSD&quot;}]}'
+</code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<p><span style="color: red">**</span> Either use <code>amounts</code> or <code>loans</code> but not both at the same time.
+The use of one of this arguments is mandatory.</p>
+<p>Using the <code>loan</code> object allows a more specific way to pay back different loan tokens. If in the other hand <code>amounts</code> argument is used, the loan will be first paid back with the available DFI. If there is not enough balance, the rest of the loan will remain unpaid.</p>
+</blockquote>
+</li>
+</ul>
+<div id="withdrawfromvault"></div>
+<ul>
+<li>
+<p><code>withdrawfromvault</code>:</p>
+<p>Is used to take a loan (mint dTokens).</p>
+<p>All arguments are wrapped in a metadata object, see example usage:</p>
+<ul>
+<li><code>vaultId</code><span style="color: red">*</span>: identifier of the vault from which withdraw the collateral amount.</li>
+<li><code>to</code><span style="color: red">*</span>: address to transfer collateral tokens.</li>
+<li><code>amounts</code><span style="color: red">*</span>: amount of withdrawn tokens in amount@symbol format. e.g. 20@dTSLA</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli withdrawfromvault '{&quot;vaultId&quot;: &quot;84b22eee1964768304e624c416f29a91d78a01dc5e8e12db26bdac0670c67bb2&quot;, \
+                             &quot;to&quot;: &quot;mwSDMvn1Hoc8DsoB7AkLv7nxdrf5Ja4jsF&quot;, \
+                             &quot;amounts&quot;: &quot;14@TSLA&quot;}'
+</code></pre>
+</li>
+</ul>
+<h2 id="auction-rpcs"><a class="header" href="#auction-rpcs">Auction RPCs</a></h2>
+<div id="listauctions"></div>
+<ul>
+<li>
+<p><code>listauctions</code>:</p>
+<p>Retrieve the list of all active auctions.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>pagination</code>: this object contains the parameters needed for pagination purposes.
+<ul>
+<li><code>start</code>: object providing <code>vaultId</code> and/or <code>liquidation height</code>{}
+<ul>
+<li><code>vaultId</code>: id of the vault to start from.</li>
+<li><code>height</code>: start with auctions with <code>liquidationHeight</code> after this height</li>
+</ul>
+</li>
+<li><code>including_start</code>: if true, then iterate including starting position. False by default.</li>
+<li><code>limit</code>: maximum number of orders to return, 100 by default.</li>
+</ul>
+</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">[
+    {
+         'batchCount': 1,
+         'batches': [{'collaterals': ['100.00000000@DFI', '100.00000000@BTC'],
+                    'index': 0,
+                    'loan': '10.00004560@TSLA'}],
+         'liquidationHeight': 474,
+         'liquidationPenalty': Decimal('5.00000000'),
+         'loanSchemeId': 'LOAN0001',
+         'ownerAddress': 'mwsZw8nF7pKxWH8eoKL9tPxTpaFkz7QeLU',
+         'state': 'inLiquidation',
+         'vaultId': '415593c1803370cb83e6646357c9d28d1b890974b8f9934de2ac582272d0f027'
+    },
+    {
+         'batchCount': 1,
+         'batches': [{'collaterals': ['100.00000000@DFI', '100.00000000@BTC'],
+                      'index': 0,
+                      'loan': '10.00004560@TSLA'}],
+         'liquidationHeight': 474,
+         'liquidationPenalty': Decimal('5.00000000'),
+         'loanSchemeId': 'LOAN0001',
+         'ownerAddress': 'mwsZw8nF7pKxWH8eoKL9tPxTpaFkz7QeLU',
+         'state': 'inLiquidation',
+         'vaultId': '7db5032d699ac6696a9cc36a52b642f5785ca187c360116615d3855d0f760e61'
+    },
+    .
+    .
+    .
+]
+</code></pre>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli listauctions
+
+# With pagination
+defi-cli listauctions {&quot;start&quot;: {&quot;vaultId&quot;:&quot;eeea650e5de30b77d17e3907204d200dfa4996e5c4d48b000ae8e70078fe7542&quot;, \
+                                 &quot;height&quot;: 1000}, \
+                       &quot;including_start&quot;: true, \
+                       &quot;limit&quot;:100}
+</code></pre>
+</li>
+</ul>
+<div id="listauctionhistory"></div>
+<ul>
+<li>
+<p><code>listauctionhistory</code>:</p>
+<p>Retrieve auction history.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>owner|vaultId</code>: this parameter admits the following:
+<ul>
+<li>Single account id (CScript or address).</li>
+<li>A vaultId.</li>
+<li>One of this reserved words; <code>mine</code> - to list history for all owned accounts; <code>all</code> to list whole DB (default = <code>mine</code>).</li>
+</ul>
+</li>
+<li><code>pagination</code>: this object contains the parameters needed for pagination purposes.
+<ul>
+<li><code>maxBlockHeight</code>: height to iterate from (down to genesis block).</li>
+<li><code>vaultId</code>: show only auctions related to this vault.</li>
+<li><code>index</code>: only batches with this index will be listed.</li>
+<li><code>limit</code>: maximum number of orders to return, 100 by default.</li>
+</ul>
+</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">[
+    {
+        'auctionBid': '259.00000000@TSLA',
+        'auctionWon': ['200.00000400@DFI', '200.00000400@BTC'],
+        'batchIndex': 0,
+        'blockHash': '833f3b22f8df9b4d6d2e142790dd4a9f4e3b21b524e7f5303e5ea6396745671f',
+        'blockHeight': 506,
+        'blockTime': 1649803226,
+        'vaultId': 'd1b414827c115160ed9eed11ec0bdfa4355f339ed5d6240974eeafe8867af0c2',
+        'winner': 'mwsZw8nF7pKxWH8eoKL9tPxTpaFkz7QeLU'
+    },
+    {
+        'auctionBid': '515.00000000@TSLA',
+        'auctionWon': ['399.99999600@DFI', '399.99999600@BTC'],
+        'batchIndex': 0,
+        'blockHash': '58582b7511253f8d1be20c0fad4358141f77255b6e2fa071121ac85cfbb7cbb2',
+        'blockHeight': 469,
+        'blockTime': 1649803189,
+        'vaultId': 'd1b414827c115160ed9eed11ec0bdfa4355f339ed5d6240974eeafe8867af0c2',
+        'winner': 'mwsZw8nF7pKxWH8eoKL9tPxTpaFkz7QeLU'
+    },
+    .
+    .
+    .
+]
+</code></pre>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli listauctionhistory
+
+# With pagination
+defi-cli listauctionhistory {&quot;maxBlockHeight&quot;: 1000, \
+                             &quot;vaultId&quot;:&quot;eeea650e5de30b77d17e3907204d200dfa4996e5c4d48b000ae8e70078fe7542&quot;, \
+                             &quot;index&quot;: 1, \
+                             &quot;limit&quot;:100}
+</code></pre>
+</li>
+</ul>
+<div id="placeauctionbid"></div>
+<ul>
+<li>
+<p><code>placeauctionbid</code>:</p>
+<p>Make bid for an open auction's batch.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>vaultId</code><span style="color: red">*</span>: identifier of the vault in liquidation.</li>
+<li><code>index</code><span style="color: red">*</span>: index of the target batch in the auction.</li>
+<li><code>from</code><span style="color: red">*</span>: address to get tokens from. If set to <code>*</code> (star), an account with sufficient funds is selected from wallet.</li>
+<li><code>amounts</code><span style="color: red">*</span>: amount of bid in amount@symbol format. e.g. 20@dTSLA</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Transaction hash.</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli placeauctionbid 84b22eee1964768304e624c416f29a91d78a01dc5e8e12db26bdac0670c67bb2 \
+                         0 \ # batch index
+                         mwSDMvn1Hoc8DsoB7AkLv7nxdrf5Ja4jsF \
+                         100@TSLA
+</code></pre>
+</li>
+</ul>
+<h2 id="helper-rpcs"><a class="header" href="#helper-rpcs">Helper RPCs</a></h2>
+<div id="estimateloan"></div>
+<ul>
+<li>
+<p><code>estimateloan</code>:</p>
+<p>Returns amount of loan tokens a vault can take depending on a target collateral ratio.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>vaultId</code><span style="color: red">*</span>: identifier of the vault in liquidation.</li>
+<li><code>tokens</code><span style="color: red">*</span>: object with the loan tokens as key and their percent split as value. e.g. {&quot;dTSLA&quot;: 0.1, &quot;GOOGL&quot; 0.9}</li>
+<li><code>targetRatio</code>: target collateral ratio. (defaults to vault's loan scheme ratio)</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Array of amount@token e.g. ['1.5@TSLA', '2.2@TWTR']</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli estimateloan 84b22eee1964768304e624c416f29a91d78a01dc5e8e12db26bdac0670c67bb2 \
+                      '{&quot;TSLA&quot;:0.8, &quot;TWTR&quot;: 0.2}'
+</code></pre>
+</li>
+</ul>
+<div id="estimatecollateral"></div>
+<ul>
+<li>
+<p><code>estimatecollateral</code>:</p>
+<p>Returns amount of loan tokens a vault can take depending on a target collateral ratio.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>loanAmounts</code><span style="color: red">*</span>: loan amount for the estimation.</li>
+<li><code>targetRatio</code><span style="color: red">*</span>: target collateral ratio. (defaults to vault's loan scheme ratio)</li>
+<li><code>tokens</code>: object with the loan tokens as key and their percent split as value. e.g. {&quot;dTSLA&quot;: 0.1, &quot;GOOGL&quot; 0.9}</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>: Array of amount@token e.g. ['5@TSLA', '4.01@TWTR']</p>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli estimatecollateral 23.55311144@MSFT \
+                            150 \
+                            '{&quot;DFI&quot;: 0.8, &quot;BTC&quot;:0.2}'
+</code></pre>
+</li>
+</ul>
+<div id="estimatevault"></div>
+<ul>
+<li>
+<p><code>estimatevault</code>:</p>
+<p>Returns estimated vault for given collateral and loan amounts.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>collateralAmounts</code><span style="color: red">*</span>: collateral amount as JSON string or array e.g. [&quot;amount@token&quot;].</li>
+<li><code>loanAmounts</code><span style="color: red">*</span>: loan amount as JSON string or array e.g. [&quot;amount@token&quot;].</li>
+</ul>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">{
+    &quot;collateralValue&quot;: 3134.14508000, # in USD
+    &quot;loanValue&quot;: 1685.77665785, # in USD
+    &quot;informativeRatio&quot;: 185.91698167,
+    &quot;collateralRatio&quot;: 186
+}
+</code></pre>
+<p>Example usage:</p>
+<pre><code class="language-bash">defi-cli estimatevault '[&quot;1000.00000000@DFI&quot;]' '[&quot;0.65999990@GOOGL&quot;]'
+
+</code></pre>
+</li>
+</ul>
+<div id="getloaninfo"></div>
+<ul>
+<li>
+<p><code>getloaninfo</code>:</p>
+<p>Returns the attributes of loans offered by Operator.</p>
+<p><span style="color: #FF00AF">Return</span>:</p>
+<pre><code class="language-bash">{
+    &quot;currentPriceBlock&quot;: 928920,
+    &quot;nextPriceBlock&quot;: 929040,
+    &quot;defaults&quot;: {
+        &quot;scheme&quot;: &quot;C150&quot;,
+        &quot;maxPriceDeviationPct&quot;: 30.00000000,
+        &quot;minOraclesPerPrice&quot;: 2,
+        &quot;fixedIntervalBlocks&quot;: 120
+    },
+    &quot;totals&quot;: {
+        &quot;schemes&quot;: 6,
+        &quot;collateralTokens&quot;: 4,
+        &quot;collateralValue&quot;: 19892664.24475404,
+        &quot;loanTokens&quot;: 6,
+        &quot;loanValue&quot;: 501988.43640161,
+        &quot;openVaults&quot;: 163,
+        &quot;openAuctions&quot;: 0
+    }
+}
+</code></pre>
+<p>Example usage:</p>
+<pre><code>defi-cli getloaninfo
+</code></pre>
+</li>
+</ul>
 
                     </main>
 
