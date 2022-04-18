@@ -230,7 +230,7 @@
 <p>An amount of loan tokens that is minted, <del>often from a bank</del>, and which value has to be backed up by collateral during the loan's life cycle.</p>
 </blockquote>
 <p>The loan's life cycle ends when a loan is fully paid back, i.e. all dTokens + interests are returned to the vault.</p>
-<pre><code class="language-mermaid">graph LR;
+<pre class="mermaid">graph LR;
     id1(Create vault) --&gt; id2(Deposit collateral);
     id2 --&gt; id3(Take loan);
     subgraph Loan life cycle;
@@ -242,7 +242,7 @@
     id7 --&gt; id3;
     end;
     id7 --&gt; id8(Close vault)
-</code></pre>
+</pre>
 <p>Now lets continue to the second part of the initial definition:</p>
 <blockquote>
 <p><em>&quot;...usually together with an extra amount of money that you have to pay as a charge for borrowing&quot;</em></p>
