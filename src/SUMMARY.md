@@ -1,14 +1,14 @@
 # Summary
 
-[Landing](README.md)
+[Landing](./prelude.md)
 
 - [Introduction]()
 
-  - [Prelude](./prelude.md)
   - [Getting Started]()
 
 - [Concepts](./concepts.md)
 
+  - [Blocks and the Blockchain](./block.md)
   - [Protocol and Network](./proto.md)
   - [Pink Paper](./pinkpaper/README.md)
     - [Emission](./pinkpaper/emission/README.md)
