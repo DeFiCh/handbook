@@ -20,6 +20,28 @@ The header format of DeFiChain blocks is as follows. The implementation of the b
 | stakeModifier    | uint256               | A stake modifier is a collective source of random entropy for mining. It is equal to `SHA256({previous stake modifier}, {masternode ID}).`                                       |
 | sig              | vector<unsigned char> | Signed block header using miner's public key.                                                                                                                                    |
 
+### Hashing
+
+Similar to the Bitcoin implementation, all usage of hashes such as `CHash256` in DeFiChain are double SHA-256 hashes. Most of the time SHA-256 hashes are used, however RIPEMD-160 is also used when a shorter hash is desirable (for example when creating a DeFiChain address).
+
+Example of double-SHA-256 encoding of string "hello":
+
+```
+hello
+2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824 (first round of sha-256)
+9595c9df90075148eb06860365df33584b75bff782a510c6cd4883a419833d50 (second round of sha-256)
+```
+
+For bitcoin addresses (RIPEMD-160) this would give:
+
+```
+hello
+2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824 (first round is sha-256)
+b6a9c8c230722b7c748331a8b450f05566dc7d0f (with ripemd-160)
+```
+
+Double hashing provides protection against [length extension attacks](https://en.wikipedia.org/wiki/Length_extension_attack) and reduces collision probability.
+
 ### Merkle Trees
 
 Merkle trees are binary trees of hashes. Merkle trees in DeFiChain use a double SHA-256. Merkle trees allow us to efficiently if check a transaction is part of the block - in `O(log n)` time.
