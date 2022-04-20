@@ -4,13 +4,13 @@
 
 To slowly start building this up:
 
-- Critical docs: Concepts, Guides and References. 
+- Critical docs: Concepts, Guides and References.
   - Concepts: The internal technical detail, research and relevant topics.
   - Guides: A guide on how the features can be used from a user perspective.
-     - User: How to interact and use the node as a regular user. 
-     - Developer: How to interact on a deeper perspective as a developer. 
-     - Institution: How to interact with the node for exchanges, dealing with updates, best practices etc.
-  - References: A to-the-point reference that's used for quick references. 
+    - User: How to interact and use the node as a regular user.
+    - Developer: How to interact on a deeper perspective as a developer.
+    - Institution: How to interact with the node for exchanges, dealing with updates, best practices etc.
+  - References: A to-the-point reference that's used for quick references.
 - Standard practices for coding, git, things like how to add a new data structure, add rpc, etc
 - Testing: how to write a test and contribute (so we can welcome external contributions too), and release checks
 - Links to pink paper, external resources of all kind (a dedicated page similar to github awesome-{x} repos.
@@ -26,3 +26,7 @@ in minutes - not hours.
 - [Contributing to the handbook](https://rust-lang.github.io/mdBook/guide/creating.html)
 
 Learn about it here: [mdbook](https://rust-lang.github.io/mdBook/index.html)
+
+## Attributions
+
+Parts of this handbook were edited from the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page).

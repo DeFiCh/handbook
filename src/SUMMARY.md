@@ -1,6 +1,6 @@
 # Summary
 
-[Landing](./prelude.md)
+[Prelude](./prelude.md)
 
 - [Introduction]()
 
@@ -9,6 +9,7 @@
 - [Concepts](./concepts.md)
 
   - [Blocks and the Blockchain](./block.md)
+  - [Transactions](./transaction.md)
   - [Protocol and Network](./proto.md)
   - [Pink Paper](./pinkpaper/README.md)
     - [Emission](./pinkpaper/emission/README.md)
