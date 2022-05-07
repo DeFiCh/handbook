@@ -1,13 +1,11 @@
 # Blocks and the Blockchain
 
-The DeFiChain blockchain is a collection of interdependent blocks stored on a distributed digital ledger. Each block contains information about the block previous to it and they form a chain - with each additional block reinforcing the ones before it.
+Each DeFiChain block consists of
 
-Each block consists of
-
-- a block header: contains metadata about the block and its contents
+- a block header: contains metadata about the block and its contents and links to previous block
 - a body: contains a list of transactions in that block.
 
-Blocks and transactions are identified by their [SHA256 hashes](./glossary.md#hashing).
+Blocks are identified by their [SHA256 hashes](./glossary.md#hashing).
 
 ## Block header
 

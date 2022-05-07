@@ -6,8 +6,9 @@ Transactions
 - have inputs and outputs
 - difference between inputs and outputs is considered a _transaction fee_
 - **not** encrypted
+- identified by their [SHA256 hashes](./glossary.md#hashing)
 
-[Custom Transactions](./customtx.md) also exist to perform DeFi functions such as adding liquidity and performing swaps.
+[Custom Transactions](./customtx.md) also exist to interact with dApps such as the DeX and Loans.
 
 ## Transaction Format
 
