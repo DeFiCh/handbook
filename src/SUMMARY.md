@@ -10,6 +10,7 @@
 
   - [Blocks and the Blockchain](./block.md)
   - [Transactions](./transaction.md)
+  - [Custom Transactions](./customtx.md)
   - [Protocol and Network](./proto.md)
   - [Pink Paper](./pinkpaper/README.md)
     - [Emission](./pinkpaper/emission/README.md)
@@ -40,7 +41,12 @@
 - [Resources]()
 
 - [Drafts]()
+
   - [Releases](./drafts/releases.md)
   - [Code Conventions]()
   - [Git Conventions]()
   - [Loans](./drafts/loans.md)
+
+- [Glossary](./glossary.md)
+
+- [FAQ](./faq.md)
