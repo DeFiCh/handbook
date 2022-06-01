@@ -266,6 +266,513 @@ in minutes - not hours.</p>
 <li><a href="https://www.mycryptopedia.com/scriptpubkey-scriptsig/">scriptPubKey &amp; scriptSig Explained</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="custom-transactions"><a class="header" href="#custom-transactions">Custom Transactions</a></h1>
+<p>Custom Transactions are special transactions to interact with dApps on DeFiChain, such as Vaults and the DeX.</p>
+<p>Custom transaction can be identified by the first <code>vout</code> of a transaction</p>
+<ul>
+<li>begin with a <code>OP_RETURN</code></li>
+<li>followed by a <code>DfTx</code> marker (serialized in UTF as <code>44665478</code>)</li>
+<li>followed by one character marker denoting the type of transaction (serialized in UTF), conversion table <a href="https://github.com/DeFiCh/ain/blob/9911c9032b33576143e3ce658540978d9393bd05/src/masternodes/mn_checks.h#L37-L107">here</a></li>
+<li>followed by custom transaction data, if required</li>
+</ul>
+<p>For example, in the following custom transaction</p>
+<pre><code class="language-json">&quot;vout&quot;: [
+{
+    &quot;value&quot;: 0.00000000,
+    &quot;n&quot;: 0,
+    &quot;scriptPubKey&quot;: {
+    &quot;asm&quot;: &quot;OP_RETURN 446654784301d823ad3976574a50001f4ca5a5326a1c1232a0a70000&quot;,
+    &quot;hex&quot;: &quot;6a054466547841&quot;,
+    &quot;type&quot;: &quot;nulldata&quot;
+    },
+    &quot;tokenId&quot;: 0
+},
+...
+]
+</code></pre>
+<p>The custom transaction can be broken down to</p>
+<table><thead><tr><th>asm</th><th>Meaning</th></tr></thead><tbody>
+<tr><td>44665478</td><td>DfTx marker</td></tr>
+<tr><td>43</td><td><code>C</code> in UTF, <a href="https://github.com/DeFiCh/ain/blob/9911c9032b33576143e3ce658540978d9393bd05/src/masternodes/mn_checks.h#L43">corresponds to CreateMasternode message</a> (<a href="https://github.com/DeFiCh/ain/blob/9911c9032b33576143e3ce658540978d9393bd05/src/masternodes/mn_checks.h#L193-L209">CCreateMasterNodeMessage</a>)</td></tr>
+<tr><td>01</td><td><code>operatorType</code> variable</td></tr>
+<tr><td>d823ad3976574a50001f4ca5a5326a1c1232a0a7</td><td><code>operatorAuthAddress</code> variable</td></tr>
+<tr><td>0000</td><td><code>timelock</code> variable</td></tr>
+</tbody></table>
+<h2 id="transaction-types"><a class="header" href="#transaction-types">Transaction Types</a></h2>
+<h3 id="masternodes"><a class="header" href="#masternodes">Masternodes</a></h3>
+<h4 id="createmasternode"><a class="header" href="#createmasternode">CreateMasterNode</a></h4>
+<p>Creates a new masternode in the network</p>
+<p><em>Marker: <code>C</code></em></p>
+<h5 id="message-format"><a class="header" href="#message-format">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>operatorType</td><td>char</td><td>1 for P2PKH, 4 for P2WPKH</td></tr>
+<tr><td>operatorAuthAddress</td><td>CKeyID</td><td>DeFiChain address of masternode operator</td></tr>
+<tr><td>timelock</td><td>uint16_t</td><td>minimum time that masternode must be active, either 0, 5 or 10 years</td></tr>
+</tbody></table>
+<h4 id="resignmasternode"><a class="header" href="#resignmasternode">ResignMasternode</a></h4>
+<p>Removes enabled or pre-enabled masternode from network.</p>
+<p><em>Marker: <code>R</code></em></p>
+<h5 id="message-format-1"><a class="header" href="#message-format-1">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>nodeID</td><td>uint256</td><td>ID of masternode to resign</td></tr>
+</tbody></table>
+<h4 id="setforcedrewardaddress"><a class="header" href="#setforcedrewardaddress">SetForcedRewardAddress</a></h4>
+<p>Sets reward address for masternode.</p>
+<p><em>Marker: <code>F</code></em></p>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>nodeID</td><td>uint256</td><td>masternode ID</td></tr>
+<tr><td>rewardAddressType</td><td>char</td><td>1 for P2PKH, 4 for P2WPKH</td></tr>
+<tr><td>rewardAddress</td><td>CKeyID</td><td>new DeFiChain address for rewards</td></tr>
+</tbody></table>
+<h4 id="remforcedrewardaddress"><a class="header" href="#remforcedrewardaddress">RemForcedRewardAddress</a></h4>
+<p>Removes reward address for masternode if any.</p>
+<p><em>Marker: <code>f</code></em></p>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>nodeID</td><td>uint256</td><td>masternode ID</td></tr>
+</tbody></table>
+<h4 id="updatemasternode"><a class="header" href="#updatemasternode">UpdateMasternode</a></h4>
+<p>Updates masternode metadata.</p>
+<p><em>Marker: <code>m</code></em></p>
+<h5 id="message-format-2"><a class="header" href="#message-format-2">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>operatorType</td><td>char</td><td>1 for P2PKH, 4 for P2WPKH</td></tr>
+<tr><td>operatorAuthAddress</td><td>CKeyID</td><td>DeFiChain address of masternode operator</td></tr>
+<tr><td>timelock</td><td>uint16_t</td><td>minimum time that masternode must be active, either 0, 5 or 10 years</td></tr>
+</tbody></table>
+<h3 id="custom-tokens"><a class="header" href="#custom-tokens">Custom Tokens</a></h3>
+<h4 id="createtoken"><a class="header" href="#createtoken">CreateToken</a></h4>
+<p>Creates new custom token.</p>
+<p><em>Marker: <code>T</code></em></p>
+<h5 id="message-format-3"><a class="header" href="#message-format-3">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>token</td><td>CToken</td><td>token definition</td></tr>
+</tbody></table>
+<p>Class <code>CToken</code> has the following structure</p>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>symbol</td><td>string</td><td>token ticker</td></tr>
+<tr><td>name</td><td>string</td><td>name of token</td></tr>
+<tr><td>decimal</td><td>uint8_t</td><td>how divisible a token can be, fixed to <code>8</code></td></tr>
+<tr><td>limit</td><td>CAmount</td><td>deprecated</td></tr>
+<tr><td>flags</td><td>uint8_t</td><td>sets options for token</td></tr>
+</tbody></table>
+<p>The following flags are available for a token:</p>
+<table><thead><tr><th>Bit index</th><th>Flag</th></tr></thead><tbody>
+<tr><td>0</td><td>None</td></tr>
+<tr><td>1</td><td>Mintable</td></tr>
+<tr><td>2</td><td>Tradeable</td></tr>
+<tr><td>3</td><td>DeFi Asset Token (tokens backed by collateral, e.g. dBTC)</td></tr>
+<tr><td>4</td><td>Liquidity Pool Share</td></tr>
+<tr><td>5</td><td>Finalized</td></tr>
+<tr><td>6</td><td>Loan Token</td></tr>
+<tr><td>7</td><td>Unused</td></tr>
+</tbody></table>
+<p>Tokens are mintable and tradeable by default.</p>
+<h4 id="minttoken"><a class="header" href="#minttoken">MintToken</a></h4>
+<p>Mints new custom tokens.</p>
+<p><em>Marker: <code>M</code></em></p>
+<h5 id="message-format-4"><a class="header" href="#message-format-4">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>balances</td><td>CBalances</td><td>amount and type of token to mint</td></tr>
+</tbody></table>
+<h4 id="updatetoken"><a class="header" href="#updatetoken">UpdateToken</a></h4>
+<p>Set DAT flag for a token to true or false. <strong>Deprecated.</strong></p>
+<p><em>Marker: <code>N</code></em></p>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>tokenTx</td><td>uint256</td><td>CreateToken transaction for a custom token</td></tr>
+<tr><td>isDAT</td><td>bool</td><td>is token a DAT</td></tr>
+</tbody></table>
+<h4 id="updatetokenany"><a class="header" href="#updatetokenany">UpdateTokenAny</a></h4>
+<p>Update a token, supports all fields in CToken.</p>
+<p><em>Marker: <code>n</code></em></p>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>balances</td><td>CBalances</td><td>amount and type of token to mint</td></tr>
+</tbody></table>
+<h3 id="dex"><a class="header" href="#dex">DeX</a></h3>
+<h4 id="createpoolpair"><a class="header" href="#createpoolpair">CreatePoolPair</a></h4>
+<p>Create new liquidity pool.</p>
+<p><em>Marker: <code>p</code></em></p>
+<h5 id="message-format-5"><a class="header" href="#message-format-5">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>poolPair</td><td>CPoolPairMessage</td><td>metadata for liquidity pool</td></tr>
+<tr><td>pairSymbol</td><td>string</td><td>name of liquidity pool</td></tr>
+<tr><td>rewards</td><td>CBalances</td><td>percentage of coinbase liquidity rewards allocated to pool</td></tr>
+</tbody></table>
+<p><code>CPoolPairMessage</code> has the following message structure:</p>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>idTokenA</td><td>DCT_ID</td><td>token ID for first token in LP</td></tr>
+<tr><td>idTokenB</td><td>string</td><td>token ID for second token in LP</td></tr>
+<tr><td>commission</td><td>CAmount</td><td>define fees for swap</td></tr>
+<tr><td>ownerAddress</td><td>CScript</td><td>owner of DeX pool</td></tr>
+<tr><td>status</td><td>bool</td><td>pool status (active/inactive)</td></tr>
+</tbody></table>
+<h4 id="updatepoolpair"><a class="header" href="#updatepoolpair">UpdatePoolPair</a></h4>
+<p>Update a liquidity pool.</p>
+<p><em>Marker: <code>u</code></em></p>
+<h5 id="message-format-6"><a class="header" href="#message-format-6">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>poolId</td><td>DCT_ID</td><td>pool ID</td></tr>
+<tr><td>status</td><td>bool</td><td>set pool status (active/inactive)</td></tr>
+<tr><td>commission</td><td>CAmount</td><td>define fees for swap</td></tr>
+<tr><td>ownerAddress</td><td>CScript</td><td>owner of DeX pool</td></tr>
+<tr><td>rewards</td><td>CBalances</td><td>percentage of coinbase liquidity rewards allocated to pool P2WPKH</td></tr>
+</tbody></table>
+<h4 id="poolswap"><a class="header" href="#poolswap">PoolSwap</a></h4>
+<p>Swap tokens using a liqidity pool. <strong>Deprecated.</strong></p>
+<p><em>Marker: <code>s</code></em></p>
+<h5 id="message-format-7"><a class="header" href="#message-format-7">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>from</td><td>CScript</td><td>transaction input</td></tr>
+<tr><td>to</td><td>CScript</td><td>transaction output</td></tr>
+<tr><td>idTokenFrom</td><td>DCT_ID</td><td>input token ID</td></tr>
+<tr><td>idTokenTo</td><td>DCT_ID</td><td>output token ID</td></tr>
+<tr><td>amountFrom</td><td>CAmount</td><td>amount of tokens to swap</td></tr>
+<tr><td>maxPrice</td><td>PoolPrice</td><td>maximum possible price</td></tr>
+</tbody></table>
+<h4 id="poolswapv2"><a class="header" href="#poolswapv2">PoolSwapV2</a></h4>
+<p>Swap tokens using a liqidity pool. Has 16 digits precision instead of 8 in V1.</p>
+<p><em>Marker: <code>i</code></em></p>
+<h5 id="message-format-8"><a class="header" href="#message-format-8">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>swapInfo</td><td>CPoolSwapMessage</td><td>swap metadata (contents of V1 message)</td></tr>
+<tr><td>poolIDs</td><td>vector&lt;DCT_ID&gt;</td><td>IDs of pools to swap with</td></tr>
+</tbody></table>
+<h4 id="addpoolliquidity"><a class="header" href="#addpoolliquidity">AddPoolLiquidity</a></h4>
+<p>Mint LP tokens and add liquidity to a liquidity pool.</p>
+<p><em>Marker: <code>l</code></em></p>
+<h5 id="message-format-9"><a class="header" href="#message-format-9">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>from</td><td>CAccounts</td><td>dToken input</td></tr>
+<tr><td>shareAddress</td><td>CScript</td><td>address for LP rewards</td></tr>
+</tbody></table>
+<h4 id="removepoolliquidity"><a class="header" href="#removepoolliquidity">RemovePoolLiquidity</a></h4>
+<p>Redeem LP tokens and withdraw liquidity from a liquidity pool.</p>
+<p><em>Marker: <code>r</code></em></p>
+<h5 id="message-format-10"><a class="header" href="#message-format-10">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>from</td><td>CAccounts</td><td>LP token input</td></tr>
+<tr><td>amount</td><td>CTokenAmount</td><td>withdrawal amount</td></tr>
+</tbody></table>
+<h3 id="accounts"><a class="header" href="#accounts">Accounts</a></h3>
+<h4 id="utxostoaccount"><a class="header" href="#utxostoaccount">UtxosToAccount</a></h4>
+<p>Spend UTXOs from a wallet and transfer tokens to to any DeFiChain address.</p>
+<p><em>Marker: <code>U</code></em></p>
+<h5 id="message-format-11"><a class="header" href="#message-format-11">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>to</td><td>CAccounts</td><td>account and amount of tokens to send</td></tr>
+</tbody></table>
+<h4 id="accounttoutxos"><a class="header" href="#accounttoutxos">AccountToUtxos</a></h4>
+<p>Creates UTXO from a wallet account.</p>
+<p><em>Marker: <code>b</code></em></p>
+<h5 id="message-format-12"><a class="header" href="#message-format-12">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>from</td><td>CScript</td><td>UTXOs to spend</td></tr>
+<tr><td>balances</td><td>CBalances</td><td>amount of DFI to send</td></tr>
+<tr><td>mintingOutputsStart</td><td>uint32_t</td><td>number of transaction outputs</td></tr>
+</tbody></table>
+<h4 id="accounttoaccount"><a class="header" href="#accounttoaccount">AccountToAccount</a></h4>
+<p>Transfer tokens between a wallet and any DeFiChain address.</p>
+<p><em>Marker: <code>B</code></em></p>
+<h5 id="message-format-13"><a class="header" href="#message-format-13">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>from</td><td>CScript</td><td>UTXOs to spend</td></tr>
+<tr><td>to</td><td>CBalances</td><td>account to send tokens to</td></tr>
+</tbody></table>
+<h4 id="anyaccountstoaccounts"><a class="header" href="#anyaccountstoaccounts">AnyAccountsToAccounts</a></h4>
+<p>Transfer tokens from any DeFiChain address to any DeFiChain address.</p>
+<p><em>Marker: <code>a</code></em></p>
+<h5 id="message-format-14"><a class="header" href="#message-format-14">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>from</td><td>CScript</td><td>UTXOs to spend</td></tr>
+<tr><td>to</td><td>CBalances</td><td>account to send tokens to</td></tr>
+</tbody></table>
+<h4 id="smartcontract"><a class="header" href="#smartcontract">SmartContract</a></h4>
+<p>Interact with DFIP2201 contract.</p>
+<p><em>Marker: <code>K</code></em></p>
+<h5 id="message-format-15"><a class="header" href="#message-format-15">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>name</td><td>string</td><td>name of the smart contract</td></tr>
+<tr><td>accounts</td><td>CAccounts</td><td>account and amount of tokens to send</td></tr>
+</tbody></table>
+<h4 id="dfip2203"><a class="header" href="#dfip2203">DFIP2203</a></h4>
+<p>Interact with DFIP2203 (Futures) contract.</p>
+<p><em>Marker: <code>Q</code></em></p>
+<h5 id="message-format-16"><a class="header" href="#message-format-16">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>owner</td><td>CScript</td><td>address to fund contract and recieve token</td></tr>
+<tr><td>source</td><td>CTokenAmount</td><td>amount of tokens to fund future contract</td></tr>
+<tr><td>destination</td><td>uint32_t</td><td>set underlying asset (if source id DUSD)</td></tr>
+<tr><td>withdraw</td><td>bool</td><td>withdraw asset to owner address</td></tr>
+</tbody></table>
+<h3 id="governance"><a class="header" href="#governance">Governance</a></h3>
+<h4 id="setgovvariable"><a class="header" href="#setgovvariable">SetGovVariable</a></h4>
+<p>Update governance variables.</p>
+<p><em>Marker: <code>G</code></em></p>
+<h5 id="message-format-17"><a class="header" href="#message-format-17">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>govs</td><td>map&lt;shared_ptr<GovVariable>&gt;</td><td>list of variables and values to update</td></tr>
+</tbody></table>
+<h4 id="setgovvariableheight"><a class="header" href="#setgovvariableheight">SetGovVariableHeight</a></h4>
+<p>Set one governance variable at a particular block height.</p>
+<p><em>Marker: <code>j</code></em></p>
+<h5 id="message-format-18"><a class="header" href="#message-format-18">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>govs</td><td>shared_ptr<GovVariable></td><td>variable name and value to update</td></tr>
+<tr><td>startHeight</td><td>uint32_t</td><td>height at which change is in effect</td></tr>
+</tbody></table>
+<h3 id="authorisation"><a class="header" href="#authorisation">Authorisation</a></h3>
+<h4 id="autoauthprep"><a class="header" href="#autoauthprep">AutoAuthPrep</a></h4>
+<p>This is an empty custom transaction.</p>
+<p><em>Marker: <code>A</code></em></p>
+<h3 id="oracles"><a class="header" href="#oracles">Oracles</a></h3>
+<h4 id="appointoracle"><a class="header" href="#appointoracle">AppointOracle</a></h4>
+<p>Create new oracle at an address.</p>
+<p><em>Marker: <code>o</code></em></p>
+<h4 id="message-format-19"><a class="header" href="#message-format-19">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>oracleAddress</td><td>CScript</td><td>address of new oracle</td></tr>
+<tr><td>weightage</td><td>uint8_t</td><td>oracle weightage</td></tr>
+<tr><td>availablePairs</td><td>set<CTokenCurrencyPair></td><td>set of token prices available</td></tr>
+</tbody></table>
+<h4 id="removeoracleappoint"><a class="header" href="#removeoracleappoint">RemoveOracleAppoint</a></h4>
+<p>Remove existing oracle.</p>
+<p><em>Marker: <code>h</code></em></p>
+<h4 id="message-format-20"><a class="header" href="#message-format-20">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>oracleId</td><td>COracleId</td><td>oracle ID</td></tr>
+</tbody></table>
+<h4 id="updateoracleappoint"><a class="header" href="#updateoracleappoint">UpdateOracleAppoint</a></h4>
+<p>Update existing oracle.</p>
+<p><em>Marker: <code>t</code></em></p>
+<h4 id="message-format-21"><a class="header" href="#message-format-21">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>oracleId</td><td>COracleId</td><td>oracle ID</td></tr>
+<tr><td>newOracleAppoint</td><td>CAppointOracleMessage</td><td>new oracle metadata (contents of AppointOracle message)</td></tr>
+</tbody></table>
+<h4 id="setoracledata"><a class="header" href="#setoracledata">SetOracleData</a></h4>
+<p>Update oracle prices.</p>
+<p><em>Marker: <code>y</code></em></p>
+<h4 id="message-format-22"><a class="header" href="#message-format-22">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>oracleId</td><td>COracleId</td><td>oracle ID</td></tr>
+<tr><td>timestamp</td><td>int64_t</td><td>timestamp of oracle data</td></tr>
+<tr><td>prices</td><td>CTokenPrices</td><td>array of price and token strings</td></tr>
+</tbody></table>
+<h3 id="interchain-exchange-icx"><a class="header" href="#interchain-exchange-icx">Interchain Exchange (ICX)</a></h3>
+<p><em>ICX is currently disabled on the mainnet.</em></p>
+<h4 id="icxcreateorder"><a class="header" href="#icxcreateorder">ICXCreateOrder</a></h4>
+<p>Create ICX order.</p>
+<p><em>Marker: <code>1</code></em></p>
+<h4 id="message-format-23"><a class="header" href="#message-format-23">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>orderType</td><td>uint8_t</td><td>is maker buying or selling DFI</td></tr>
+<tr><td>idToken</td><td>DCT_ID</td><td>token ID on DeFiChain</td></tr>
+<tr><td>ownerAddress</td><td>CScript</td><td>address for funding DeFiChain transaction fees</td></tr>
+<tr><td>receivePubkey</td><td>CPubKey</td><td>public key which can claim external HTLC</td></tr>
+<tr><td>amountFrom</td><td>CAmount</td><td>amount of asset to be sold</td></tr>
+<tr><td>amountToFill</td><td>CAmount</td><td>amount of tokens in order available to fill</td></tr>
+<tr><td>orderPrice</td><td>CAmount</td><td>quoted price of asset</td></tr>
+<tr><td>expiry</td><td>uint32_t</td><td>block height for order expiry</td></tr>
+</tbody></table>
+<h4 id="icxmakeoffer"><a class="header" href="#icxmakeoffer">ICXMakeOffer</a></h4>
+<p>Make an offer for an ICX order.</p>
+<p><em>Marker: <code>2</code></em></p>
+<h4 id="message-format-24"><a class="header" href="#message-format-24">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>orderTx</td><td>uint256</td><td>transaction ID of order</td></tr>
+<tr><td>amount</td><td>CAmount</td><td>amount of asset to swap</td></tr>
+<tr><td>ownerAddress</td><td>CScript</td><td>address for funding DeFiChain transaction fees</td></tr>
+<tr><td>receivePubkey</td><td>CPubKey</td><td>public key which can claim external HTLC</td></tr>
+<tr><td>expiry</td><td>uint32_t</td><td>block height for order expiry</td></tr>
+<tr><td>takerFee</td><td>CAmount</td><td>taker fee</td></tr>
+</tbody></table>
+<h4 id="icxsubmitdfchtlc"><a class="header" href="#icxsubmitdfchtlc">ICXSubmitDFCHTLC</a></h4>
+<p>Submit a DFI hash time lock contract (HTLC) for offer.</p>
+<p><em>Marker: <code>3</code></em></p>
+<h4 id="message-format-25"><a class="header" href="#message-format-25">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>offerTx</td><td>uint256</td><td>transaction ID of offer</td></tr>
+<tr><td>amount</td><td>CAmount</td><td>amount to put in HTLC</td></tr>
+<tr><td>hash</td><td>uint256</td><td>hash of seed used for the hash lock</td></tr>
+<tr><td>timeout</td><td>uint32_t</td><td>timeout for expiration of HTLC in DeFiChain blocks</td></tr>
+</tbody></table>
+<h4 id="icxsubmitexthtlc"><a class="header" href="#icxsubmitexthtlc">ICXSubmitEXTHTLC</a></h4>
+<p>Submit a BTC hash time lock contract (HTLC) for offer.</p>
+<p><em>Marker: <code>4</code></em></p>
+<h4 id="message-format-26"><a class="header" href="#message-format-26">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>offerTx</td><td>uint256</td><td>transaction ID of offer</td></tr>
+<tr><td>amount</td><td>CAmount</td><td>amount to put in HTLC</td></tr>
+<tr><td>hash</td><td>uint256</td><td>hash of seed used for the hash lock</td></tr>
+<tr><td>htlcscriptAddress</td><td>string</td><td>script address of external htlc</td></tr>
+<tr><td>ownerPubkey</td><td>CPubKey</td><td>refund address in case of HTLC timeout</td></tr>
+<tr><td>timeout</td><td>uint32_t</td><td>timeout for expiration of HTLC in DeFiChain blocks</td></tr>
+</tbody></table>
+<h4 id="icxclaimdfchtlc"><a class="header" href="#icxclaimdfchtlc">ICXClaimDFCHTLC</a></h4>
+<p>Claim a DFI HTLC.</p>
+<p><em>Marker: <code>5</code></em></p>
+<h4 id="message-format-27"><a class="header" href="#message-format-27">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>dfchtlcTx</td><td>uint256</td><td>transaction ID of DeFiChain HTLC</td></tr>
+<tr><td>seed</td><td>vector<unsigned char></td><td>secret seed for claiming HTLC</td></tr>
+</tbody></table>
+<h4 id="icxcloseorder"><a class="header" href="#icxcloseorder">ICXCloseOrder</a></h4>
+<p>Close an ICX order.</p>
+<p><em>Marker: <code>6</code></em></p>
+<h4 id="message-format-28"><a class="header" href="#message-format-28">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>orderTx</td><td>uint256</td><td>transaction ID of ICX order</td></tr>
+</tbody></table>
+<h4 id="icxcloseoffer"><a class="header" href="#icxcloseoffer">ICXCloseOffer</a></h4>
+<p>Close an ICX offer.</p>
+<p><em>Marker: <code>7</code></em></p>
+<h4 id="message-format-29"><a class="header" href="#message-format-29">Message Format</a></h4>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>offerTx</td><td>uint256</td><td>transaction ID of ICX offer</td></tr>
+</tbody></table>
+<h3 id="loans"><a class="header" href="#loans">Loans</a></h3>
+<h4 id="setloancollateraltoken"><a class="header" href="#setloancollateraltoken">SetLoanCollateralToken</a></h4>
+<p>Sets what tokens are allowed as collateral.</p>
+<p><em>Marker: <code>c</code></em></p>
+<h5 id="message-format-30"><a class="header" href="#message-format-30">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>idToken</td><td>DCT_ID</td><td>token ID</td></tr>
+<tr><td>factor</td><td>CAmount</td><td>minimum collateralization ratio</td></tr>
+<tr><td>fixedIntervalPriceId</td><td>CTokenCurrencyPair</td><td>oracle price for current loan period</td></tr>
+<tr><td>activateAfterBlock</td><td>uint32_t</td><td>block number at which change will be activated</td></tr>
+</tbody></table>
+<h4 id="setloantoken"><a class="header" href="#setloantoken">SetLoanToken</a></h4>
+<p>Sets loan token.</p>
+<p><em>Marker: <code>g</code></em></p>
+<h5 id="message-format-31"><a class="header" href="#message-format-31">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>symbol</td><td>string</td><td>ticker for loan token</td></tr>
+<tr><td>name</td><td>string</td><td>name of loan token</td></tr>
+<tr><td>fixedIntervalPriceId</td><td>CTokenCurrencyPair</td><td>oracle price for current loan period</td></tr>
+<tr><td>mintable</td><td>bool</td><td>token's mintable property, defaults to true</td></tr>
+<tr><td>interest</td><td>CAmount</td><td>interest rate for the token</td></tr>
+</tbody></table>
+<h4 id="updateloantoken"><a class="header" href="#updateloantoken">UpdateLoanToken</a></h4>
+<p>Update loan token.</p>
+<p><em>Marker: <code>x</code></em></p>
+<h5 id="message-format-32"><a class="header" href="#message-format-32">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>tokenTx</td><td>uint256</td><td>token creation tx</td></tr>
+<tr><td>symbol</td><td>string</td><td>ticker for loan token</td></tr>
+<tr><td>name</td><td>string</td><td>name of loan token</td></tr>
+<tr><td>fixedIntervalPriceId</td><td>CTokenCurrencyPair</td><td>oracle price for current loan period</td></tr>
+<tr><td>mintable</td><td>bool</td><td>token's mintable property, defaults to true</td></tr>
+<tr><td>interest</td><td>CAmount</td><td>interest rate for the token</td></tr>
+</tbody></table>
+<h4 id="loanscheme"><a class="header" href="#loanscheme">LoanScheme</a></h4>
+<p>Create a loan scheme.</p>
+<p><em>Marker: <code>L</code></em></p>
+<h5 id="message-format-33"><a class="header" href="#message-format-33">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>identifier</td><td>string</td><td>loan scheme identifier</td></tr>
+<tr><td>updateHeight</td><td>uint64_t</td><td>block height to create scheme at</td></tr>
+<tr><td>ratio</td><td>uint32_t</td><td>minimum collateralization ratio</td></tr>
+<tr><td>rate</td><td>CAmount</td><td>interest rate</td></tr>
+</tbody></table>
+<h4 id="defaultloanscheme"><a class="header" href="#defaultloanscheme">DefaultLoanScheme</a></h4>
+<p>Set default loan scheme.</p>
+<p><em>Marker: <code>d</code></em></p>
+<h5 id="message-format-34"><a class="header" href="#message-format-34">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>identifier</td><td>string</td><td>loan scheme identifier</td></tr>
+</tbody></table>
+<h4 id="destroyloanscheme"><a class="header" href="#destroyloanscheme">DestroyLoanScheme</a></h4>
+<p>Delete existing loan scheme.</p>
+<p><em>Marker: <code>D</code></em></p>
+<h5 id="message-format-35"><a class="header" href="#message-format-35">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>identifier</td><td>string</td><td>loan scheme identifier</td></tr>
+<tr><td>destroyHeight</td><td>uint64_t</td><td>block height to destroy scheme at</td></tr>
+</tbody></table>
+<h4 id="vault"><a class="header" href="#vault">Vault</a></h4>
+<p>Create new vault.</p>
+<p><em>Marker: <code>V</code></em></p>
+<h5 id="message-format-36"><a class="header" href="#message-format-36">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>ownerAddress</td><td>CScript</td><td>owner of vault</td></tr>
+<tr><td>schemeId</td><td>string</td><td>loan scheme to use</td></tr>
+</tbody></table>
+<h4 id="closevault"><a class="header" href="#closevault">CloseVault</a></h4>
+<p>Close existing vault.</p>
+<p><em>Marker: <code>e</code></em></p>
+<h5 id="message-format-37"><a class="header" href="#message-format-37">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>vaultId</td><td>CVaultId</td><td>ID of vault</td></tr>
+<tr><td>to</td><td>CScript</td><td>address to send collateral to</td></tr>
+</tbody></table>
+<h4 id="updatevault"><a class="header" href="#updatevault">UpdateVault</a></h4>
+<p>Update existing open vault.</p>
+<p><em>Marker: <code>v</code></em></p>
+<h5 id="message-format-38"><a class="header" href="#message-format-38">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>vaultId</td><td>CVaultId</td><td>ID of vault</td></tr>
+<tr><td>ownerAddress</td><td>CScript</td><td>owner of vault</td></tr>
+<tr><td>schemeId</td><td>string</td><td>loan scheme to use</td></tr>
+</tbody></table>
+<h4 id="deposittovault"><a class="header" href="#deposittovault">DepositToVault</a></h4>
+<p>Deposit collateral in a vault.</p>
+<p><em>Marker: <code>S</code></em></p>
+<h5 id="message-format-39"><a class="header" href="#message-format-39">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>vaultId</td><td>CVaultId</td><td>ID of vault</td></tr>
+<tr><td>from</td><td>CScript</td><td>address funding the vault</td></tr>
+<tr><td>amount</td><td>CTokenAmount</td><td>amount of tokens to deposit</td></tr>
+</tbody></table>
+<h4 id="withdrawfromvault"><a class="header" href="#withdrawfromvault">WithdrawFromVault</a></h4>
+<p>Withdraw collateral in a vault.</p>
+<p><em>Marker: <code>J</code></em></p>
+<h5 id="message-format-40"><a class="header" href="#message-format-40">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>vaultId</td><td>CVaultId</td><td>ID of vault</td></tr>
+<tr><td>to</td><td>CScript</td><td>address to send collateral to</td></tr>
+<tr><td>amount</td><td>CTokenAmount</td><td>amount of tokens to deposit</td></tr>
+</tbody></table>
+<h4 id="takeloan"><a class="header" href="#takeloan">TakeLoan</a></h4>
+<p>Mint loan token against a loan vault.</p>
+<p><em>Marker: <code>X</code></em></p>
+<h5 id="message-format-41"><a class="header" href="#message-format-41">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>vaultId</td><td>CVaultId</td><td>ID of vault</td></tr>
+<tr><td>to</td><td>CScript</td><td>address to send loan tokens to</td></tr>
+<tr><td>amount</td><td>CBalances</td><td>amount of loan token to mint</td></tr>
+</tbody></table>
+<h4 id="paybackloan"><a class="header" href="#paybackloan">PaybackLoan</a></h4>
+<p>Repay an existing loan. <strong>Deprecated</strong>.</p>
+<p><em>Marker: <code>H</code></em></p>
+<h5 id="message-format-42"><a class="header" href="#message-format-42">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>vaultId</td><td>CVaultId</td><td>ID of vault</td></tr>
+<tr><td>from</td><td>CScript</td><td>address repaying the loan</td></tr>
+<tr><td>amount</td><td>CBalances</td><td>amount of loan token to repay</td></tr>
+</tbody></table>
+<h4 id="paybackloanv2"><a class="header" href="#paybackloanv2">PaybackLoanV2</a></h4>
+<p>Repay an existing loan.</p>
+<p><em>Marker: <code>k</code></em></p>
+<h5 id="message-format-43"><a class="header" href="#message-format-43">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>vaultId</td><td>CVaultId</td><td>ID of vault</td></tr>
+<tr><td>from</td><td>CScript</td><td>address repaying the loan</td></tr>
+<tr><td>loans</td><td>map&lt;DCT_ID, CBalances&gt;</td><td>amount of loan token to repay</td></tr>
+</tbody></table>
+<h4 id="auctionbid"><a class="header" href="#auctionbid">AuctionBid</a></h4>
+<p>Bid for an auction on a vault.</p>
+<p><em>Marker: <code>I</code></em></p>
+<h5 id="message-format-44"><a class="header" href="#message-format-44">Message Format</a></h5>
+<table><thead><tr><th>Variable</th><th>Data Type</th><th>Description</th></tr></thead><tbody>
+<tr><td>vaultId</td><td>CVaultId</td><td>ID of vault</td></tr>
+<tr><td>index</td><td>uint32_t</td><td>auction index</td></tr>
+<tr><td>from</td><td>CScript</td><td>address to recieve vault collateral</td></tr>
+<tr><td>amount</td><td>CTokenAmount</td><td>bid amount</td></tr>
+</tbody></table>
+<h4 id="futureswapexecution"><a class="header" href="#futureswapexecution">FutureSwapExecution</a></h4>
+<p><em>Unimplemented</em></p>
+<p><em>Marker: <code>q</code></em></p>
+<h4 id="futureswaprefund"><a class="header" href="#futureswaprefund">FutureSwapRefund</a></h4>
+<p><em>Unimplemented</em></p>
+<p><em>Marker: <code>w</code></em></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="protocol-and-network"><a class="header" href="#protocol-and-network">Protocol and Network</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><p><img src="pinkpaper/files/pinkpaper-banner.svg" alt="DeFiChain Pink Paper" /></p>
 <p>This is a working version of the Pink Paper for <a href="https://defichain.com">DeFiChain</a>.</p>
@@ -978,7 +1485,7 @@ in minutes - not hours.</p>
 <p><a href="pinkpaper/loan/../fees">DeFi fees</a> are burned. Fees are typically collected in the form of the loan token repayment, and automatically swapped on DEX for DFI to be burned.</p>
 <p>For example, if a loan of 100 <code>TSLA</code> is taken out and repaid back exactly 6 months later with the APR of 2%, the user will have to repay 101 <code>TSLA</code> during redemption to regain full access of collateral in the vault.</p>
 <p>100 <code>TSLA</code> will be burned as part of the repayment process. 1 <code>TSLA</code> that forms the interest payment will be swapped on DEX for DFI. The resulting DFI will burned. All of these occur atomically as part of DeFiChain consensus.</p>
-<h3 id="vault"><a class="header" href="#vault">Vault</a></h3>
+<h3 id="vault-1"><a class="header" href="#vault-1">Vault</a></h3>
 <p>User is able to freely open a vault and deposit tokens to a vault. Vault is transferable to other owners, including being controlled by multisig address.</p>
 <h3 id="collateral-dfi-requirement"><a class="header" href="#collateral-dfi-requirement">Collateral DFI requirement</a></h3>
 <p>Vault's collateral requires at least 50% of it to be DFI.</p>
@@ -1154,7 +1661,7 @@ in minutes - not hours.</p>
 </ul>
 </li>
 </ol>
-<h4 id="vault-1"><a class="header" href="#vault-1">Vault</a></h4>
+<h4 id="vault-2"><a class="header" href="#vault-2">Vault</a></h4>
 <p>Vault-related, but does not require owner's authentication.</p>
 <ol>
 <li>
@@ -1693,7 +2200,7 @@ Windows: <code>defid.exe</code></p>
 <p>Your wallet is <strong>not encrypted by default</strong>. This means that anyone with physical access to your computer or wallet file will be able to access your funds. For any wallets with real DFI or dTokens, make use of the <code>encryptwallet</code> command to encrypt your wallet, and use <code>walletlock</code> lock your wallet with a password and prevent hackers from accessing your funds.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="concepts-2"><a class="header" href="#concepts-2">Concepts</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="releases"><a class="header" href="#releases">Releases</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="loans"><a class="header" href="#loans">Loans</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="loans-1"><a class="header" href="#loans-1">Loans</a></h1>
 <h1 id="table-of-contents"><a class="header" href="#table-of-contents">Table of contents</a></h1>
 <ol>
 <li><a href="drafts/loans.html#1-introduction">Introduction</a></li>
@@ -1895,7 +2402,7 @@ Windows: <code>defid.exe</code></p>
 <p>DeFiChain, a blockchain that's built for specifically for DeFi, enjoy the benefit of automation and can have liquidation trigger automatically on-chain. This address the above two problems.</p>
 <h3 id="liquidation-penalty"><a class="header" href="#liquidation-penalty">Liquidation penalty</a></h3>
 <p>If a vault gets liquidated then a penalty fee is charged. Default penalty is set to 5% of the total value of the minted dTokens including interest value.</p>
-<h2 id="vault-2"><a class="header" href="#vault-2">Vault</a></h2>
+<h2 id="vault-3"><a class="header" href="#vault-3">Vault</a></h2>
 <p>A vault is the place where <a href="drafts/loans.html#collateral">collaterals</a> (guarantee) and loans (minted dTokens) are handled. It is also accountant of the generated interests over time.</p>
 <p>Vaults are identified by a unique <code>Id</code> on the blockchain. This <code>Id</code> is the transaction hash of the creation of the vault, meaning the return of the <a href="drafts/loans.html#createvault"><code>createvault</code></a> RPC command.
 To create an empty vault only a valid address is needed, nothing else. If a loan scheme is not set upon creation, the vault will be subscribed to the default loan scheme.</p>
