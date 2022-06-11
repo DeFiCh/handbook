@@ -34,6 +34,8 @@
 
 - [References](./concepts.md)
 
+  - [Hard forks](./hardforks.md)
+
 - [Ecosystem]()
 
   - [Wallets]()

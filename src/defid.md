@@ -101,7 +101,13 @@ This will start the node and the software will begin syncing blockchain data. Yo
 In order to speed up the process, you can download a snapshot from AWS.
 
 1. Stop the `defid` process.
-2. Go to [the AWS bucket](https://defi-snapshots.s3.ap-southeast-1.amazonaws.com/index.txt) and copy the filename of the latest (bottom most) snapshot.
+2. Go to an AWS bucket and copy the filename of the latest (bottom most) snapshot.
+
+- [America](https://defi-snapshots-us.s3.amazonaws.com/index.txt)
+- [Asia](https://defi-snapshots.s3.ap-southeast-1.amazonaws.com/index.txt)
+- [Australia](https://defi-snapshots-sydney.s3.ap-southeast-2.amazonaws.com/index.txt)
+- [Europe](https://defi-snapshots-europe.s3.eu-central-1.amazonaws.com/index.txt)
+
 3. Replace `index.txt` in the URL with the filename from the previous step.
 4. Extract the contents of the downloaded `.zip` file.
 5. Copy the extracted contents into the `.defi` folder.
