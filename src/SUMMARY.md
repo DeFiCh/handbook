@@ -8,10 +8,10 @@
 
 - [Concepts](./concepts.md)
 
-  - [Blocks and the Blockchain](./block.md)
-  - [Transactions](./transaction.md)
-  - [Custom Transactions](./customtx.md)
-  - [Protocol and Network](./proto.md)
+  - [Blocks and the Blockchain](./concepts/block.md)
+  - [Transactions](./concepts/transaction.md)
+  - [Custom Transactions](./concepts/customtx.md)
+  - [Protocol and Network](./concepts/proto.md)
   - [Pink Paper](./pinkpaper/README.md)
     - [Emission](./pinkpaper/emission/README.md)
     - [Fees](./pinkpaper/fees/README.md)
@@ -29,12 +29,12 @@
 
 - [Guides](./guides.md)
 
-  - [Using defid - The Reference Node](./defid.md)
-  - [Using a Wallet](./node/wallet.md)
+  - [Using defid - The Reference Node](./guides/defid.md)
+  - [Using a Wallet](./guides/wallet.md)
 
 - [References](./concepts.md)
 
-  - [Hard forks](./hardforks.md)
+  - [Hard forks](./references/hardforks.md)
 
 - [Ecosystem]()
 
