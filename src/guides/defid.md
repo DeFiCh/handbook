@@ -14,7 +14,7 @@ Every DeFiChain node runs an implementation of the DeFiChain protocol, and can b
 - Atleast 8 gigabytes of physical memory (RAM) (Minimum: ~1GB, but isn't recommended and sufficient swap is required)
 - 4 GB of swap space (Minimum: None, but highly recommended to give room for memory fragmentation spikes)
 
-There are two ways start using the node - using the compiled releases or compiling the souce code on your own.
+There are two ways start using the node - using the compiled releases or [compiling the souce](./compiling.md) code on your own.
 
 ## Using compiled releases
 
@@ -29,63 +29,6 @@ You can run the following install command to globally install the DeFiChain bina
 ```bash
 sudo install -m 0755 -o root -g root -t /usr/local/bin <defichain-path>/bin/* # replace <defichain-path> with the path to the root of the extracted folder
 ```
-
-Proceed to [Initial Block Download](#initial-block-download).
-
-## Compiling from source
-
-### Using `make.sh` (Debian/Ubuntu only)
-
-By running `./make.sh build` will download install required dependencies and run the complete compilation process. Run `make install` at the end of the process to make the compiled binaries available globally.
-
-### Compiling manually
-
-Install `gcc` and `boost` and other dependecies from your distribution's package manager.
-
-Arch Linux: `sudo pacman -S gcc boost libevent python`.
-
-Debian/Ubuntu: `sudo apt-get install build-essential libtool autotools-dev automake pkg-config bsdmainutils python3 curl ibssl-dev libevent-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev`
-
-Clone the latest version of `ain` from GitHub.
-
-```bash
-git clone https://github.com/DeFiCh/ain.git
-cd ain
-```
-
-Install Berekely DB.
-
-```bash
-./contrib/install_db4.sh `pwd`
-```
-
-Once installation is complete, take note of the commands provided at the end of the build log.
-
-```bash
-db4 build complete.
-
-When compiling defid, run `./configure` in the following way:
-
-  export BDB_PREFIX='/home/DeFiCha/ain/contrib/db4'
-  ./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" ...
-```
-
-Now, run the export command from the DB compilation, then run `autogen.sh` and finally run the configure command from above.
-
-```bash
-export BDB_PREFIX='/home/DeFiCha/ain/contrib/db4'
-./autogen.sh
-./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include"
-```
-
-We can now compile the node. Run `make` in the `ain` root directory.
-
-```bash
-make #
-make -j "$(($(nproc)))" # for multicore CPUs
-```
-
-`defi-d` and other DeFiChain executable will now be in the `src/` directory. You can run `make install` to access the compiled binaries globally.
 
 Proceed to [Initial Block Download](#initial-block-download).
 
