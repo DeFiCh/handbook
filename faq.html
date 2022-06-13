@@ -143,11 +143,40 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="faq"><a class="header" href="#faq">FAQ</a></h1>
-<h3 id="question-1"><a class="header" href="#question-1">Question 1</a></h3>
-<p>Answer 1</p>
-<hr />
-<h3 id="question-2"><a class="header" href="#question-2">Question 2</a></h3>
-<p>Answer 2</p>
+<h3 id="what-is-subnode-staking"><a class="header" href="#what-is-subnode-staking">What is subnode staking?</a></h3>
+<p>Masternodes that are locked in for 5 and 10 years should increased rewards of 1.5x and 2x respectively, the subnode staking system was introduced to provide consistent returns. Since each of the subnodes allows for multiple hashes in the same interval, having multiple subnodes is equivalent to having a higher mining hashrate, and therefore proportionally increases chances of mining a block successfully leading to higher returns on average.</p>
+<ul>
+<li>Normal masternodes uses 2 subnodes</li>
+<li>5 year lockup masternode uses 3 subnodes</li>
+<li>10 year lockup masternode uses 4 subnodes</li>
+</ul>
+<h3 id="while-using-composite-swaps-are-fees-applied-once-or-multiple-times"><a class="header" href="#while-using-composite-swaps-are-fees-applied-once-or-multiple-times">While using composite swaps, are fees applied once or multiple times?</a></h3>
+<p>Composite swaps will require the user to fees for every DeX pool that is utilised.</p>
+<p>For example, swapping from dLTC to DUSD has the following routing and fees</p>
+<pre><code>LTC
+ ↓ (0.2%)
+DFI
+ ↓ (0.2%)
+DUSD
+</code></pre>
+<p>$$
+fees = 1 - ((1 \times 0.998) \times 0.998) = 0.003996
+$$</p>
+<p>Net fees for the swap will be 0.3996% without accounting for slippage.</p>
+<h3 id="how-is-the-number-of-lp-tokens-calculated"><a class="header" href="#how-is-the-number-of-lp-tokens-calculated">How is the number of LP tokens calculated?</a></h3>
+<p>The total number of liquidity tokens in a pool is $$min(\text{liquidity of A}, \text{liquidity of B})$$</p>
+<p>When new liquidity is added, the amount of tokens returned to the user is</p>
+<p>$$
+min(liq_a, liq_b)
+$$</p>
+<p>where</p>
+<p>$$
+liq_a = \frac{\text{amount of A added} * \text{total liquidity}}{\text{amount of A}}
+$$</p>
+<p>and</p>
+<p>$$
+liq_b = \frac{\text{amount of B added} * \text{total liquidity}}{\text{amount of B}}
+$$</p>
 
                     </main>
 
