@@ -3784,7 +3784,7 @@ d7 = dhash(d5 concat d6)
 <h4 id="external-references"><a class="header" href="#external-references">External References</a></h4>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="faq"><a class="header" href="#faq">FAQ</a></h1>
 <h3 id="what-is-subnode-staking"><a class="header" href="#what-is-subnode-staking">What is subnode staking?</a></h3>
-<p>Masternodes that are locked in for 5 and 10 years should increased rewards of 1.5x and 2x respectively, the subnode staking system was introduced to provide consistent returns. Since each of the subnodes allows for multiple hashes in the same interval, having multiple subnodes is equivalent to having a higher mining hashrate, and therefore proportionally increases chances of mining a block successfully leading to higher returns on average.</p>
+<p>Masternodes that are locked in for 5 and 10 years should increased rewards of 1.5x and 2x respectively, the subnode staking system was introduced to provide consistent returns. Since each of the subnodes has a unique masternode ID, it therefore allows for multiple hashes in the same interval. Thus, having multiple subnodes is equivalent to having a higher mining hashrate, and therefore proportionally increases chances of mining a block successfully leading to higher returns on average.</p>
 <ul>
 <li>Normal masternodes uses 2 subnodes</li>
 <li>5 year lockup masternode uses 3 subnodes</li>
@@ -3817,6 +3817,17 @@ $$</p>
 <p>$$
 liq_b = \frac{\text{amount of B added} * \text{total liquidity}}{\text{amount of B}}
 $$</p>
+<h3 id="what-is-the-current-block-reward-scheme"><a class="header" href="#what-is-the-current-block-reward-scheme">What is the current block reward scheme?</a></h3>
+<p>The base block reward is distributed to 6 different recipients. Recipients marked with UTXO are the only transactions present in the coinbase transaction.</p>
+<table><thead><tr><th>Recipient</th><th>Coinbase allocation</th><th>Description</th></tr></thead><tbody>
+<tr><td>Masternode (UTXO)</td><td>33.33%</td><td>Masternode rewards. Masternode also receives additional income from transaction fees.</td></tr>
+<tr><td>Community Fund (UTXO)</td><td>4.91%</td><td>Community fund controlled by the Foundation, used to finance DeFiChain initiatives. <a href="https://github.com/DeFiCh/dfips">ref</a></td></tr>
+<tr><td>Anchor</td><td>0.02%</td><td>Fund to pay the Bitcoin transaction fee for anchoring.</td></tr>
+<tr><td>Liquidity Pools</td><td>25.45%</td><td>Distributed to LP providers as incentive.</td></tr>
+<tr><td>Loans</td><td>24.68%</td><td>Incentives for atomic swap and DeFiChain futures.</td></tr>
+<tr><td>Options</td><td>9.88%</td><td>Distributed to options holders. Not in use currently.</td></tr>
+<tr><td>Unallocated</td><td>1.73%</td><td>N/A</td></tr>
+</tbody></table>
 
                     </main>
 
