@@ -33,6 +33,7 @@
   - [Compiling from source](./guides/compiling.md)
   - [Running tests](./guides/testing.md)
   - [Using a Wallet](./guides/wallet.md)
+  - [Loans](./guides/loans.md)
 
 - [References](./concepts.md)
 
@@ -50,7 +51,6 @@
   - [Releases](./drafts/releases.md)
   - [Code Conventions]()
   - [Git Conventions]()
-  - [Loans](./drafts/loans.md)
 
 - [Glossary](./glossary.md)
 
