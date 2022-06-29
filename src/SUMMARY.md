@@ -37,6 +37,7 @@
 - [References](./concepts.md)
 
   - [Hard forks](./references/hardforks.md)
+  - [Governance Variables](./references/governance_variables.md)
 
 - [Ecosystem]()
 
