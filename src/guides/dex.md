@@ -27,7 +27,7 @@ The price of an asset can be determined by the ratio between the reserves of the
 
 > In the DeFiChain DEX, liquidity is distributed uniformly.
 >
-> The DEX uses the `x * y = k` formula. Learn more about how it works [here](https://medium.com/phoenix-finance/understanding-the-xyk-model-of-pooled-liquidity-7340fdc20d9c).
+> The DEX uses the `x * y = k` formula. Learn more about how it works in the [Uniswap paper](https://github.com/runtimeverification/verified-smart-contracts/blob/uniswap/uniswap/x-y-k.pdf) on the model and [this article](https://medium.com/phoenix-finance/understanding-the-xyk-model-of-pooled-liquidity-7340fdc20d9c).
 
 $$
 price_A = \frac{reserve_B}{reserve_A}
