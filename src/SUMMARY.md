@@ -34,6 +34,7 @@
   - [Running tests](./guides/testing.md)
   - [Using a Wallet](./guides/wallet.md)
   - [Loans](./guides/loans.md)
+  - [Decentralised Exchange](./guides/dex.md)
 
 - [References](./concepts.md)
 
@@ -55,3 +56,5 @@
 - [Glossary](./glossary.md)
 
 - [FAQ](./faq.md)
+
+- [Open Issues](./issues.md)
