@@ -40,6 +40,7 @@
 
   - [Hard forks](./references/hardforks.md)
   - [Governance Variables](./references/governance_variables.md)
+  - [Burns](./references/burn.md)
 
 - [Ecosystem]()
 
