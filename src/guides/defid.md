@@ -55,7 +55,8 @@ In order to speed up the process, you can download a snapshot from AWS.
 4. Extract the contents of the downloaded `.zip` file.
 5. Copy the extracted contents into the `.defi` folder.
    - Windows: `C:\Users\<username>\AppData\Roaming\DeFi Blockchain`
-   - Linux and macOS: `~/.defi/`
+   - Linux: `~/.defi/`
+   - macOS: `/Users/<username>/Library/Application\ Support/DeFi`
 6. Now restart the `defi` process. There will be a short syncing process to get the node up to date with the rest of the network.
 
 ## Interacting with the node
