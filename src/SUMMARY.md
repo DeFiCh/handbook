@@ -29,7 +29,8 @@
 
 - [Guides](./guides.md)
 
-  - [Using defid - The Reference Node](./guides/defid.md)
+  - [Installing defid - The Reference Node](./guides/defid.md)
+  - [Upgrading defid](./guides/upgrading.md)
   - [Compiling from source](./guides/compiling.md)
   - [Running tests](./guides/testing.md)
   - [Using a Wallet](./guides/wallet.md)
