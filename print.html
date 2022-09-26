@@ -3679,12 +3679,16 @@ $$</p>
 <li>Subtract DeX input fees from input amount (set using governance variables)</li>
 <li>Add input amount to reserves and extract output from reserves</li>
 </ol>
-<p>There are two possible types of swaps, single and composite. Single swaps are swaps where the swap route has just one pool pair, whereas composite swaps can go through up to 3 pool pairs.</p>
+<p>There are two possible types of swaps, <strong>single</strong> and <strong>composite</strong>. Single swaps are swaps where the swap route has just one pool pair, whereas composite swaps can go through up to 3 pool pairs.</p>
 <p>For example, swapping from ETH to DFI is a single swap since it only uses the ETH-DFI pool. However swapping from DUSD to ETH is a composite swap since the DUSD is first swapped to DFI using the DUSD-DFI pool, and then the DFI is swapped to ETH using the ETH-DFI pool.</p>
 <blockquote>
 <p>When using composite swaps, every pool pair used will apply their own fees. See <a href="guides/../faq.html#while-using-composite-swaps-are-fees-applied-once-or-multiple-times">FAQ</a>.</p>
 </blockquote>
 <p>See how the amount of LP tokens are caluclated <a href="guides/../faq.html#how-is-the-number-of-lp-tokens-calculated">here</a>.</p>
+<h2 id="lp-rewards"><a class="header" href="#lp-rewards">LP Rewards</a></h2>
+<p>Pools have block rewards and swap fees (called commissions). These rewards are paid out in proportion to the user's share of the total liquidity. LP rewards are transferred to the user when performing interactions any pool, such as adding/removing liquidity and swapping.</p>
+<p>$$ share = \frac{liquidity}{totalLiquidity} $$</p>
+<p>Depending on the token type, the block reward is a share of the &quot;Liquidity Pools&quot; coinbase allocation (<code>rewardPct</code>) for crypto tokens, or &quot;Loans&quot; (<code>rewardLoanPct</code>) for mintable dTokens. </p>
 <h2 id="performing-swaps"><a class="header" href="#performing-swaps">Performing swaps</a></h2>
 <p>Swapping tokens can be performed using the <code>poolswap</code> RPC for single swaps and <code>compositeswap</code> RPC for composite swaps.</p>
 <blockquote>
@@ -4029,7 +4033,7 @@ $$</p>
 <tr><td>Community Fund (UTXO)</td><td>4.91%</td><td>Community fund controlled by the Foundation, used to finance DeFiChain initiatives. <a href="https://github.com/DeFiCh/dfips">ref</a></td></tr>
 <tr><td>Anchor</td><td>0.02%</td><td>Fund to pay the Bitcoin transaction fee for anchoring.</td></tr>
 <tr><td>Liquidity Pools</td><td>25.45%</td><td>Distributed to crypto-crypto LP providers.</td></tr>
-<tr><td>Loans</td><td>24.68%</td><td>Distributed to dToken-DFI LP providers.</td></tr>
+<tr><td>Loans</td><td>24.68%</td><td>Distributed to dToken-DUSD LP providers.</td></tr>
 <tr><td>Options</td><td>9.88%</td><td>Distributed to options holders. Not in use currently.</td></tr>
 <tr><td>Unallocated</td><td>1.73%</td><td>N/A</td></tr>
 </tbody></table>
