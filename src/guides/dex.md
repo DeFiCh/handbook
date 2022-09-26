@@ -52,13 +52,21 @@ Swaps are executed with the following steps:
 5. Subtract DeX input fees from input amount (set using governance variables)
 6. Add input amount to reserves and extract output from reserves
 
-There are two possible types of swaps, single and composite. Single swaps are swaps where the swap route has just one pool pair, whereas composite swaps can go through up to 3 pool pairs.
+There are two possible types of swaps, **single** and **composite**. Single swaps are swaps where the swap route has just one pool pair, whereas composite swaps can go through up to 3 pool pairs.
 
 For example, swapping from ETH to DFI is a single swap since it only uses the ETH-DFI pool. However swapping from DUSD to ETH is a composite swap since the DUSD is first swapped to DFI using the DUSD-DFI pool, and then the DFI is swapped to ETH using the ETH-DFI pool.
 
 > When using composite swaps, every pool pair used will apply their own fees. See [FAQ](../faq.md#while-using-composite-swaps-are-fees-applied-once-or-multiple-times).
 
 See how the amount of LP tokens are caluclated [here](../faq.md#how-is-the-number-of-lp-tokens-calculated).
+
+## LP Rewards
+
+Pools have block rewards and swap fees (called commissions). These rewards are paid out in proportion to the user's share of the total liquidity. LP rewards are transferred to the user when performing interactions any pool, such as adding/removing liquidity and swapping.
+
+$$ share = \frac{liquidity}{totalLiquidity} $$
+
+Depending on the token type, the block reward is a share of the "Liquidity Pools" coinbase allocation (`rewardPct`) for crypto tokens, or "Loans" (`rewardLoanPct`) for mintable dTokens. 
 
 ## Performing swaps
 

@@ -60,6 +60,6 @@ The base block reward is distributed to 6 different recipients. Recipients marke
 | Community Fund (UTXO) | 4.91%               | Community fund controlled by the Foundation, used to finance DeFiChain initiatives. [ref](https://github.com/DeFiCh/dfips) |
 | Anchor                | 0.02%               | Fund to pay the Bitcoin transaction fee for anchoring.                                                                     |
 | Liquidity Pools       | 25.45%              | Distributed to crypto-crypto LP providers.                                                                                 |
-| Loans                 | 24.68%              | Distributed to dToken-DFI LP providers.                                                                                    |
+| Loans                 | 24.68%              | Distributed to dToken-DUSD LP providers.                                                                                    |
 | Options               | 9.88%               | Distributed to options holders. Not in use currently.                                                                      |
 | Unallocated           | 1.73%               | N/A                                                                                                                        |
