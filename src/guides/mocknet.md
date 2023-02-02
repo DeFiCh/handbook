@@ -1,5 +1,5 @@
 
-# Creating a masternode
+# Creating a masternode on mocknet
 
 1. Compile it from source
 
@@ -26,7 +26,7 @@
   
 
 5. Now stop and restart the defi-cli in order to setup your wallet as the default one. While doing that add two parameter while launch the defiChain: 
-	1. `-mocknet` to pass on the mocknet network in order to have more possibility of testing than on the normal network
+	1. `-mocknet` to enable the mocknet network
 	2. `-gen=1` that will allow to mine blocks.
 
 	```bash
