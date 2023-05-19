@@ -21,7 +21,7 @@ Before running the scripts make sure you have installed the following:
 
 #### MacOS
 ```bash
-brew install autoconf atomake wget gnu-tar libtool coreutils
+brew install autoconf atomake wget gnu-tar libtool coreutils pkg-config
 ```
 
 #### Ubuntu/Debian
