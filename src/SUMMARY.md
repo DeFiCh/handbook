@@ -36,6 +36,9 @@
   - [Using a Wallet](./guides/wallet.md)
   - [Loans](./guides/loans.md)
   - [Decentralised Exchange](./guides/dex.md)
+  - [Run a Local Node in Floppynet](./guides/guide_floppynet.md)
+  - [Connect Metamask to Floppynet](./guides/guide_floppynet_short.md)
+
 
 - [References](./concepts.md)
 
