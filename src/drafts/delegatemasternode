@@ -11,9 +11,19 @@ A possibility to delegate vote to another address will be added i a future updat
  - A new field in the RPC message
  - Fork checks
  - Print the delegate address when requesting the information about the masternode
+ - New message for Createmasternode
 
 
  ## Things that still need to be done
 
  - Modify the delegate address when updating the masternode 
  - Functional tests
+
+## Known issue to look at 
+
+- Having this error when calling RPC with curl
+
+  ERROR: Reject messages larger than max deserialization size: (1936672778 > 134217728)
+
+
+ ## Last update 22 may 2023
