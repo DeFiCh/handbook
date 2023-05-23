@@ -1,6 +1,6 @@
 # Connect Metamask to Floppynet
 
-> ⚠️ **ATENTION
+> ✏️ **Note:**
 > FloppyNet is an ALPHA stage test network, which means it may be subject to changes.
 > The network may experience execution failures and data persistence issues. Rollbacks are likely to happen periodically.**
 
@@ -26,12 +26,14 @@
 Connection data:
 
 - Network name: **MetaChain** (or whatever name you prefer)
-> **Warning: Due to potential network overloads, it is advised to use a local node over the public node to connect with Metamask. Follow the guide: [Run a Local Node in Floppynet](./guide_floppynet.md).**
+> ⚠️ **Warning: Due to potential network overloads, it is advised to use a local node over the public node to connect with Metamask. Follow the guide: [Run a Local Node in Floppynet](./guide_floppynet.md).**
 
 - Local node (Recomended):
     - New RPC URL: **http://127.0.0.1:20551** or **http://localhost:20551**
 - Public node:
     - New RPC URL: **http://35.187.53.161:20551**
+> ✏️ **Note:**
+> The public node is temporarily hosted by the core team for the easy access and convenience of early testers, and it is subject to change.
 
 - Chain ID: **1132** (Specific to Floppynet)
 - Currency symbol: **DFI**
