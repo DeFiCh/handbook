@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Protocol and Network - DeFiChain Handbook</title>
+        <title>Run a Local Node in Floppynet - DeFiChain Handbook</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="../prelude.html">Prelude</a></li><li class="chapter-item "><div>Introduction</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Getting Started</div></li></ol></li><li class="chapter-item expanded "><a href="../concepts.html">Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../concepts/block.html">Blocks and the Blockchain</a></li><li class="chapter-item "><a href="../concepts/transaction.html">Transactions</a></li><li class="chapter-item "><a href="../concepts/customtx.html">Custom Transactions</a></li><li class="chapter-item expanded "><a href="../concepts/proto.html" class="active">Protocol and Network</a></li><li class="chapter-item "><a href="../pinkpaper/index.html">Pink Paper</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../pinkpaper/emission/index.html">Emission</a></li><li class="chapter-item "><a href="../pinkpaper/fees/index.html">Fees</a></li><li class="chapter-item "><a href="../pinkpaper/futures/index.html">Futures</a></li><li class="chapter-item "><a href="../pinkpaper/governance/index.html">Governance</a></li><li class="chapter-item "><a href="../pinkpaper/interchain-exchange/index.html">Interchain Exchange</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../pinkpaper/interchain-exchange/fees.html">Fees</a></li></ol></li><li class="chapter-item "><a href="../pinkpaper/loan/index.html">Loan</a></li><li class="chapter-item "><a href="../pinkpaper/operator/index.html">Operator</a></li><li class="chapter-item "><a href="../pinkpaper/price-oracle/index.html">Price Oracle</a></li></ol></li></ol></li><li class="chapter-item "><div>DFIPS</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../dfips/2203.html">DFIP 2203</a></li></ol></li><li class="chapter-item "><a href="../guides.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/defid.html">Installing defid - The Reference Node</a></li><li class="chapter-item "><a href="../guides/upgrading.html">Upgrading defid</a></li><li class="chapter-item "><a href="../guides/compiling.html">Compiling from source</a></li><li class="chapter-item "><a href="../guides/testing.html">Running tests</a></li><li class="chapter-item "><a href="../guides/wallet.html">Using a Wallet</a></li><li class="chapter-item "><a href="../guides/loans.html">Loans</a></li><li class="chapter-item "><a href="../guides/dex.html">Decentralised Exchange</a></li><li class="chapter-item "><a href="../guides/guide_floppynet.html">Run a Local Node in Floppynet</a></li><li class="chapter-item "><a href="../guides/guide_floppynet_short.html">Connect Metamask to Floppynet</a></li></ol></li><li class="chapter-item "><a href="../concepts.html">References</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../references/hardforks.html">Hard forks</a></li><li class="chapter-item "><a href="../references/governance_variables.html">Governance Variables</a></li><li class="chapter-item "><a href="../references/burn.html">Burns</a></li></ol></li><li class="chapter-item "><div>Ecosystem</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Wallets</div></li></ol></li><li class="chapter-item "><div>Resources</div></li><li class="chapter-item "><div>Drafts</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../drafts/releases.html">Releases</a></li><li class="chapter-item "><div>Code Conventions</div></li><li class="chapter-item "><div>Git Conventions</div></li></ol></li><li class="chapter-item "><a href="../glossary.html">Glossary</a></li><li class="chapter-item "><a href="../faq.html">FAQ</a></li><li class="chapter-item "><a href="../issues.html">Open Issues</a></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="../prelude.html">Prelude</a></li><li class="chapter-item "><div>Introduction</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Getting Started</div></li></ol></li><li class="chapter-item "><a href="../concepts.html">Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../concepts/block.html">Blocks and the Blockchain</a></li><li class="chapter-item "><a href="../concepts/transaction.html">Transactions</a></li><li class="chapter-item "><a href="../concepts/customtx.html">Custom Transactions</a></li><li class="chapter-item "><a href="../concepts/proto.html">Protocol and Network</a></li><li class="chapter-item "><a href="../pinkpaper/index.html">Pink Paper</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../pinkpaper/emission/index.html">Emission</a></li><li class="chapter-item "><a href="../pinkpaper/fees/index.html">Fees</a></li><li class="chapter-item "><a href="../pinkpaper/futures/index.html">Futures</a></li><li class="chapter-item "><a href="../pinkpaper/governance/index.html">Governance</a></li><li class="chapter-item "><a href="../pinkpaper/interchain-exchange/index.html">Interchain Exchange</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../pinkpaper/interchain-exchange/fees.html">Fees</a></li></ol></li><li class="chapter-item "><a href="../pinkpaper/loan/index.html">Loan</a></li><li class="chapter-item "><a href="../pinkpaper/operator/index.html">Operator</a></li><li class="chapter-item "><a href="../pinkpaper/price-oracle/index.html">Price Oracle</a></li></ol></li></ol></li><li class="chapter-item "><div>DFIPS</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../dfips/2203.html">DFIP 2203</a></li></ol></li><li class="chapter-item expanded "><a href="../guides.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/defid.html">Installing defid - The Reference Node</a></li><li class="chapter-item "><a href="../guides/upgrading.html">Upgrading defid</a></li><li class="chapter-item "><a href="../guides/compiling.html">Compiling from source</a></li><li class="chapter-item "><a href="../guides/testing.html">Running tests</a></li><li class="chapter-item "><a href="../guides/wallet.html">Using a Wallet</a></li><li class="chapter-item "><a href="../guides/loans.html">Loans</a></li><li class="chapter-item "><a href="../guides/dex.html">Decentralised Exchange</a></li><li class="chapter-item expanded "><a href="../guides/guide_floppynet.html" class="active">Run a Local Node in Floppynet</a></li><li class="chapter-item "><a href="../guides/guide_floppynet_short.html">Connect Metamask to Floppynet</a></li></ol></li><li class="chapter-item "><a href="../concepts.html">References</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../references/hardforks.html">Hard forks</a></li><li class="chapter-item "><a href="../references/governance_variables.html">Governance Variables</a></li><li class="chapter-item "><a href="../references/burn.html">Burns</a></li></ol></li><li class="chapter-item "><div>Ecosystem</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Wallets</div></li></ol></li><li class="chapter-item "><div>Resources</div></li><li class="chapter-item "><div>Drafts</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../drafts/releases.html">Releases</a></li><li class="chapter-item "><div>Code Conventions</div></li><li class="chapter-item "><div>Git Conventions</div></li></ol></li><li class="chapter-item "><a href="../glossary.html">Glossary</a></li><li class="chapter-item "><a href="../faq.html">FAQ</a></li><li class="chapter-item "><a href="../issues.html">Open Issues</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -115,7 +115,7 @@
                         <a href="https://github.com/DeFiCh/handbook/tree/main/" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/DeFiCh/handbook/edit/main/src/concepts/proto.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/DeFiCh/handbook/edit/main/src/guides/guide_floppynet.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
                     </div>
@@ -142,16 +142,66 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="protocol-and-network"><a class="header" href="#protocol-and-network">Protocol and Network</a></h1>
+                        <h1 id="run-a-local-node-in-floppynet"><a class="header" href="#run-a-local-node-in-floppynet">Run a Local Node in Floppynet</a></h1>
+<blockquote>
+<p>✏️ <strong>Note:</strong></p>
+<p>Floppynet is an ALPHA stage test network, which means it may be subject to changes. The network may experience execution failures and data persistence issues. Rollbacks are likely to happen periodically.**</p>
+</blockquote>
+<h3 id="1-get-the-source-code"><a class="header" href="#1-get-the-source-code">1. Get the source code</a></h3>
+<p>The main development regarding MetaChain is being merged into the branch <code>feature/evm</code> of the <a href="https://github.com/defich/ain/tree/feature/evm">official DeFiChain node repository</a>. Beware that this branch will be eventually merged into the master branch and this is only a temporal development work in progress branch. For the ease of this guide we will clone the branch directly:</p>
+<pre><code class="language-bash">git clone -b feature/evm https://github.com/defich/ain
+cd ain
+</code></pre>
+<h3 id="2-compile-the-node"><a class="header" href="#2-compile-the-node">2. Compile the node</a></h3>
+<blockquote>
+<p>✏️ <strong>Note:</strong></p>
+<p>This build process is currently operational on Linux. We are actively working on the build processes for MacOS and Windows. Once complete, they should exhibit the same behavior as the Linux version.</p>
+</blockquote>
+<p>Considering this development introduces additional dependencies, notably Rust, it is strongly suggested to utilize the make.sh script for the efficient compilation of the node. This helper script will take care of compiling and linking all of the dependencies of the DeFiChain node.</p>
+<p>Before running the script make sure you have docker installed and running. You can follow <a href="https://docs.docker.com/engine/install/">the official guide</a> to install, configure and run docker in yoour machine.</p>
+<pre><code class="language-bash">./make.sh docker_release
+</code></pre>
+<p>This command will compile the node dependencies and the node itself inside a docker container. Beware that this will take some time in the first run as it will download all the source code of the libraries needed and the docker images.</p>
+<h3 id="3-running-the-node"><a class="header" href="#3-running-the-node">3. Running the node</a></h3>
+<p>Once the build succeeds you will find the binaries in <code>./buld/defichain-latest/bin/</code>. To run the node and connect it to floppynet run the following command:</p>
+<pre><code class="language-bash">./build/defichain-latest/bin/defid -devnet -connect=35.187.53.161 --daemon
+</code></pre>
+<p>With the <code>-connect=35.187.53.161</code> your local node will connect to the  public node which is maintained by the core developers. This way it will start synchronising and finding new nodes running in Floppynet.</p>
+<p>Note that if you are not using a snapshot the synchronisation will take some time.</p>
+<p>An easy way to see the progress of the syncing is to run:</p>
+<pre><code class="language-bash">./build/defichain-latest/bin/defi-cli -devnet getblockchaininfo | head
+</code></pre>
+<p>This will return something like:</p>
+<pre><code class="language-bash">{
+  &quot;chain&quot;: &quot;devnet&quot;,
+  &quot;blocks&quot;: 1590154,
+  &quot;headers&quot;: 1590154,
+  &quot;bestblockhash&quot;: &quot;0fcfca2fc40ce21ce8051b1c4cfca0ecba24d44a7b9edc4338596e5cca020685&quot;,
+  &quot;difficulty&quot;: 10057949.89351971,
+  &quot;mediantime&quot;: 1684309761,
+  &quot;verificationprogress&quot;: 1,
+  &quot;initialblockdownload&quot;: false,
+  &quot;chainwork&quot;: &quot;000000000000000000000000000000000000000000007f7505aaaf5fa8b5ad7b&quot;,
+</code></pre>
+<p>If <code>blocks</code> and <code>headers</code> are equal and <code>verificationprogress</code> is 1 then your node is synced.</p>
+<h4 id="node-logs"><a class="header" href="#node-logs">Node Logs</a></h4>
+<p>To check the logs go to the data folder:</p>
+<ul>
+<li>Windows: C:\Users\%username%\AppData\Roaming\DeFi Blockchain</li>
+<li>Mac: /Users/%username%/Library/Application Support/DeFi</li>
+<li>Linux: /home/%username%/.defi</li>
+</ul>
+<p>Open the <code>debug.log</code> inside the <code>devnet/</code> folder with your preferred text editor</p>
+<h3 id="4-connect-metamask-to-floppynet"><a class="header" href="#4-connect-metamask-to-floppynet">4. <a href="./guide_floppynet_short.html">Connect Metamask to Floppynet</a></a></h3>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../concepts/customtx.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../guides/dex.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../pinkpaper/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../guides/guide_floppynet_short.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -160,10 +210,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../concepts/customtx.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../guides/dex.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../pinkpaper/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../guides/guide_floppynet_short.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
