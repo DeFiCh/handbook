@@ -192,6 +192,13 @@ cd ain
 <li>Linux: /home/%username%/.defi</li>
 </ul>
 <p>Open the <code>debug.log</code> inside the <code>devnet/</code> folder with your preferred text editor</p>
+<h4 id="rust-debug-logs"><a class="header" href="#rust-debug-logs">Rust debug logs</a></h4>
+<p>To display the Rust debug logs first stop the node:</p>
+<pre><code class="language-bash">./build/defichain-latest/bin/defi-cli -devnet stop
+</code></pre>
+<p>Then start the node with <code>RUST_LOG=debug</code>:</p>
+<pre><code class="language-bash">RUST_LOG=debug ./build/defichain-latest/bin/defid -devnet --daemon
+</code></pre>
 <h3 id="4-connect-metamask-to-floppynet"><a class="header" href="#4-connect-metamask-to-floppynet">4. <a href="./guide_floppynet_short.html">Connect Metamask to Floppynet</a></a></h3>
 
                     </main>
