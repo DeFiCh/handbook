@@ -69,5 +69,21 @@ To check the logs go to the data folder:
 
 Open the `debug.log` inside the `devnet/` folder with your preferred text editor
 
+#### Rust debug logs
+
+To display the Rust debug logs first stop the node:
+
+```bash
+./build/defichain-latest/bin/defi-cli -devnet stop
+```
+
+Then start the node with `RUST_LOG=debug`:
+
+```bash
+RUST_LOG=debug ./build/defichain-latest/bin/defid -devnet --daemon
+```
+
+
+
 ### 4. [Connect Metamask to Floppynet](./guide_floppynet_short.md)
 
