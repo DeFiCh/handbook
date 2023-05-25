@@ -46,7 +46,7 @@ Connection data:
 
 ### That's it!
 Now you can switch to the MetaChain network and see your new account, transfer funds and call and deploy smart contracts.
-To get some DFI, head to DeFiChain's Slack and join the [#testnet-faucet](https://defichain.slack.com/archives/C04NY2ZJ0HF) channel then drop a message with your address, amount and reason, for example:
+To get some DFI, head to [DeFiChain's Slack](https://join.slack.com/t/defichain/shared_invite/zt-1vpyeesl3-iUa1aMjW4fCt0W53g2y46Q), join the `#testnet-faucet` channel and drop a message with your address, amount and reason like so:
 
 ```
 Address: 0x20b50961f7ce10F70874f358d54343cB388D3b71
