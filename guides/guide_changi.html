@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Compiling from source - DeFiChain Handbook</title>
+        <title>Run a Local Node in Changi Testnet - DeFiChain Handbook</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="../prelude.html">Prelude</a></li><li class="chapter-item "><div>Introduction</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Getting Started</div></li></ol></li><li class="chapter-item "><a href="../concepts.html">Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../concepts/block.html">Blocks and the Blockchain</a></li><li class="chapter-item "><a href="../concepts/transaction.html">Transactions</a></li><li class="chapter-item "><a href="../concepts/customtx.html">Custom Transactions</a></li><li class="chapter-item "><a href="../concepts/proto.html">Protocol and Network</a></li><li class="chapter-item "><a href="../pinkpaper/index.html">Pink Paper</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../pinkpaper/emission/index.html">Emission</a></li><li class="chapter-item "><a href="../pinkpaper/fees/index.html">Fees</a></li><li class="chapter-item "><a href="../pinkpaper/futures/index.html">Futures</a></li><li class="chapter-item "><a href="../pinkpaper/governance/index.html">Governance</a></li><li class="chapter-item "><a href="../pinkpaper/interchain-exchange/index.html">Interchain Exchange</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../pinkpaper/interchain-exchange/fees.html">Fees</a></li></ol></li><li class="chapter-item "><a href="../pinkpaper/loan/index.html">Loan</a></li><li class="chapter-item "><a href="../pinkpaper/operator/index.html">Operator</a></li><li class="chapter-item "><a href="../pinkpaper/price-oracle/index.html">Price Oracle</a></li></ol></li></ol></li><li class="chapter-item "><div>DFIPS</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../dfips/2203.html">DFIP 2203</a></li></ol></li><li class="chapter-item expanded "><a href="../guides.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/defid.html">Installing defid - The Reference Node</a></li><li class="chapter-item "><a href="../guides/upgrading.html">Upgrading defid</a></li><li class="chapter-item expanded "><a href="../guides/compiling.html" class="active">Compiling from source</a></li><li class="chapter-item "><a href="../guides/testing.html">Running tests</a></li><li class="chapter-item "><a href="../guides/wallet.html">Using a Wallet</a></li><li class="chapter-item "><a href="../guides/loans.html">Loans</a></li><li class="chapter-item "><a href="../guides/dex.html">Decentralised Exchange</a></li><li class="chapter-item "><a href="../guides/guide_floppynet.html">Run a Local Node in Floppynet</a></li><li class="chapter-item "><a href="../guides/guide_changi.html">Run a Local Node in Changi Testnet</a></li><li class="chapter-item "><a href="../guides/guide_floppynet_short.html">Connect Metamask to Floppynet</a></li></ol></li><li class="chapter-item "><a href="../concepts.html">References</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../references/hardforks.html">Hard forks</a></li><li class="chapter-item "><a href="../references/governance_variables.html">Governance Variables</a></li><li class="chapter-item "><a href="../references/burn.html">Burns</a></li></ol></li><li class="chapter-item "><div>Ecosystem</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Wallets</div></li></ol></li><li class="chapter-item "><div>Resources</div></li><li class="chapter-item "><div>Drafts</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../drafts/releases.html">Releases</a></li><li class="chapter-item "><div>Code Conventions</div></li><li class="chapter-item "><div>Git Conventions</div></li></ol></li><li class="chapter-item "><a href="../glossary.html">Glossary</a></li><li class="chapter-item "><a href="../faq.html">FAQ</a></li><li class="chapter-item "><a href="../issues.html">Open Issues</a></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="../prelude.html">Prelude</a></li><li class="chapter-item "><div>Introduction</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Getting Started</div></li></ol></li><li class="chapter-item "><a href="../concepts.html">Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../concepts/block.html">Blocks and the Blockchain</a></li><li class="chapter-item "><a href="../concepts/transaction.html">Transactions</a></li><li class="chapter-item "><a href="../concepts/customtx.html">Custom Transactions</a></li><li class="chapter-item "><a href="../concepts/proto.html">Protocol and Network</a></li><li class="chapter-item "><a href="../pinkpaper/index.html">Pink Paper</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../pinkpaper/emission/index.html">Emission</a></li><li class="chapter-item "><a href="../pinkpaper/fees/index.html">Fees</a></li><li class="chapter-item "><a href="../pinkpaper/futures/index.html">Futures</a></li><li class="chapter-item "><a href="../pinkpaper/governance/index.html">Governance</a></li><li class="chapter-item "><a href="../pinkpaper/interchain-exchange/index.html">Interchain Exchange</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../pinkpaper/interchain-exchange/fees.html">Fees</a></li></ol></li><li class="chapter-item "><a href="../pinkpaper/loan/index.html">Loan</a></li><li class="chapter-item "><a href="../pinkpaper/operator/index.html">Operator</a></li><li class="chapter-item "><a href="../pinkpaper/price-oracle/index.html">Price Oracle</a></li></ol></li></ol></li><li class="chapter-item "><div>DFIPS</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../dfips/2203.html">DFIP 2203</a></li></ol></li><li class="chapter-item expanded "><a href="../guides.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/defid.html">Installing defid - The Reference Node</a></li><li class="chapter-item "><a href="../guides/upgrading.html">Upgrading defid</a></li><li class="chapter-item "><a href="../guides/compiling.html">Compiling from source</a></li><li class="chapter-item "><a href="../guides/testing.html">Running tests</a></li><li class="chapter-item "><a href="../guides/wallet.html">Using a Wallet</a></li><li class="chapter-item "><a href="../guides/loans.html">Loans</a></li><li class="chapter-item "><a href="../guides/dex.html">Decentralised Exchange</a></li><li class="chapter-item "><a href="../guides/guide_floppynet.html">Run a Local Node in Floppynet</a></li><li class="chapter-item expanded "><a href="../guides/guide_changi.html" class="active">Run a Local Node in Changi Testnet</a></li><li class="chapter-item "><a href="../guides/guide_floppynet_short.html">Connect Metamask to Floppynet</a></li></ol></li><li class="chapter-item "><a href="../concepts.html">References</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../references/hardforks.html">Hard forks</a></li><li class="chapter-item "><a href="../references/governance_variables.html">Governance Variables</a></li><li class="chapter-item "><a href="../references/burn.html">Burns</a></li></ol></li><li class="chapter-item "><div>Ecosystem</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>Wallets</div></li></ol></li><li class="chapter-item "><div>Resources</div></li><li class="chapter-item "><div>Drafts</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../drafts/releases.html">Releases</a></li><li class="chapter-item "><div>Code Conventions</div></li><li class="chapter-item "><div>Git Conventions</div></li></ol></li><li class="chapter-item "><a href="../glossary.html">Glossary</a></li><li class="chapter-item "><a href="../faq.html">FAQ</a></li><li class="chapter-item "><a href="../issues.html">Open Issues</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -115,7 +115,7 @@
                         <a href="https://github.com/DeFiCh/handbook/tree/main/" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/DeFiCh/handbook/edit/main/src/guides/compiling.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/DeFiCh/handbook/edit/main/src/guides/guide_changi.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
                     </div>
@@ -142,63 +142,51 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="compiling-from-source"><a class="header" href="#compiling-from-source">Compiling from source</a></h1>
-<h2 id="using-makesh-debianubuntu-only"><a class="header" href="#using-makesh-debianubuntu-only">Using <code>make.sh</code> (Debian/Ubuntu only)</a></h2>
-<p>By running <code>./make.sh build</code> will download install required dependencies and run the complete compilation process. Run <code>make install</code> at the end of the process to make the compiled binaries available globally.</p>
-<h2 id="compiling-manually"><a class="header" href="#compiling-manually">Compiling manually</a></h2>
-<ol>
-<li>
-<p>Install <code>gcc</code> and <code>boost</code> and other <a href="https://github.com/DeFiCh/ain/blob/master/doc/dependencies.md">dependecies</a> from your distribution's package manager.</p>
-<p><em>Arch Linux</em></p>
-<pre><code class="language-bash">sudo pacman -S gcc boost libevent python
+                        <h1 id="run-a-local-node-in-changi"><a class="header" href="#run-a-local-node-in-changi">Run a Local Node in Changi</a></h1>
+<h3 id="get-the-binaries"><a class="header" href="#get-the-binaries">Get the binaries</a></h3>
+<p>Got to the <a href="https://github.com/DeFiCh/ain/releases">official DeFiChain</a> and look for the latest version of the node.</p>
+<img src="./screenshots/release-page.png"  width="90%">
+<p>Then click on the Assets dropdown at the end of each release section. Then select the binaries for your Operating System.</p>
+<p>pic</p>
+<blockquote>
+<p>Note that for version v4.0.0-beta1 there are only Linux binaries. Future releases will be handing also OSX ans Windows binaries.</p>
+</blockquote>
+<p>Once you have downloaded the binaries extract then to your desired directory. You should see three files:</p>
+<ul>
+<li><code>defid</code>: DeFiChain node</li>
+<li><code>defi-cli</code>: Command line interface to interact with the node</li>
+<li><code>defi-tx</code>: utility tool to build and sign transactions on DeFiChain</li>
+</ul>
+<p>For the porpuse of this guide we will only be using defid and defi-cli.</p>
+<h3 id="runing-the-node"><a class="header" href="#runing-the-node">Runing the node</a></h3>
+<p>To run the node just run the <code>defid</code> binary with he <code>-changi</code> flag</p>
+<pre><code class="language-bash">defid -changi
 </code></pre>
-<p><em>Debian/Ubuntu</em></p>
-<pre><code class="language-bash">sudo apt-get install build-essential libtool autotools-dev automake pkg-config bsdmainutils python3 curl ibssl-dev libevent-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev
+<blockquote>
+<p>If you want <code>defid</code> to run as a deamon (in the background) add the <code>-daemon</code> flag to the command above. Also if you want to have additional debug information about the EVM add <code>RUST_LOG=debug</code> to the begining of the command.</p>
+<p><code>RUST_LOG=debug defid -changi --daemon</code></p>
+</blockquote>
+<p>Once the node is running it should start syncing. The process of syncing can take up to a cuple of hours depending on your machione so just be patient.</p>
+<p>To check if the node is synced you can open a new terminal, run the following command and check if the fields <code>blocks</code> and <code>headers</code> are equal:</p>
+<pre><code class="language-bash">defi-cli getblockchaininfo | head
 </code></pre>
-</li>
-<li>
-<p>Clone the latest version of <code>ain</code> from GitHub.</p>
-<pre><code class="language-bash">git clone https://github.com/DeFiCh/ain.git
-cd ain
-</code></pre>
-</li>
-<li>
-<p>Install Berekely DB.</p>
-<pre><code class="language-bash">./contrib/install_db4.sh `pwd`
-</code></pre>
-<p>Once installation is complete, take note of the commands provided at the end of the build log.</p>
-<pre><code class="language-bash">db4 build complete.
-
-When compiling defid, run `./configure` in the following way:
-
-export BDB_PREFIX='/home/DeFiCha/ain/contrib/db4'
-./configure BDB_LIBS=&quot;-L${BDB_PREFIX}/lib -ldb_cxx-4.8&quot; BDB_CFLAGS=&quot;-I${BDB_PREFIX}/include&quot; ...
-</code></pre>
-</li>
-<li>
-<p>Now, run the export command from the DB compilation, then run <code>autogen.sh</code> and finally run the configure command from above.</p>
-<pre><code class="language-bash">export BDB_PREFIX='/home/DeFiCha/ain/contrib/db4'
-./autogen.sh
-./configure BDB_LIBS=&quot;-L${BDB_PREFIX}/lib -ldb_cxx-4.8&quot; BDB_CFLAGS=&quot;-I${BDB_PREFIX}/include&quot;
-</code></pre>
-</li>
-<li>
-<p>We can now compile the node. Run <code>make</code> in the <code>ain</code> root directory.</p>
-<pre><code class="language-bash">make #
-make -j &quot;$(($(nproc)))&quot; # for multicore CPUs
-</code></pre>
-</li>
-</ol>
-<p><code>defid</code> and other DeFiChain executables will now be in the <code>src/</code> directory. You can run <code>make install</code> to access the compiled binaries globally.</p>
+<img src="./screenshots/getblockchaininfo.png"  width="90%">
+<h3 id="connect-metamask"><a class="header" href="#connect-metamask">Connect Metamask.</a></h3>
+<p>To connect to metamask the process is the same as the one described in <a href="./guide_floppynet_short.html">Connect Metamask to Floppynet</a> and in <a href="./guide_floppynet_short.html#4-fill-network-form-with-connection-data">point 4</a> use the Changi Testnet connection data below. For now only the Chain Id and the optional block explorer in the Changi Testnet are different:</p>
+<table><thead><tr><th>Network</th><th>RPC URL</th><th>Chain ID</th><th>Block Explorer</th></tr></thead><tbody>
+<tr><td>Changi Testnet</td><td>http://localhost:20551</td><td>1133</td><td>https://testnet-dmc.mydefichain.com:8444</td></tr>
+</tbody></table>
+<h3 id="faucet"><a class="header" href="#faucet">Faucet</a></h3>
+<p>To get you Changi Testnet DFI you can use the faucet provided by the community at <a href="http://tc04.mydefichain.com/faucet/">http://tc04.mydefichain.com/faucet/</a></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../guides/upgrading.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../guides/guide_floppynet.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../guides/testing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../guides/guide_floppynet_short.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -207,10 +195,10 @@ make -j &quot;$(($(nproc)))&quot; # for multicore CPUs
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../guides/upgrading.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../guides/guide_floppynet.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../guides/testing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../guides/guide_floppynet_short.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
