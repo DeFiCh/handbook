@@ -1,4 +1,4 @@
-# Run a Local Node in Floppynet
+# Run a Local Node
 
 > ✏️ **Note:**
 >
