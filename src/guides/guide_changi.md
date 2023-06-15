@@ -8,11 +8,11 @@ Got to the [official DeFiChain](https://github.com/DeFiCh/ain/releases) and look
 
 Then click on the Assets dropdown at the end of each release section. Then select the binaries for your Operating System.
 
-pic
+<img src="./screenshots/assets.png"  width="90%">
 
 > Note that for version v4.0.0-beta1 there are only Linux binaries. Future releases will be handing also OSX ans Windows binaries.
 
-Once you have downloaded the binaries extract then to your desired directory. You should see three files:
+Once you have downloaded the binaries extract then to your desired directory. You should see three files inside the bin folder:
 
 - `defid`: DeFiChain node
 - `defi-cli`: Command line interface to interact with the node
