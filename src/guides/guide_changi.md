@@ -2,7 +2,7 @@
 
 ### Get the binaries
 
-Go to to the [official DeFiChain release section](https://github.com/DeFiCh/ain/releases) and look for the latest version of the node.
+Go to the [official DeFiChain release section](https://github.com/DeFiCh/ain/releases) and look for the latest version of the node.
 
 <img src="./screenshots/release-page.png"  width="90%">
 
