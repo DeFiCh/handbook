@@ -2,7 +2,7 @@
 
 ### Get the binaries
 
-Got to the [official DeFiChain](https://github.com/DeFiCh/ain/releases) and look for the latest version of the node.
+Go to to the [official DeFiChain](https://github.com/DeFiCh/ain/releases) and look for the latest version of the node.
 
 <img src="./screenshots/release-page.png"  width="90%">
 
@@ -10,9 +10,9 @@ Then click on the Assets dropdown at the end of each release section. Then selec
 
 <img src="./screenshots/assets.png"  width="90%">
 
-> Note that for version v4.0.0-beta1 there are only Linux binaries. Future releases will be handing also OSX ans Windows binaries.
+> Note that for version v4.0.0-beta1 there are only Linux binaries. Future releases will also be handing OSX and Windows binaries.
 
-Once you have downloaded the binaries extract then to your desired directory. You should see three files inside the bin folder:
+Once you have downloaded the binaries extract them to your desired directory. You should see three files inside the bin folder:
 
 - `defid`: DeFiChain node
 - `defi-cli`: Command line interface to interact with the node
@@ -22,7 +22,7 @@ For the porpuse of this guide we will only be using defid and defi-cli.
 
 ### Runing the node
 
-To run the node just run the `defid` binary with he `-changi` flag
+To run the node just run the `defid` binary with the `-changi` flag
 
 ```bash
 defid -changi
@@ -32,7 +32,7 @@ defid -changi
 >
 > `RUST_LOG=debug defid -changi --daemon`
 
-Once the node is running it should start syncing. The process of syncing can take up to a cuple of hours depending on your machione so just be patient.
+Once the node is running it should start syncing. The process of syncing can take up to a couple of hours depending on your machine so just be patient.
 
 To check if the node is synced you can open a new terminal, run the following command and check if the fields `blocks` and `headers` are equal:
 
@@ -52,7 +52,7 @@ To connect to metamask the process is the same as the one described in [Connect 
 
 ### Faucet
 
-To get you Changi Testnet DFI you can use the faucet provided by the community at [http://tc04.mydefichain.com/faucet/](http://tc04.mydefichain.com/faucet/)
+To get Changi Testnet DFI you can use the faucet provided by the community at [http://tc04.mydefichain.com/faucet/](http://tc04.mydefichain.com/faucet/)
 
 
 
