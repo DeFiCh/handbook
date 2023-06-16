@@ -144,14 +144,14 @@
                     <main>
                         <h1 id="run-a-local-node-in-changi"><a class="header" href="#run-a-local-node-in-changi">Run a Local Node in Changi</a></h1>
 <h3 id="get-the-binaries"><a class="header" href="#get-the-binaries">Get the binaries</a></h3>
-<p>Got to the <a href="https://github.com/DeFiCh/ain/releases">official DeFiChain</a> and look for the latest version of the node.</p>
+<p>Go to to the <a href="https://github.com/DeFiCh/ain/releases">official DeFiChain</a> and look for the latest version of the node.</p>
 <img src="./screenshots/release-page.png"  width="90%">
 <p>Then click on the Assets dropdown at the end of each release section. Then select the binaries for your Operating System.</p>
 <img src="./screenshots/assets.png"  width="90%">
 <blockquote>
-<p>Note that for version v4.0.0-beta1 there are only Linux binaries. Future releases will be handing also OSX ans Windows binaries.</p>
+<p>Note that for version v4.0.0-beta1 there are only Linux binaries. Future releases will also be handing OSX and Windows binaries.</p>
 </blockquote>
-<p>Once you have downloaded the binaries extract then to your desired directory. You should see three files inside the bin folder:</p>
+<p>Once you have downloaded the binaries extract them to your desired directory. You should see three files inside the bin folder:</p>
 <ul>
 <li><code>defid</code>: DeFiChain node</li>
 <li><code>defi-cli</code>: Command line interface to interact with the node</li>
@@ -159,14 +159,14 @@
 </ul>
 <p>For the porpuse of this guide we will only be using defid and defi-cli.</p>
 <h3 id="runing-the-node"><a class="header" href="#runing-the-node">Runing the node</a></h3>
-<p>To run the node just run the <code>defid</code> binary with he <code>-changi</code> flag</p>
+<p>To run the node just run the <code>defid</code> binary with the <code>-changi</code> flag</p>
 <pre><code class="language-bash">defid -changi
 </code></pre>
 <blockquote>
 <p>If you want <code>defid</code> to run as a deamon (in the background) add the <code>-daemon</code> flag to the command above. Also if you want to have additional debug information about the EVM add <code>RUST_LOG=debug</code> to the begining of the command.</p>
 <p><code>RUST_LOG=debug defid -changi --daemon</code></p>
 </blockquote>
-<p>Once the node is running it should start syncing. The process of syncing can take up to a cuple of hours depending on your machione so just be patient.</p>
+<p>Once the node is running it should start syncing. The process of syncing can take up to a couple of hours depending on your machine so just be patient.</p>
 <p>To check if the node is synced you can open a new terminal, run the following command and check if the fields <code>blocks</code> and <code>headers</code> are equal:</p>
 <pre><code class="language-bash">defi-cli getblockchaininfo | head
 </code></pre>
@@ -177,7 +177,7 @@
 <tr><td>Changi Testnet</td><td>http://localhost:20551</td><td>1133</td><td>https://testnet-dmc.mydefichain.com:8444</td></tr>
 </tbody></table>
 <h3 id="faucet"><a class="header" href="#faucet">Faucet</a></h3>
-<p>To get you Changi Testnet DFI you can use the faucet provided by the community at <a href="http://tc04.mydefichain.com/faucet/">http://tc04.mydefichain.com/faucet/</a></p>
+<p>To get Changi Testnet DFI you can use the faucet provided by the community at <a href="http://tc04.mydefichain.com/faucet/">http://tc04.mydefichain.com/faucet/</a></p>
 
                     </main>
 
