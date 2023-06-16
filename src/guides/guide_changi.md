@@ -2,7 +2,7 @@
 
 ### Get the binaries
 
-Go to to the [official DeFiChain](https://github.com/DeFiCh/ain/releases) and look for the latest version of the node.
+Go to to the [official DeFiChain release section](https://github.com/DeFiCh/ain/releases) and look for the latest version of the node.
 
 <img src="./screenshots/release-page.png"  width="90%">
 
@@ -18,7 +18,7 @@ Once you have downloaded the binaries extract them to your desired directory. Yo
 - `defi-cli`: Command line interface to interact with the node
 - `defi-tx`: utility tool to build and sign transactions on DeFiChain
 
-For the porpuse of this guide we will only be using defid and defi-cli.
+For the purpose of this guide we will only be using defid and defi-cli.
 
 ### Runing the node
 
@@ -44,7 +44,7 @@ defi-cli getblockchaininfo | head
 
 ### Connect Metamask.
 
-To connect to metamask the process is the same as the one described in [Connect Metamask to Floppynet](./guide_floppynet_short.md) and in [point 4](./guide_floppynet_short.md#4-fill-network-form-with-connection-data) use the Changi Testnet connection data below. For now only the Chain Id and the optional block explorer in the Changi Testnet are different:
+To connect to MetaMask the process is the same as the one described in [Connect Metamask to Floppynet](./guide_floppynet_short.md) and in [point 4](./guide_floppynet_short.md#4-fill-network-form-with-connection-data) use the Changi Testnet connection data below. For now only the Chain Id and the optional block explorer in the Changi Testnet are different:
 
 | Network | RPC URL | Chain ID | Block Explorer |
 |---------|---------|----------|----------------|
