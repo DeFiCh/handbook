@@ -44,11 +44,11 @@ defi-cli getblockchaininfo | head
 
 ### Connect Metamask.
 
-To connect to MetaMask the process is the same as the one described in [Connect Metamask to Floppynet](./guide_floppynet_short.md) and in [point 4](./guide_floppynet_short.md#4-fill-network-form-with-connection-data) use the Changi Testnet connection data below. For now only the Chain Id and the optional block explorer in the Changi Testnet are different:
+To connect to MetaMask the process is the same as the one described in [Connect Metamask to Floppynet](./guide_floppynet_short.md) and in [point 4](./guide_floppynet_short.md#4-fill-network-form-with-connection-data) use the Changi Testnet connection data below. For now only the Chain ID and the optional block explorer in the Changi Testnet are different:
 
 | Network | RPC URL | Chain ID | Block Explorer |
 |---------|---------|----------|----------------|
-|Changi Testnet| http://localhost:20551| 1133 | https://testnet-dmc.mydefichain.com:8444 |
+|Changi Testnet| http://changi.dfi.team| 1133 | https://meta.defiscan.live |
 
 ### Faucet
 
