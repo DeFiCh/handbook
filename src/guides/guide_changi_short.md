@@ -1,8 +1,5 @@
 # Connect Metamask to Changi TestNet
 
-> ✏️ **Note:**
-> The network may experience execution failures and data persistence issues. Rollbacks are likely to happen periodically.**
-
 ### To connect to MetaChain follow this four steps:
 
 #### 1. Open network dropdown.
