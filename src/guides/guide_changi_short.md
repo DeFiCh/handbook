@@ -24,7 +24,7 @@ Connection data:
 - Network name: **MetaChain**
 > ⚠️ **Warning: Due to potential network overloads, it is advised to use a local node over the public node to connect with Metamask. Follow the guide: [Run a Local Node in Changi](./guide_changi.md).**
 
-- RPC URL: http://changi.dfi.team
+- RPC URL: https://changi.dfi.team
 - Chain ID: **1133** (Specific to Changi TestNet)
 - Currency symbol: **DFI**
 - Block explorer URL: https://meta.defiscan.live
