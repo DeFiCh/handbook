@@ -41,7 +41,7 @@ defi-cli getblockchaininfo | head
 ### Connect Metamask.
 
 To connect to MetaMask the process is the same as the one described in [Connect Metamask to Changi TestNet](./guide_changi_short.md) you can refer to that guide for more information on it. 
-> Do note that the RPC url will need to be pointed to your local node and not http://changi.dfi.team
+> Do note that the RPC url will need to be pointed to your local node (Default: `http://127.0.0.1:20551`) and not http://changi.dfi.team
 
 
 ### Faucet
