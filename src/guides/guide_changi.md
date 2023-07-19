@@ -28,7 +28,7 @@ defid -changi
 >
 > `RUST_LOG=debug defid -changi --daemon`
 
-Once the node is running it should start syncing. The process of syncing can a couple of hours depending on your machine so just be patient.
+Once the node is running it should start syncing. The process of syncing can take a couple of hours depending on your machine.
 
 To check if the node is synced you can open a new terminal, run the following command and check if the fields `blocks` and `headers` are equal:
 
