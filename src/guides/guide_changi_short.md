@@ -26,7 +26,8 @@ Connection data:
 
 | Network | RPC URL | Chain ID | Currency symbol | Block Explorer (Optional) |
 |---------|---------|----------|----------------|----------------|
-|Changi Testnet| http://changi.dfi.team| 1133 | DFI | https://meta.defiscan.live |
+|Changi Testnet / Managed Node| https://changi.dfi.team | 1133 | DFI | https://meta.defiscan.live |
+|Changi Testnet / Local Node | https://127.0.0.1:20551 | 1133 | DFI | https://meta.defiscan.live |
 
 
 <p align="center">
