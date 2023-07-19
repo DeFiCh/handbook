@@ -37,8 +37,9 @@
   - [Loans](./guides/loans.md)
   - [Decentralised Exchange](./guides/dex.md)
   - [Run a Local Node in Floppynet](./guides/guide_floppynet.md)
-  - [Run a Local Node in Changi Testnet](./guides/guide_changi.md)
   - [Connect Metamask to Floppynet](./guides/guide_floppynet_short.md)
+  - [Run a Local Node in Changi Testnet](./guides/guide_changi.md)
+  - [Connect Metamask to Changi Testnet](./guides/guide_changi_short.md)
 
 
 - [References](./concepts.md)
