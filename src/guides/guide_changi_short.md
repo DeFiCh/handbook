@@ -28,6 +28,7 @@ Connection data:
 |---------|---------|----------|----------------|----------------|
 |Changi Testnet| http://changi.dfi.team| 1133 | DFI | https://meta.defiscan.live |
 
+
 <p align="center">
 <img width="863" alt ="step4" src="https://github.com/DeFiCh/handbook/assets/113342097/ec0f54dc-908b-4a01-8a7c-e0e778ddef09)">
 
