@@ -4,13 +4,9 @@
 
 Go to the [official DeFiChain release section](https://github.com/DeFiCh/ain/releases) and look for the latest version of the node.
 
-<img src="./screenshots/release-page.png"  width="90%">
-
 Then click on the Assets dropdown at the end of each release section. Then select the binaries for your Operating System.
 
-<img src="./screenshots/assets.png"  width="90%">
-
-> Note that for version v4.0.0-beta1 there are only Linux binaries. Future releases will also be handing OSX and Windows binaries.
+> Currently version v4.0.0-beta5 is the latest release. 
 
 Once you have downloaded the binaries extract them to your desired directory. You should see three files inside the bin folder:
 
@@ -20,7 +16,7 @@ Once you have downloaded the binaries extract them to your desired directory. Yo
 
 For the purpose of this guide we will only be using defid and defi-cli.
 
-### Runing the node
+### Running the node
 
 To run the node just run the `defid` binary with the `-changi` flag
 
@@ -32,7 +28,7 @@ defid -changi
 >
 > `RUST_LOG=debug defid -changi --daemon`
 
-Once the node is running it should start syncing. The process of syncing can take up to a couple of hours depending on your machine so just be patient.
+Once the node is running it should start syncing. The process of syncing can a couple of hours depending on your machine so just be patient.
 
 To check if the node is synced you can open a new terminal, run the following command and check if the fields `blocks` and `headers` are equal:
 
@@ -44,11 +40,9 @@ defi-cli getblockchaininfo | head
 
 ### Connect Metamask.
 
-To connect to MetaMask the process is the same as the one described in [Connect Metamask to Floppynet](./guide_floppynet_short.md) and in [point 4](./guide_floppynet_short.md#4-fill-network-form-with-connection-data) use the Changi Testnet connection data below. For now only the Chain ID and the optional block explorer in the Changi Testnet are different:
+To connect to MetaMask the process is the same as the one described in [Connect Metamask to Changi TestNet](./guide_changi_short.md) you can refer to that guide for more information on it. 
+> Do note that the RPC url will need to be pointed to your local node and not http://changi.dfi.team
 
-| Network | RPC URL | Chain ID | Block Explorer |
-|---------|---------|----------|----------------|
-|Changi Testnet| http://changi.dfi.team| 1133 | https://meta.defiscan.live |
 
 ### Faucet
 
