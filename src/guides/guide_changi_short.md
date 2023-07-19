@@ -1,4 +1,4 @@
-# Connect Metamask to Changi TestNet
+![252304387-ec0f54dc-908b-4a01-8a7c-e0e778ddef09](https://github.com/DeFiCh/handbook/assets/113342097/d5273de6-eba3-43ae-b8e7-1f39f0373830)# Connect Metamask to Changi TestNet
 
 ### To connect to MetaChain follow this four steps:
 
@@ -29,10 +29,10 @@ Connection data:
 |Changi Testnet / Managed Node| https://changi.dfi.team | 1133 | DFI | https://meta.defiscan.live |
 |Changi Testnet / Local Node | https://127.0.0.1:20551 | 1133 | DFI | https://meta.defiscan.live |
 
+![252304387-ec0f54dc-908b-4a01-8a7c-e0e778ddef09](https://github.com/DeFiCh/handbook/assets/113342097/497df9f0-2f96-4e6d-850e-966dc0708006)
+
 
 <p align="center">
-<img width="863" alt ="step4" src="https://github.com/DeFiCh/handbook/assets/113342097/ec0f54dc-908b-4a01-8a7c-e0e778ddef09)">
-
   <img width="863" alt="step5" src="https://github.com/DeFiCh/handbook/assets/113342097/c7d66182-0c57-437a-9f5c-091a40239011">
 </p>
 
