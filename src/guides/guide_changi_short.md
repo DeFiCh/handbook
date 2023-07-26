@@ -1,20 +1,20 @@
-![252304387-ec0f54dc-908b-4a01-8a7c-e0e778ddef09](https://github.com/DeFiCh/handbook/assets/113342097/d5273de6-eba3-43ae-b8e7-1f39f0373830)# Connect Metamask to Changi TestNet
+# Connect Metamask to Changi TestNet
 
 ### To connect to MetaChain follow this four steps:
 
 #### 1. Open network dropdown.
 <p align="center">
-  <img width="356" alt="step1" src="https://github.com/DeFiCh/handbook/assets/113342097/ab62ae59-a140-45ff-a1e8-17db0c0a8683">
+  <img width="356" alt="step1" src="https://github.com/DeFiCh/handbook/blob/virgc/testnet_doc/src/guides/screenshots/step1_guide_changi_short.png">
 </p>
 
 #### 2. Add network
 <p align="center">
-<img width="354" alt="step2" src="https://github.com/DeFiCh/handbook/assets/113342097/64a24837-114c-406f-b624-63f4974677fa">
+<img width="354" alt="step2" src="https://github.com/DeFiCh/handbook/blob/virgc/testnet_doc/src/guides/screenshots/step2_guide_changi_short.png">
 </p>
 
 #### 3. Add network manually
 <p align="center">
-<img width="1191" alt="step3" src="https://github.com/DeFiCh/handbook/assets/113342097/8277e3c3-710c-4081-a62e-fb3b337d96b2">
+<img width="1191" alt="step3" src="https://github.com/DeFiCh/handbook/blob/virgc/testnet_doc/src/guides/screenshots/step3_guide_changi_short.png">
 </p>
 
 #### 4. Fill network form with connection data
@@ -29,16 +29,16 @@ Connection data:
 |Changi Testnet / Managed Node| https://changi.dfi.team | 1133 | DFI | https://meta.defiscan.live |
 |Changi Testnet / Local Node | https://127.0.0.1:20551 | 1133 | DFI | https://meta.defiscan.live |
 
-![252304387-ec0f54dc-908b-4a01-8a7c-e0e778ddef09](https://github.com/DeFiCh/handbook/assets/113342097/497df9f0-2f96-4e6d-850e-966dc0708006)
-
+<p align="center">
+<img width="854" alt="step4" src="https://github.com/DeFiCh/handbook/blob/virgc/testnet_doc/src/guides/screenshots/step4_guide_changi_short.png">
+</p>
 
 <p align="center">
-  <img width="863" alt="step5" src="https://github.com/DeFiCh/handbook/assets/113342097/c7d66182-0c57-437a-9f5c-091a40239011">
+  <img width="863" alt="step5" src="https://github.com/DeFiCh/handbook/blob/virgc/testnet_doc/src/guides/screenshots/step5_guide_changi_short.png">
 </p>
 
 ### That's it!
-Now you can switch to the MetaChain network and see your new account, transfer funds and call and deploy smart contracts.
-To get some DFI, head to [DeFiChain's Slack](https://join.slack.com/t/defichain/shared_invite/zt-1vpyeesl3-iUa1aMjW4fCt0W53g2y46Q), join the `#testnet-faucet` channel and drop a message with your address, amount and reason like so:
+To get some DFI, head to [DeFiChain's Developer Discord](https://docs.google.com/forms/d/e/1FAIpQLSdAo1WuOfeZv3HyZPCRbqzkGggI1JefdEtCnZbdv_RnWs0wdw/viewform), apply to join the Discord, if your application is successful use the `#testnet-faucet` channel and drop a message with your address, amount and reason like so:
 
 ```
 Address: 0x20b50961f7ce10F70874f358d54343cB388D3b71
