@@ -10,8 +10,6 @@
 
 ![](./screenshots/step2_guide_changi_short.png)
 
->>>>>>> c352484 (Link images locally)
-
 #### 3. Add network manually
 
 ![](./screenshots/step3_guide_changi_short.png)
