@@ -9,7 +9,7 @@
 
 #### 2. Add network
 <p align="center">
-<img width="354" alt="step2" src="https://github.com/DeFiCh/handbook/blob/virgc/testnet_doc/src/guides/screenshots/step2_guide_changi_short.png">
+![](./screenshots/step2_guide_changi_short.png)
 </p>
 
 #### 3. Add network manually
