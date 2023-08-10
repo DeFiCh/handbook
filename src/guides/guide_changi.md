@@ -10,8 +10,6 @@ Then click on the Assets dropdown at the end of each release section. Then selec
 
 <img src="./screenshots/assets.png"  width="90%">
 
-> Note that for version v4.0.0-beta1 there are only Linux binaries. Future releases will also be handing OSX and Windows binaries.
-
 Once you have downloaded the binaries extract them to your desired directory. You should see three files inside the bin folder:
 
 - `defid`: DeFiChain node
