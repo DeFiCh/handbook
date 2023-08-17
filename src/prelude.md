@@ -1,4 +1,4 @@
-# Prelude
+## Prelude
 
 ## What's the goal of this handbook?
 
